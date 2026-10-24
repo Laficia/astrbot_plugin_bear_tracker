@@ -1,5 +1,11 @@
 """Scope the preserved engine per event, without sharing mutable event state."""
 from contextvars import ContextVar
+import re
+import time
+from .delivery_journal import delivery_scope, SCOPE
+from .components.magic_bucket.engine import MissingForwardMessageID
+
+class MergedDelivery(MissingForwardMessageID):pass
 from .feature_controls import allows, enabled
 from .components.magic_bucket.s_hunt_names import ForwardBotPlugin as BaseEngine
 
@@ -45,6 +51,38 @@ class ScopedMagicEngine(BaseEngine):
     async def onGroupMessageReceived(self, event):
         token = _source_group.set(str(event.group_id))
         try:
-            return await super().onGroupMessageReceived(event)
+            with delivery_scope('forwarding',str(getattr(event,'message_id','')) or None,source_group=str(event.group_id),source_text=''.join(s.text for s in event.message.filter_text()) if hasattr(event,'message') else '',expires_at=time.time()+300):
+                return await super().onGroupMessageReceived(event)
         finally:
             _source_group.reset(token)
+
+    @staticmethod
+    def _extract_message_id(result):
+        if isinstance(result,dict):
+            if result.get('_bear_merged'):raise MergedDelivery('相同报告已合并')
+            if result.get('_bear_unknown'):raise MissingForwardMessageID('发送结果待确认，不重复发送')
+        return BaseEngine._extract_message_id(result)
+
+    async def _send_segments(self,target_group,segments,rule_name,label,max_retries):
+        feature='collection' if rule_name=='leak_fill' else 'mango' if 'mango' in rule_name else 'hunt' if rule_name=='hunt_overdue' else (SCOPE.get() or {}).get('feature','forwarding')
+        with delivery_scope(feature,dedup=label not in ('补发通知','补发撤回码')):
+            try:return await super()._send_segments(target_group,segments,rule_name,label,max_retries)
+            except MergedDelivery:return None
+
+    async def safe_forward_message(self,target_group,message_id,rule_name,max_retries=2):
+        # A following separate map must not be lost when the text already exists.
+        rules=getattr(self,'config',{}).get('rules',[])
+        attach=any(r.get('name')==rule_name and r.get('attach_map_image') for r in rules)
+        with delivery_scope('forwarding',dedup=not attach):
+            try:return await super().safe_forward_message(target_group,message_id,rule_name,max_retries)
+            except MergedDelivery:return None
+
+    async def _reply(self,event,text):
+        stats=(SCOPE.get() or {}).get('stats',{})
+        merged=stats.get('merged',0)
+        if merged and text.startswith(('已转发','本次没有可缓存')):
+            if not stats.get('sent'):return
+            text=re.sub(r'\n(\d+) 条发送失败。',lambda m:'\n'+str(max(0,int(m[1])-merged))+' 条发送失败。' if int(m[1])>merged else '',text)
+            text+='\n相同的 S 怪报告已按群合并。'
+        with delivery_scope('commands',dedup=False):
+            return await super()._reply(event,text)

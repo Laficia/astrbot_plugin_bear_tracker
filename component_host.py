@@ -1,7 +1,7 @@
 """Minimal lifecycle/config/API hosting for the preserved component code."""
 from collections.abc import MutableMapping
 import copy
-import logging
+from astrbot.api import logger
 from pathlib import Path
 
 from astrbot.api.star import StarTools
@@ -15,8 +15,7 @@ class Component:
     """No Star subclass: only the owning plugin registers AstrBot handlers."""
     def __init__(self, context):
         self.context = context
-        self.logger = logging.getLogger(NAME)
-
+        self.logger = logger
 
 class ComponentDataTools:
     def __init__(self, key):
@@ -69,7 +68,7 @@ class ComponentContext:
         self.context, self.key, self.owner = context, key, owner
 
     def guard_bot(self,bot):
-        return GuardedBot(bot,self.owner.config) if self.owner else bot
+        return GuardedBot(bot,self.owner.config,getattr(getattr(self.owner,'operations',None),'delivery',None),shared_platform(self.owner.config)) if self.owner else bot
 
     def __getattr__(self, name):
         return getattr(self.context, name)
@@ -140,6 +139,13 @@ class MergedComponents:
                 if (call_args and isinstance(call_args[0],str) and call_args[0].startswith('send_')) or getattr(action,'__name__','')=='reply':
                     require_delivery(plugin.config)
                     require_feature(plugin.config,'manual',call_kwargs.get('group_id'))
+                journal=getattr(getattr(plugin,'operations',None),'delivery',None)
+                if journal and call_args and call_args[0]=='send_group_msg':
+                    transport=getattr(action,'__self__',None)
+                    platform=next((p.meta().id for p in plugin.context.platform_manager.platform_insts if p.get_client() is getattr(transport,'bot',None)), '')
+                    from .delivery_journal import delivery_scope
+                    with delivery_scope('manual'):
+                        return await journal.send(platform,str(call_kwargs.get('group_id','')),call_kwargs.get('message'),lambda:action(*call_args,**call_kwargs),'manual',api=True)
                 return await action(*call_args,**call_kwargs)
             return await original_limited(checked,*args,**kwargs)
         self.manual.engine.limited=limited

@@ -446,5 +446,63 @@
         "default": "bean"
       }
     }
+  },
+  "operations": {
+    "type": "object",
+    "description": "运行维护配置（建议使用插件 WebUI）",
+    "items": {
+      "dedup": {
+        "type": "object",
+        "description": "跨来源 S 报告合并",
+        "items": {
+          "enabled": {
+            "type": "bool",
+            "description": "启用保守去重",
+            "default": true
+          },
+          "window_seconds": {
+            "type": "int",
+            "description": "合并窗口秒数",
+            "default": 180
+          }
+        }
+      },
+      "watchdog": {
+        "type": "object",
+        "description": "本机 NapCat 恢复",
+        "items": {
+          "enabled": {
+            "type": "bool",
+            "description": "enabled",
+            "default": false
+          },
+          "launcher": {
+            "type": "string",
+            "description": "launcher",
+            "default": ""
+          },
+          "account": {
+            "type": "string",
+            "description": "account",
+            "default": ""
+          },
+          "webui_port": {
+            "type": "int",
+            "description": "webui_port",
+            "default": 6099
+          },
+          "cooldown_seconds": {
+            "type": "int",
+            "description": "cooldown_seconds",
+            "default": 300
+          },
+          "max_restarts_per_hour": {
+            "type": "int",
+            "description": "max_restarts_per_hour",
+            "default": 3
+          }
+        }
+      }
+    }
   }
 }

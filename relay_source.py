@@ -9,7 +9,7 @@ from __future__ import annotations
 
 import asyncio
 import json
-import logging
+from astrbot.api import logger
 import math
 import re
 import time
@@ -24,7 +24,7 @@ DATA_CENTER = "豆豆柴"
 WORLDS = ("水晶塔", "银泪湖", "太阳海岸", "伊修加德", "红茶川")
 SOCKET_URL = "wss://tracker-api.beartoolkit.com/socket/?EIO=4&transport=websocket"
 NAMESPACE = "/HuntUpdate"
-LOG = logging.getLogger(__name__)
+LOG = logger
 
 
 def _log_info(message, *args):

@@ -38,21 +38,27 @@ def require_delivery(config):
         raise QuietHours('当前为静默时段；播报区间为 '+str(window.get('start','?'))+'—'+str(window.get('end','?'))+'（北京时间）')
 
 
-async def guarded_send(context,config,origin,chain):
+async def guarded_send(context,config,origin,chain,**record):
     require_delivery(config)
     from .feature_controls import require_feature
     require_feature(config,'sightings',origin.split(':',2)[-1])
-    return await context.send_message(origin,chain)
+    from .delivery_journal import recorded_chain
+    return await recorded_chain(context,origin,chain,**record)
 
 
 class GuardedAPI:
-    def __init__(self,api,config):self.original,self.config=api,config
+    def __init__(self,api,config,journal=None,platform=""):
+        self.original,self.config,self.journal,self.platform=api,config,journal,platform
     def __getattr__(self,name):return getattr(self.original,name)
     async def call_action(self,action,**kwargs):
         if action.startswith('send_'):require_delivery(self.config)
+        if action=='send_group_msg' and self.journal:
+            return await self.journal.send(self.platform,str(kwargs.get('group_id','')),kwargs.get('message'),
+                lambda:self.original.call_action(action,**kwargs),'forwarding',api=True)
         return await self.original.call_action(action,**kwargs)
 
 
 class GuardedBot:
-    def __init__(self,bot,config):self.original=bot;self.api=GuardedAPI(bot.api,config)
+    def __init__(self,bot,config,journal=None,platform=""):
+        self.original=bot;self.api=GuardedAPI(bot.api,config,journal,platform)
     def __getattr__(self,name):return getattr(self.original,name)

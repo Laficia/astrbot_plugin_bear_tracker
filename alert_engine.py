@@ -290,7 +290,7 @@ class AlertEngine:
                     scenes = getattr(platform, "_session_scene", None)
                     if isinstance(scenes, dict) and umo.split(":", 2)[-1] not in scenes:
                         raise RuntimeError("请在目标群发言一次，以恢复QQ主动消息场景")
-                    sent = await asyncio.wait_for(guarded_send(self.context,self.config,umo,chain), timeout=30)
+                    sent = await asyncio.wait_for(guarded_send(self.context,self.config,umo,chain,event_key=str(spawn_key)+(':map' if path else ':text'),report={**sighting,'position':p},expires_at=float(sighting['seen_at'])+self.max_age), timeout=30)
                     if sent is False:
                         raise RuntimeError("目标平台未连接")
                     self.state.mark_sent(spawn_key, umo, bool(path))

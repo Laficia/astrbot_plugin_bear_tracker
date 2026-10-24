@@ -15,6 +15,7 @@ from .trigger_source import DEFAULT_TRIGGER_HUNTS, validate_trigger_hunts
 from .component_host import shared_platform
 from .quiet_hours import DEFAULT_WINDOW,validate_window,delivery_allowed
 from .feature_controls import FEATURES,control,updated_controls
+from .group_directory import GroupDirectory
 
 PREFIX = "/astrbot_plugin_bear_tracker/webui"
 
@@ -23,11 +24,25 @@ class BearWebUI:
     def __init__(self, plugin):
         self.plugin = plugin
         self.lock = asyncio.Lock()
+        self.group_directory = GroupDirectory(plugin.context, getattr(getattr(plugin, 'alerts', None), 'data_dir', None))
         for route, handler, method in [("status", self.status, "GET"), ("options", self.options, "GET"), ("catalog", self.catalog, "GET"),
                                        ("settings", self.settings, "POST"), ("template-preview", self.template_preview, "POST"), ("preview", self.preview, "POST"),
                                        ("calibrate", self.calibrate, "POST"), ("clear-recent", self.clear_recent, "POST"),
-                                       ("feature-status",self.feature_status,"GET"),("feature-settings",self.feature_settings,"POST")]:
+                                       ("feature-status",self.feature_status,"GET"),("feature-settings",self.feature_settings,"POST"),
+                                       ("group-names",self.group_names,"POST")]:
             plugin.context.register_web_api(PREFIX + "/" + route, handler, [method], "S怪播报控制台")
+
+    async def group_names(self):
+        try:
+            body = await request.json(default={})
+            if not isinstance(body, dict) or type(body.get('refresh', False)) is not bool:
+                raise ValueError('群名称查询参数无效')
+            pid = body.get('platform_id') or shared_platform(self.plugin.config)
+            if not isinstance(pid, str) or not pid:
+                raise ValueError('请先选择发送机器人')
+            return {'status': 'ok', 'data': await self.group_directory.query(pid, body.get('refresh', False))}
+        except (ValueError, TypeError) as exc:
+            return {'status': 'error', 'message': str(exc)}
 
     async def feature_status(self):
         config=self.plugin.config
@@ -112,6 +127,7 @@ class BearWebUI:
             groups.setdefault(platform, []).append(group)
         worlds, centers = resolve_scope(e.client.resources or {}, scopes)
         return {"status": "ok", "data": {"enabled": self.plugin.config.get("enabled", True),
+                "bot_connection": self.bot_connection(),
                 "targets": list(e.destinations()), "automation_platform_id":shared_platform(self.plugin.config), "pending": len(e.pending), "last_report": e.last_report,
                 "last_error": e.last_error, "monitor": getattr(e.client, "monitor_status", {}),
                 "poll_interval_seconds": self.plugin.config.get("poll_interval_seconds", 30),
@@ -130,6 +146,25 @@ class BearWebUI:
                 "trigger_hunts": [key for key in DEFAULT_TRIGGER_HUNTS if key in self.plugin.triggers.selected_hunts()],
                 "trigger_monitor": self.plugin.triggers.status(),
                 "aliases": {"豆豆柴": "狗", "陆行鸟": "鸟", "猫小胖": "猫", "莫古力": "猪"}}}
+
+    def bot_connection(self):
+        pid = shared_platform(self.plugin.config)
+        manager = getattr(self.plugin.context, 'platform_manager', None)
+        for platform in getattr(manager, 'platform_insts', []):
+            meta = platform.meta()
+            if meta.id != pid:
+                continue
+            if meta.name != 'aiocqhttp':
+                return {'platform_id': pid, 'connected': None, 'message': '平台状态请在 AstrBot 连接页查看'}
+            try:
+                client = platform.get_client()
+                accounts = getattr(client, '_wsr_api_clients', {})
+                connected = bool(accounts)
+            except Exception:
+                connected = False
+            return {'platform_id': pid, 'connected': connected,
+                    'message': '机器人已连接' if connected else '机器人协议端未连接，请检查 QQ／NapCat 是否运行并登录'}
+        return {'platform_id': pid, 'connected': False, 'message': '尚未选择已接入的发送机器人'}
 
     def platforms(self):
         manager = getattr(self.plugin.context, "platform_manager", None)

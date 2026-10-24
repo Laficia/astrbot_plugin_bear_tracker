@@ -187,7 +187,7 @@ class TriggerMonitor:
                     if isinstance(scenes, dict) and target.split(":", 2)[-1] not in scenes:
                         raise RuntimeError("请在目标群发言一次，以恢复QQ主动消息场景")
                     chain = MessageChain().message(self.describe(current)).use_t2i(False).use_markdown(False)
-                    result = await asyncio.wait_for(guarded_send(context,self.config,target,chain), timeout=30)
+                    result = await asyncio.wait_for(guarded_send(context,self.config,target,chain,feature='trigger',event_key=sent_key,expires_at=min(e['window_end'] for e in current)), timeout=30)
                     if result is False:
                         raise RuntimeError("目标平台未连接")
                     self.sent[sent_key] = time.time()

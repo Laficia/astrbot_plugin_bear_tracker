@@ -15,6 +15,7 @@ from astrbot.api.message_components import Image
 from .train_schedule import CENTERS,TZ,flatten_schedules,resolve_center,validate_format,PROTECTED_COMMANDS
 from .feature_controls import allows
 from .component_host import shared_platform
+from .delivery_journal import recorded_chain, recorded_event
 from .quiet_hours import delivery_allowed
 
 ROUTE_SOURCE='https://119.29.119.179/Arank/'
@@ -170,7 +171,7 @@ class HuntTrainFeature:
                         receipts[key]['state']='silenced';self.save();continue
                     try:
                         chain=MessageChain().message(self.message(row,config=latest)).use_t2i(False).use_markdown(False)
-                        result=await asyncio.wait_for(self.plugin.context.send_message(origin,chain),30)
+                        result=await asyncio.wait_for(recorded_chain(self.plugin.context,origin,chain,feature='trains',event_key=key,expires_at=row['departure_at']-latest['minutes']*60+90),30)
                         if result is False:raise RuntimeError('发送机器人未连接')
                         receipts[key]['state']='sent';self.last_error=''
                     except asyncio.CancelledError:raise
@@ -222,8 +223,8 @@ class HuntTrainFeature:
         task=asyncio.current_task();self.jobs.add(task)
         try:
             path=await self.render(kind,argument)
-            if self.active(group):await event.send(MessageChain().file_image(str(path)).use_t2i(False).use_markdown(False))
+            if self.active(group):await recorded_event(self.plugin,event,MessageChain().file_image(str(path)).use_t2i(False).use_markdown(False))
         except (ValueError,OSError,aiohttp.ClientError) as exc:
-            if self.active(group):await event.send(MessageChain().message(str(exc)).use_t2i(False).use_markdown(False))
+            if self.active(group):await recorded_event(self.plugin,event,MessageChain().message(str(exc)).use_t2i(False).use_markdown(False))
         finally:self.jobs.discard(task)
         return True

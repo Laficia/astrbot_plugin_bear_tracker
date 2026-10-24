@@ -1,7 +1,7 @@
 name: astrbot_plugin_bear_tracker
 display_name: 莫古环的魔法水桶
 desc: FF14 S怪播报与地图标点、狩猎车文字提醒及图片指令，集成群消息转发、查漏采集、芒果广播和手动图文群发，支持统一WebUI。
-version: 2.9.0
+version: 2.10.0
 author: Laficia
 repo: https://github.com/Laficia/astrbot_plugin_bear_tracker
 astrbot_version: ">=4.29.1"

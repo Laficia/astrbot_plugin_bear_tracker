@@ -14,6 +14,7 @@ import re
 import time
 import urllib.parse
 import urllib.request
+from .static_literals import read_literal, code_digest, minified_timer_digest
 
 BASE = "https://119.29.119.179"
 SOURCE = BASE + "/Srank/"
@@ -107,7 +108,7 @@ def condition_window(key, now):
     return next((interval for interval in merged(windows) if interval[0] <= now < interval[1]), None)
 
 
-def decode_page(page):
+def decode_legacy_page(page):
     try:
         block = page[page.index("const ET_SEC_HOUR ="):page.index("// ---------------------------------------------------------------- 对外主入口")]
     except ValueError as exc:
@@ -131,6 +132,68 @@ def decode_page(page):
             centers[data["dc"]] = {h["k"]: h for h in data["hunts"] if h.get("k") in RULES}
     if not centers or any(set(rows) != set(RULES) for rows in centers.values()):
         raise ValueError("参考站缺少完整触发期计时参数")
+    return centers
+
+
+def decode_page(page):
+    """Accept audited readable/minified layouts; never evaluate remote JS."""
+    if re.search(r'const\s+ET_SEC_HOUR\s*=', page) and '// ---------------------------------------------------------------- 对外主入口' in page:
+        return decode_legacy_page(page)
+    scripts = re.findall(r'<script\b[^>]*>(.*?)</script>', page, re.S | re.I)
+    calculations = next((s for s in scripts if re.search(r'\bconst\s+ET_SEC_HOUR\s*=', s)), '')
+    boundary = re.search(r'\bfunction\s+certaintyOf\s*\(', calculations)
+    if not boundary:
+        raise ValueError('参考站触发规则结构已变化，暂停触发提醒')
+    core = calculations[:boundary.start()]
+    profile = RULE_DATA.get('compact_profile', {})
+    if code_digest(core) != profile.get('calculations_sha256'):
+        raise ValueError('参考站时间或天气计算已变化，需重新校准')
+    timer_script = next((s for s in scripts if re.search(r'\bSRKTimers\s*=', s)), '')
+    marker = re.search(r'\bSRKTimers\s*=', timer_script)
+    start = timer_script.rfind('(function(', 0, marker.start()) if marker else -1
+    if start < 0 or (code_digest(timer_script[start:]) != profile.get('timers_sha256') and (not profile.get('timers_normalized_sha256') or minified_timer_digest(timer_script[start:])!=profile['timers_normalized_sha256'])):
+        raise ValueError('参考站可触发与强制期计算已变化，需重新校准')
+    floating = next((s for s in scripts if 'if(!window.SRK||!window.TRIGGER_MAP)return;' in re.sub(r'\s+', '', s)), '')
+    group_marker = re.search(r'\bconst\s+\w+\s*=\s*(\{\s*g\s*:)', floating)
+    if not group_marker:
+        raise ValueError('参考站悬浮窗怪物列表结构已变化')
+    groups, _ = read_literal(floating, group_marker.start(1))
+    keys = [k for group in groups.values() for k in group.get('hunts', [])]
+    if set(keys) != set(RULES) or len(keys) != len(RULES):
+        raise ValueError('参考站悬浮窗的S怪范围已变化，需重新校准')
+    # Verify the audited gate still requires BOTH the active condition window
+    # and a green/open server; forced-only servers must not become new alerts.
+    current = re.search(r'\b(\w+)\s*=\s*\w+\.windows\.find\(\s*(\w+)\s*=>\s*\2\.start\s*<=\s*(\w+)\s*&&\s*\3\s*<\s*\2\.end\s*\)', floating)
+    server = re.search(r'\b(\w+)\s*=\s*\w+\(\w+,\w+,\w+\);\s*const\s+\w+\s*=\s*\w+\?\w+\.hunts\.find', floating)
+    if not current or not server or not re.search(r'\b\w+\s*=\s*'+re.escape(current[1])+r'\s*&&\s*'+re.escape(server[1])+r'\s*&&\s*'+re.escape(server[1])+r'\.ok\.length\s*>\s*0\b', floating):
+        raise ValueError('参考站悬浮窗可触发判定已变化，需重新校准')
+    marker = re.search(r'window\.SRKMaint\.configure\s*\(\s*', page)
+    if not marker:
+        raise ValueError('参考站缺少触发期计时参数')
+    data, end = read_literal(page, marker.end())
+    if not re.match(r'\s*\)', page[end:]) or not isinstance(data, list):
+        raise ValueError('参考站计时参数格式无效')
+    centers = {}
+    for center in data:
+        if not isinstance(center, dict) or not isinstance(center.get('dc'), str) or not isinstance(center.get('hunts'), list):
+            raise ValueError('参考站大区计时资料无效')
+        rows = {}
+        for hunt in center['hunts']:
+            if not isinstance(hunt, dict) or hunt.get('k') not in RULES:
+                continue
+            key = hunt['k']
+            if key in rows or type(hunt.get('ln', 1)) is not int or not 1 <= hunt.get('ln', 1) <= 20:
+                raise ValueError('参考站计时怪物重复或分线无效')
+            for name in ('rt', 'mt'):
+                params = hunt.get(name)
+                if not isinstance(params, list) or len(params) != 2 or not all(number(n) for n in params) or not 0 < params[0] <= 1000 or not 0 <= params[1] <= 1000:
+                    raise ValueError('参考站普通或维护CD参数无效')
+            rows[key] = hunt
+        if set(rows) != set(RULES) or center['dc'] in centers:
+            raise ValueError('参考站缺少完整触发期计时参数')
+        centers[center['dc']] = rows
+    if not centers:
+        raise ValueError('参考站缺少完整触发期计时参数')
     return centers
 
 

@@ -1,6 +1,7 @@
 """Read-only hunt train schedules and configurable plain-text query commands."""
 from __future__ import annotations
 import asyncio
+from .delivery_journal import recorded_event
 from .quiet_hours import delivery_allowed
 import copy
 from datetime import datetime, timedelta, timezone
@@ -235,7 +236,7 @@ class TrainFeature:
             command=re.split(r'[\s(（]',text.lstrip('/'),maxsplit=1)[0].casefold()
             if not config['enabled'] or command not in {c.casefold() for r in config['rules'] if r['enabled'] for c in r['commands']}:return
             event.stop_event()
-            if delivery_allowed(self.plugin.config) and feature_allows(self.plugin.config,'trains',group):await event.send(MessageChain().message(str(exc)).use_t2i(False).use_markdown(False))
+            if delivery_allowed(self.plugin.config) and feature_allows(self.plugin.config,'trains',group):await recorded_event(self.plugin,event,MessageChain().message(str(exc)).use_t2i(False).use_markdown(False))
             return
         if not match or self.closed:return
         if not delivery_allowed(self.plugin.config):event.stop_event();return
@@ -246,7 +247,7 @@ class TrainFeature:
             if self.closed or not result:return
             for part in result['parts']:
                 if self.closed or not delivery_allowed(self.plugin.config) or not feature_allows(self.plugin.config,'trains',group):return
-                await event.send(MessageChain().message(part).use_t2i(False).use_markdown(False))
+                await recorded_event(self.plugin,event,MessageChain().message(part).use_t2i(False).use_markdown(False))
         finally:self.tasks.discard(task)
 
     async def close(self):

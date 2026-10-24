@@ -15,9 +15,11 @@ from .train_schedule import TrainFeature
 from .train_webui import TrainWebUI
 from .train_hunt import HuntTrainFeature
 from .quiet_hours import delivery_allowed
+from .operations import Operations
+from .delivery_journal import DeliveryContext, recorded_event
 
 
-@register("astrbot_plugin_bear_tracker", "Laficia", "莫古环的魔法水桶：FF14狩猎播报、车表与群消息管理", "2.9.0")
+@register("astrbot_plugin_bear_tracker", "Laficia", "莫古环的魔法水桶：FF14狩猎播报、车表与群消息管理", "2.10.0")
 class BearTrackerPlugin(Star):
     def __init__(self, context: Context, config: AstrBotConfig = None):
         super().__init__(context)
@@ -32,8 +34,12 @@ class BearTrackerPlugin(Star):
         self.train_webui = TrainWebUI(self)
         self.webui = BearWebUI(self)
         self.components = MergedComponents(self)
+        self.operations = Operations(self, self.alerts.data_dir)
+        self.context = DeliveryContext(context, self.operations.delivery)
+        self.alerts.context = self.context
 
     async def initialize(self):
+        self.operations.start()
         self.alerts.start()
         self.triggers.start()
         self.train_hunt.start()
@@ -46,8 +52,11 @@ class BearTrackerPlugin(Star):
             finally:
                 await self.components.close()
         finally:
-            await self.triggers.close()
-            await self.alerts.close()
+            try:
+                await self.triggers.close()
+                await self.alerts.close()
+            finally:
+                await self.operations.close()
 
     @filter.event_message_type(filter.EventMessageType.GROUP_MESSAGE, priority=100)
     async def merged_group_message(self, event: AstrMessageEvent):
@@ -117,7 +126,7 @@ class BearTrackerPlugin(Star):
         if result:
             if not delivery_allowed(self.config):event.stop_event();return
             logger.info("[BearTracker] 直接查询已处理，无需LLM: %s", "命令" if command else "狩猎问答")
-            await event.send(event.plain_result(result))
+            await recorded_event(self,event,event.plain_result(result))
             event.stop_event()
 
     @filter.llm_tool(name="query_bear_tracker_timers")
