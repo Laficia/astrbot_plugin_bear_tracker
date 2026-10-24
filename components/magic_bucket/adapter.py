@@ -4,6 +4,7 @@ import base64
 import copy
 import json
 from pathlib import Path
+from .runtime_paths import output_path
 
 
 def merge(base, patch):
@@ -36,7 +37,10 @@ def load_config(settings, data_dir):
                                 ('hunt_alerts','state',data_dir)]:
         path = Path(config[section][key])
         config[section][key] = str(path if path.is_absolute() else Path(base)/path)
+    for section,key,fallback in [('mango_watch','work_dir','mango'),('spawn_watch','path','bot_relay.json'),('hunt_alerts','state','hunt-alerts-state.json')]:
+        config[section][key]=output_path(data_dir,config[section][key],fallback)
     alerts = config['hunt_alerts']
+    alerts['output_dir']=str(Path(data_dir)/'shared')
     if alerts.get('enabled'):
         shared = Path(alerts.get('root') or '')
         if not alerts.get('root') or not (shared/'bot_relay.json').is_file():

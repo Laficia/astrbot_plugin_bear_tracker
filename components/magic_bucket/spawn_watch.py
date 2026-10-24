@@ -14,13 +14,12 @@
 from __future__ import annotations
 
 import json
-import logging
+from astrbot.api import logger
 import os
 import re
 import time
 from pathlib import Path
 
-logger = logging.getLogger("ForwardBotPlugin")
 
 # 47 只 S 怪：中文名 -> 看板 RELAY 用的 key（与站点内嵌 hunts 数据一致）
 HUNT_CN2KEY = {

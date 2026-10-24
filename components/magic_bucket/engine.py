@@ -5,10 +5,11 @@ import time
 from dataclasses import dataclass
 from pathlib import Path
 
-import logging
+from astrbot.api import logger
 from typing import Any
 GroupMessageEvent = Any
 
+from .runtime_paths import data_directory
 from .completions import MonsterMapCompleter
 from .decorations import TermDecorator
 from .leak_fill import LeakFiller
@@ -38,8 +39,7 @@ class MissingForwardMessageID(RuntimeError):
 class ForwardBotPlugin:
     def __init__(self, config, api):
         self.config, self.api = config, api
-        self.logger = logging.getLogger("magic_bucket")
-
+        self.logger = logger
     def get_config(self, key, default=None):
         return self.config.get(key, default)
 
@@ -103,7 +103,7 @@ class ForwardBotPlugin:
         self._hunt_alert_task = None
         if alerts.get("enabled", False):
             self._hunt_alerts = HuntAlerts(catalog, map_aliases,
-                root=alerts["root"], state=alerts["state"])
+                root=alerts['root'], state=alerts['state'], output_dir=alerts.get('output_dir'))
             self._hunt_alerts.source_group = str(alerts.get("source_group", "1034151994"))
             self._hunt_alert_task = asyncio.create_task(self._hunt_alert_loop())
 
@@ -200,7 +200,7 @@ class ForwardBotPlugin:
         config = self._config_section("spawn_watch")
         if not config.get("enabled", False):
             return None
-        path = str(config.get("path") or "/var/www/srank/bot_relay.json")
+        path = str(config.get("path") or str(data_directory()/'bot_relay.json'))
         servers = [str(s) for s in (config.get("servers") or [])]
         if not servers:
             self.logger.warning("spawn_watch.enabled 为真但没有配置 servers，已跳过")

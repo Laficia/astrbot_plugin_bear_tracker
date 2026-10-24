@@ -7,9 +7,9 @@ import os
 import math
 from pathlib import Path
 import re
-import subprocess
 import time
 import unicodedata
+from .runtime_paths import data_directory
 
 
 def read_json(path):
@@ -26,8 +26,9 @@ def write_json(path, data, mode=0o600):
 
 
 class HuntAlerts:
-    def __init__(self, catalog, aliases=None, root='/var/www/srank', state='/var/lib/srank-alerts/state.json', clock=time.time, history_fetcher=None):
-        self.root, self.state_path, self.clock = Path(root), Path(state), clock
+    def __init__(self, catalog, aliases=None, root=None, state=None, clock=time.time, history_fetcher=None, output_dir=None):
+        self.root, self.state_path, self.clock = Path(root) if root else data_directory()/'shared', Path(state) if state else data_directory()/'hunt-alerts-state.json', clock
+        self.output_dir=Path(output_dir) if output_dir else self.root
         self.history_fetcher = history_fetcher or self.fetch_history
         self.catalog = {h['k']: h for h in catalog['hunts']}
         self.worlds = set(catalog['worlds'])
@@ -44,7 +45,7 @@ class HuntAlerts:
                     if isinstance(name, str) and len(name) >= 2:
                         self.maps[name] = canonical
         try:
-            self.state = read_json(state)
+            self.state = read_json(self.state_path)
         except FileNotFoundError:
             self.state = {'ss': {}, 'alerts': {}}
         if not isinstance(self.state.get('ss'), dict) or not isinstance(self.state.get('alerts'), dict):
@@ -91,7 +92,7 @@ class HuntAlerts:
     def publish(self):
         now = self.clock()
         events = [v for v in self.state['ss'].values() if 0 <= now-v['at'] < 3600]
-        write_json(self.root/'ss_events.json', {'generated': int(now), 'events': sorted(events, key=lambda v: -v['at'])}, 0o644)
+        write_json(self.output_dir/'ss_events.json', {'generated': int(now), 'events': sorted(events, key=lambda v: -v['at'])}, 0o644)
 
     def observe_ss(self, text, group, message_id='', at=None):
         if str(group) != getattr(self, 'source_group', '1034151994'):
@@ -129,7 +130,7 @@ class HuntAlerts:
         for world, hunts in relay.items():
             for key, entry in hunts.items():
                 spawns[(world, key)] = max(spawns.get((world, key), 0), float(entry[0]))
-        presence_path = Path('/var/lib/srank-alerts/tracker-presence.json') if self.root == Path('/var/www/srank') else self.root/'tracker-presence.json'
+        presence_path = self.root/'tracker-presence.json'
         if presence_path.exists():
             presence = read_json(presence_path)
             for world, hunts in presence.get('relay', {}).items():
@@ -145,12 +146,12 @@ class HuntAlerts:
                     kills[(world, key)] = max(kills.get((world, key), 0), float(at))
         # Alternate snapshots can contain report/observation times. Those are
         # not explicit death events and must never cancel an overdue alert.
-        reports = read_json('/var/lib/srank-manual/manual-reports.json') if self.root == Path('/var/www/srank') else read_json(self.root/'manual-reports.json')
+        reports = read_json(self.root/'manual-reports.json')
         for row in reports:
             if row.get('type') == 'kill' and not row.get('withdrawnAt'):
                 scope = (row['world'], row['hunt'])
                 kills[scope] = max(kills.get(scope, 0), float(row['killAt']))
-        maintenance_path = Path('/var/lib/srank-manual/maintenance-reports.json') if self.root == Path('/var/www/srank') else self.root/'maintenance-reports.json'
+        maintenance_path = self.root/'maintenance-reports.json'
         maintenance = read_json(maintenance_path) if maintenance_path.exists() else []
         due = []
         for (world, key), at in sorted(spawns.items()):

@@ -131,7 +131,7 @@ class MangoWatch:
         self.bmob = {int(b) for b in (cfg.get("bmob") or [])}
         # 服务器名 -> 大区（两 DC 全量；喊话匹配只认表里的名字，避免误判）
         self.servers = {str(k): str(v) for k, v in (cfg.get("servers") or {}).items()}
-        self.api = str(cfg.get("points_api") or "http://127.0.0.1/api/tracker-points")
+        self.api = str(cfg.get("points_api") or "http://119.29.119.179/api/tracker-points")
         self.map_image = str(cfg.get("map_image") or "")
         self.work_dir = Path(str(cfg.get("work_dir") or "data/mango"))
         self.cooldown = float(cfg.get("cooldown_seconds") or 300)
