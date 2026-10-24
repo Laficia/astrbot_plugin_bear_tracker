@@ -2,14 +2,14 @@
 
 import asyncio
 import copy
-import logging
+from astrbot.api import logger
 import math
 import re
 import secrets
 import time
 from dataclasses import dataclass
 
-log = logging.getLogger(__name__)
+log = logger
 RECALL = re.compile(r"撤回\s*([0-9a-fA-F]{8})")
 
 
