@@ -64,7 +64,7 @@ class TemplateWebUITests(unittest.IsolatedAsyncioTestCase):
     async def test_template_only_save_persists_without_touching_routes_or_scopes(self):
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory) / "config.json"
-            original = {"target_sessions": ["莫古环:GroupMessage:736805976"],
+            original = {"target_sessions": ["莫古环:GroupMessage:100000001"],
                         "listen_scopes": [{"data_center": "豆豆柴", "servers": []}], "enabled": True}
             path.write_text(json.dumps(original), "utf-8")
             config = AstrBotConfig(str(path), default_config={**original, "message_template": DEFAULT_TEMPLATE})

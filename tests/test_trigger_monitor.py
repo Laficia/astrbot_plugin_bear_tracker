@@ -17,7 +17,7 @@ from astrbot.api.message_components import Plain
 DAY = 320000 + 10
 NOW = DAY * 4200 + 9 * 175
 WORLD, DC = "伊修加德", "豆豆柴"
-GROUP = "莫古环:GroupMessage:736805976"
+GROUP = "莫古环:GroupMessage:100000001"
 DEFINITION = {"Bonnacon": {"ln": 1, "rt": [65, 10], "mt": [39, 6]}}
 
 

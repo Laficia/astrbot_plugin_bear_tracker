@@ -60,14 +60,14 @@ class ScopeTests(unittest.TestCase):
 
 class GroupNumberTests(unittest.TestCase):
     def test_plain_group_numbers_are_routed_without_user_prefix(self):
-        self.assertEqual(normalize_group_ids(["736805976", "123456789", "736805976"]), ["736805976", "123456789"])
+        self.assertEqual(normalize_group_ids(["100000001", "123456789", "100000001"]), ["100000001", "123456789"])
         self.assertEqual(resolve_group_receivers(["莫古环:GroupMessage:old", "阿咬:GroupMessage:keep"],
-                         {"莫古环": ["736805976"]}, {"莫古环", "阿咬"}),
-                         ["阿咬:GroupMessage:keep", "莫古环:GroupMessage:736805976"])
+                         {"莫古环": ["100000001"]}, {"莫古环", "阿咬"}),
+                         ["阿咬:GroupMessage:keep", "莫古环:GroupMessage:100000001"])
 
     def test_removing_groups_and_invalid_inputs(self):
-        self.assertEqual(resolve_group_receivers(["莫古环:GroupMessage:736805976"], {"莫古环": []}, {"莫古环"}), [])
-        for value in [["莫古环:GroupMessage:736805976"], ["123 456"], [123456], "123456"]:
+        self.assertEqual(resolve_group_receivers(["莫古环:GroupMessage:100000001"], {"莫古环": []}, {"莫古环"}), [])
+        for value in [["莫古环:GroupMessage:100000001"], ["123 456"], [123456], "123456"]:
             with self.subTest(value=value), self.assertRaises(ValueError):
                 normalize_group_ids(value)
         with self.assertRaises(ValueError):
