@@ -7,6 +7,7 @@ import json
 from pathlib import Path
 import time
 from .quiet_hours import delivery_allowed,guarded_send,QuietHours
+from .trigger_preferences import DEFAULT_INTERVAL, validate_interval, delays, delay_ready
 from .feature_controls import allows as feature_allows,enabled as feature_enabled
 
 from astrbot.api import logger
@@ -42,6 +43,19 @@ class TriggerMonitor:
         self.last_sync = None
         self.last_error = ""
         self.connected = False
+        self.wake = asyncio.Event()
+        self.timing_baselines = set()
+
+    def interval(self):
+        try:return validate_interval(self.config.get("trigger_check_interval_seconds", DEFAULT_INTERVAL))
+        except ValueError:return DEFAULT_INTERVAL
+
+    def timing_changed(self, hunts=()):
+        hunts=set(hunts)
+        self.timing_baselines.update(hunts)
+        self.active={key:e for key,e in self.active.items() if e["hunt_key"] not in hunts}
+        if hunts:self.save()
+        self.wake.set()
 
     def enabled(self):
         return self.config.get("enabled", True) and feature_enabled(self.config,'sightings') and self.config.get("trigger_alerts_enabled", True) and bool(self.selected_hunts())
@@ -118,11 +132,12 @@ class TriggerMonitor:
                 # must not receive a backlog from an already open window.
                 self.active[identity] = {**old, **event, "targets": [t for t in old.get("targets", []) if t in destinations]}
             else:
-                notify = event["world"] in self.primed_worlds
+                notify = event["world"] in self.primed_worlds and event["hunt_key"] not in self.timing_baselines
                 targets = [umo for umo, sub in destinations.items() if now >= float(sub["since"]) - 2]
                 self.active[identity] = {**event, "notify": notify, "created_at": now,
                                          "targets": targets if notify else [], "retry": {}}
         self.primed_worlds.update(valid_worlds)
+        if valid_worlds:self.timing_baselines.clear()
         self.save()
 
     def describe(self, events):
@@ -152,6 +167,7 @@ class TriggerMonitor:
 
     async def deliver(self, valid_worlds, observed_at):
         if not delivery_allowed(self.config):self.silence_pending();return
+        waiting=delays(self.config, DEFAULT_TRIGGER_HUNTS)
         batches = {}
         for event in list(self.active.values()):
             batches.setdefault(self.batch_key(event), []).append(event)
@@ -163,6 +179,7 @@ class TriggerMonitor:
                     continue
                 current = [e for e in events if e["world"] in valid_worlds
                            and e["hunt_key"] in self.selected_hunts() and self.alerts.accepts(e)
+                           and delay_ready(e, waiting[e["hunt_key"]], now)
                            and now < e["window_end"] and now - e.get("source_at", observed_at) <= MAX_SOURCE_AGE]
                 pending = [e for e in current if target in e.get("targets", [])
                            and now - e["created_at"] <= self.alerts.max_age]
@@ -220,9 +237,10 @@ class TriggerMonitor:
                 self.alerts.client.sync()
         await asyncio.to_thread(sync)
         worlds, _ = resolve_scope(self.alerts.client.resources, self.config.get("listen_scopes", DEFAULT_SCOPES))
-        events, valid, errors = await asyncio.to_thread(self.source.fetch, worlds)
+        waiting=delays(self.config, DEFAULT_TRIGGER_HUNTS)
+        events, valid, errors = await asyncio.to_thread(self.source.fetch, worlds, delay_hours=waiting)
         current, _ = resolve_scope(self.alerts.client.resources, self.config.get("listen_scopes", DEFAULT_SCOPES))
-        if worlds != current or not self.enabled():
+        if worlds != current or not self.enabled() or waiting != delays(self.config, DEFAULT_TRIGGER_HUNTS):
             return
         now = time.time()
         self.apply_snapshot(events, valid, current, now)
@@ -233,6 +251,7 @@ class TriggerMonitor:
 
     async def run(self):
         while True:
+            self.wake.clear()
             start = time.monotonic()
             try:
                 await self.tick()
@@ -245,7 +264,9 @@ class TriggerMonitor:
                 if error != self.last_error:
                     logger.warning("[BearTracker S] %s", error)
                 self.last_error = error
-            await asyncio.sleep(max(1, 20 - (time.monotonic() - start)))
+            try:
+                await asyncio.wait_for(self.wake.wait(),max(1, self.interval() - (time.monotonic() - start)))
+            except asyncio.TimeoutError:pass
 
     def status(self):
         destinations = self.alerts.destinations()
@@ -254,5 +275,6 @@ class TriggerMonitor:
                        and time.time() < min(event["window_end"], event["created_at"] + self.alerts.max_age)})
         return {"enabled": bool(self.config.get("trigger_alerts_enabled", True)), "source": SOURCE,
                 "connected": self.connected, "last_sync": self.last_sync, "last_error": self.last_error,
+                "check_interval_seconds": self.interval(),
                 "eligible_count": sum(e["hunt_key"] in self.selected_hunts() and e["world"] in self.primed_worlds and e["window_end"] > time.time() for e in self.active.values()),
                 "pending": pending, "hunt_count": len(DEFAULT_TRIGGER_HUNTS), "selected_hunt_count": len(self.selected_hunts())}

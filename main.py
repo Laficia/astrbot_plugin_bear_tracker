@@ -19,7 +19,7 @@ from .operations import Operations
 from .delivery_journal import DeliveryContext, recorded_event
 
 
-@register("astrbot_plugin_bear_tracker", "Laficia", "莫古环的魔法水桶：FF14狩猎播报、车表与群消息管理", "2.10.0")
+@register("astrbot_plugin_bear_tracker", "Laficia", "莫古环的魔法水桶：FF14狩猎播报、车表与群消息管理", "2.11.1")
 class BearTrackerPlugin(Star):
     def __init__(self, context: Context, config: AstrBotConfig = None):
         super().__init__(context)

@@ -287,5 +287,275 @@
     "calculations_sha256": "8324860e7c318986a13443cf9c22a66dd8c4a24ac700af97ac44aa20f6154dbb",
     "timers_sha256": "93012e6b699416cbcf27ee06340930b76656d524d50381d91e2a5f65d1d4ca88",
     "timers_normalized_sha256": "43e0f5c1264d2bbe5611f6b8ddbb930a563ea3098e62d8603e332b3f99670ab0"
+  },
+  "cooldown_reference": {
+    "source": "https://119.29.119.179/Srank/",
+    "audited_on": "2026-10-25",
+    "centers": {
+      "豆豆柴": {
+        "Bonnacon": {
+          "rt": [
+            65,
+            10
+          ],
+          "mt": [
+            39,
+            6
+          ]
+        },
+        "Croakadile": {
+          "rt": [
+            50,
+            1
+          ],
+          "mt": [
+            30,
+            0.6
+          ]
+        },
+        "Croque-Mitaine": {
+          "rt": [
+            65,
+            10
+          ],
+          "mt": [
+            39,
+            6
+          ]
+        },
+        "Laideronnette": {
+          "rt": [
+            42,
+            6
+          ],
+          "mt": [
+            25.2,
+            3.6
+          ]
+        },
+        "Mindflayer": {
+          "rt": [
+            50,
+            1
+          ],
+          "mt": [
+            30,
+            0.6
+          ]
+        },
+        "The Garlok": {
+          "rt": [
+            42,
+            6
+          ],
+          "mt": [
+            25.2,
+            3.6
+          ]
+        },
+        "Thousand-cast Theda": {
+          "rt": [
+            57,
+            8
+          ],
+          "mt": [
+            34.2,
+            4.8
+          ]
+        },
+        "Zona Seeker": {
+          "rt": [
+            57,
+            8
+          ],
+          "mt": [
+            34.2,
+            3.6
+          ]
+        },
+        "Gandarewa": {
+          "rt": [
+            84,
+            48
+          ],
+          "mt": [
+            50.4,
+            28.8
+          ]
+        },
+        "Gamma": {
+          "rt": [
+            84,
+            48
+          ],
+          "mt": [
+            50.4,
+            28.8
+          ]
+        },
+        "Okina": {
+          "rt": [
+            84,
+            48
+          ],
+          "mt": [
+            50.4,
+            28.8
+          ]
+        },
+        "Burfurlur the Canny": {
+          "rt": [
+            84,
+            48
+          ],
+          "mt": [
+            50.4,
+            28.8
+          ]
+        },
+        "Kirlirger the Abhorrent": {
+          "rt": [
+            84,
+            48
+          ],
+          "mt": [
+            50.4,
+            28.8
+          ]
+        }
+      },
+      "莫古力": {
+        "Bonnacon": {
+          "rt": [
+            65,
+            10
+          ],
+          "mt": [
+            39,
+            6
+          ]
+        },
+        "Croakadile": {
+          "rt": [
+            50,
+            1
+          ],
+          "mt": [
+            30,
+            0.6
+          ]
+        },
+        "Croque-Mitaine": {
+          "rt": [
+            65,
+            10
+          ],
+          "mt": [
+            39,
+            6
+          ]
+        },
+        "Laideronnette": {
+          "rt": [
+            42,
+            6
+          ],
+          "mt": [
+            25.2,
+            3.6
+          ]
+        },
+        "Mindflayer": {
+          "rt": [
+            50,
+            1
+          ],
+          "mt": [
+            30,
+            0.6
+          ]
+        },
+        "The Garlok": {
+          "rt": [
+            42,
+            6
+          ],
+          "mt": [
+            25.2,
+            3.6
+          ]
+        },
+        "Thousand-cast Theda": {
+          "rt": [
+            57,
+            8
+          ],
+          "mt": [
+            34.2,
+            4.8
+          ]
+        },
+        "Zona Seeker": {
+          "rt": [
+            57,
+            8
+          ],
+          "mt": [
+            34.2,
+            3.6
+          ]
+        },
+        "Gandarewa": {
+          "rt": [
+            84,
+            48
+          ],
+          "mt": [
+            50.4,
+            28.8
+          ]
+        },
+        "Gamma": {
+          "rt": [
+            84,
+            48
+          ],
+          "mt": [
+            50.4,
+            28.8
+          ]
+        },
+        "Okina": {
+          "rt": [
+            84,
+            48
+          ],
+          "mt": [
+            50.4,
+            28.8
+          ]
+        },
+        "Burfurlur the Canny": {
+          "rt": [
+            84,
+            48
+          ],
+          "mt": [
+            50.4,
+            28.8
+          ]
+        },
+        "Kirlirger the Abhorrent": {
+          "rt": [
+            84,
+            48
+          ],
+          "mt": [
+            50.4,
+            28.8
+          ]
+        }
+      }
+    }
   }
 }

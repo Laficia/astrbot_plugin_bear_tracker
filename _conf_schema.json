@@ -504,5 +504,95 @@
         }
       }
     }
+  },
+  "trigger_check_interval_seconds": {
+    "type": "int",
+    "description": "可触发提醒检查间隔 / 秒",
+    "default": 60,
+    "hint": "20～3600 秒；默认 60 秒。间隔过长可能错过短暂的天气或游戏时间窗口。仅影响可触发提醒。"
+  },
+  "trigger_delay_hours": {
+    "type": "object",
+    "description": "各 S 怪进闸后等待小时数",
+    "items": {
+      "Laideronnette": {
+        "type": "float",
+        "description": "Laideronnette：进闸后等待的现实小时",
+        "default": 0.0,
+        "hint": "0～168，支持小数；从服务器进入刷新窗口的时刻起算，等待后仍需符合时间天气及非强制期条件。建议在插件 WebUI 设置。"
+      },
+      "The Garlok": {
+        "type": "float",
+        "description": "The Garlok：进闸后等待的现实小时",
+        "default": 0.0,
+        "hint": "0～168，支持小数；从服务器进入刷新窗口的时刻起算，等待后仍需符合时间天气及非强制期条件。建议在插件 WebUI 设置。"
+      },
+      "Zona Seeker": {
+        "type": "float",
+        "description": "Zona Seeker：进闸后等待的现实小时",
+        "default": 0.0,
+        "hint": "0～168，支持小数；从服务器进入刷新窗口的时刻起算，等待后仍需符合时间天气及非强制期条件。建议在插件 WebUI 设置。"
+      },
+      "Croque-Mitaine": {
+        "type": "float",
+        "description": "Croque-Mitaine：进闸后等待的现实小时",
+        "default": 0.0,
+        "hint": "0～168，支持小数；从服务器进入刷新窗口的时刻起算，等待后仍需符合时间天气及非强制期条件。建议在插件 WebUI 设置。"
+      },
+      "Bonnacon": {
+        "type": "float",
+        "description": "Bonnacon：进闸后等待的现实小时",
+        "default": 0.0,
+        "hint": "0～168，支持小数；从服务器进入刷新窗口的时刻起算，等待后仍需符合时间天气及非强制期条件。建议在插件 WebUI 设置。"
+      },
+      "Thousand-cast Theda": {
+        "type": "float",
+        "description": "Thousand-cast Theda：进闸后等待的现实小时",
+        "default": 0.0,
+        "hint": "0～168，支持小数；从服务器进入刷新窗口的时刻起算，等待后仍需符合时间天气及非强制期条件。建议在插件 WebUI 设置。"
+      },
+      "Gamma": {
+        "type": "float",
+        "description": "Gamma：进闸后等待的现实小时",
+        "default": 0.0,
+        "hint": "0～168，支持小数；从服务器进入刷新窗口的时刻起算，等待后仍需符合时间天气及非强制期条件。建议在插件 WebUI 设置。"
+      },
+      "Mindflayer": {
+        "type": "float",
+        "description": "Mindflayer：进闸后等待的现实小时",
+        "default": 0.0,
+        "hint": "0～168，支持小数；从服务器进入刷新窗口的时刻起算，等待后仍需符合时间天气及非强制期条件。建议在插件 WebUI 设置。"
+      },
+      "Croakadile": {
+        "type": "float",
+        "description": "Croakadile：进闸后等待的现实小时",
+        "default": 0.0,
+        "hint": "0～168，支持小数；从服务器进入刷新窗口的时刻起算，等待后仍需符合时间天气及非强制期条件。建议在插件 WebUI 设置。"
+      },
+      "Okina": {
+        "type": "float",
+        "description": "Okina：进闸后等待的现实小时",
+        "default": 0.0,
+        "hint": "0～168，支持小数；从服务器进入刷新窗口的时刻起算，等待后仍需符合时间天气及非强制期条件。建议在插件 WebUI 设置。"
+      },
+      "Burfurlur the Canny": {
+        "type": "float",
+        "description": "Burfurlur the Canny：进闸后等待的现实小时",
+        "default": 0.0,
+        "hint": "0～168，支持小数；从服务器进入刷新窗口的时刻起算，等待后仍需符合时间天气及非强制期条件。建议在插件 WebUI 设置。"
+      },
+      "Kirlirger the Abhorrent": {
+        "type": "float",
+        "description": "Kirlirger the Abhorrent：进闸后等待的现实小时",
+        "default": 0.0,
+        "hint": "0～168，支持小数；从服务器进入刷新窗口的时刻起算，等待后仍需符合时间天气及非强制期条件。建议在插件 WebUI 设置。"
+      },
+      "Gandarewa": {
+        "type": "float",
+        "description": "Gandarewa：进闸后等待的现实小时",
+        "default": 0.0,
+        "hint": "0～168，支持小数；从服务器进入刷新窗口的时刻起算，等待后仍需符合时间天气及非强制期条件。建议在插件 WebUI 设置。"
+      }
+    }
   }
 }

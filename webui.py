@@ -11,7 +11,8 @@ from astrbot.api.web import request
 from .listening_scope import DEFAULT_SCOPES, center_worlds, validate_scopes, resolve_scope
 from .message_template import (DEFAULT_TEMPLATE, DEFAULT_TRIGGER_TEMPLATE, SAMPLE_VALUES, VARIABLES,
                                TRIGGER_SAMPLE_VALUES, TRIGGER_VARIABLES, render_template, validate_template)
-from .trigger_source import DEFAULT_TRIGGER_HUNTS, validate_trigger_hunts
+from .trigger_preferences import DEFAULT_INTERVAL, validate_interval, validate_delays, delays
+from .trigger_source import DEFAULT_TRIGGER_HUNTS, validate_trigger_hunts, cooldown_details
 from .component_host import shared_platform
 from .quiet_hours import DEFAULT_WINDOW,validate_window,delivery_allowed
 from .feature_controls import FEATURES,control,updated_controls
@@ -144,6 +145,8 @@ class BearWebUI:
                 "trigger_message_template": self.plugin.config.get("trigger_message_template", DEFAULT_TRIGGER_TEMPLATE),
                 "trigger_alerts_enabled": self.plugin.config.get("trigger_alerts_enabled", True),
                 "trigger_hunts": [key for key in DEFAULT_TRIGGER_HUNTS if key in self.plugin.triggers.selected_hunts()],
+                "trigger_check_interval_seconds": self.plugin.config.get("trigger_check_interval_seconds", DEFAULT_INTERVAL),
+                "trigger_delay_hours": delays(self.plugin.config, DEFAULT_TRIGGER_HUNTS),
                 "trigger_monitor": self.plugin.triggers.status(),
                 "aliases": {"豆豆柴": "狗", "陆行鸟": "鸟", "猫小胖": "猫", "莫古力": "猪"}}}
 
@@ -178,11 +181,13 @@ class BearWebUI:
     async def options(self):
         try:
             await self.sync()
+            metadata=getattr(getattr(getattr(self.plugin,"triggers",None),"source",None),"metadata",None)
             return {"status": "ok", "data": {"data_centers": center_worlds(self.plugin.client.resources),
                     "platforms": self.platforms(), "default_message_template": DEFAULT_TEMPLATE,
                     "template_variables": VARIABLES, "default_trigger_message_template": DEFAULT_TRIGGER_TEMPLATE,
                     "trigger_template_variables": TRIGGER_VARIABLES,
-                    "trigger_hunts": [{"key": key, "name": self.plugin.client.info(key, self.plugin.client.resources.get("DatabaseHunt", {}).get(key, {}))["名称"]}
+                    "trigger_hunts": [{"key": key, "name": self.plugin.client.info(key, self.plugin.client.resources.get("DatabaseHunt", {}).get(key, {}))["名称"],
+                                       "cooldowns":cooldown_details(key,metadata)}
                                       for key in DEFAULT_TRIGGER_HUNTS]}}
         except Exception as exc:
             return {"status": "error", "message": str(exc)}
@@ -217,6 +222,9 @@ class BearWebUI:
                 values["target_sessions"] = resolve_group_receivers(
                     self.plugin.alerts.destinations(), body["group_receivers"], {p["id"] for p in self.platforms()})
             config = self.plugin.config
+            old_waiting=delays(config, DEFAULT_TRIGGER_HUNTS)
+            if "trigger_delay_hours" in values:
+                values["trigger_delay_hours"]={**config.get("trigger_delay_hours",{}),**values["trigger_delay_hours"]}
             if 'forward_interval_ms' in values:
                 interval=values.pop('forward_interval_ms')
                 values['magic_bucket']={**config.get('magic_bucket',{}),'send_interval_ms':interval}
@@ -239,6 +247,9 @@ class BearWebUI:
                 if hasattr(self.plugin.alerts,'silence_pending'):self.plugin.alerts.silence_pending()
                 triggers=getattr(self.plugin,'triggers',None)
                 if triggers and hasattr(triggers,'silence_pending'):triggers.silence_pending()
+            if "trigger_check_interval_seconds" in values or "trigger_delay_hours" in values:
+                changed=[key for key,hours in delays(config, DEFAULT_TRIGGER_HUNTS).items() if hours!=old_waiting[key]]
+                self.plugin.triggers.timing_changed(changed)
             if "trigger_hunts" in values:
                 self.plugin.triggers.apply_hunt_selection()
             if "target_sessions" in values:
@@ -300,6 +311,10 @@ def validate_settings(body):
     if not isinstance(body, dict):
         raise ValueError("配置必须为对象")
     result = {}
+    if "trigger_check_interval_seconds" in body:
+        result["trigger_check_interval_seconds"]=validate_interval(body["trigger_check_interval_seconds"])
+    if "trigger_delay_hours" in body:
+        result["trigger_delay_hours"]=validate_delays(body["trigger_delay_hours"], DEFAULT_TRIGGER_HUNTS)
     if 'broadcast_window' in body:result['broadcast_window']=validate_window(body['broadcast_window'])
     if 'forward_interval_ms' in body:
         interval=body['forward_interval_ms']

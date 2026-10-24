@@ -87,6 +87,9 @@ class Operations:
                 self.owner.alerts.silence_pending()
                 self.owner.triggers.silence_pending()
                 self.owner.triggers.apply_hunt_selection()
+                if hasattr(self.owner.triggers,"timing_changed"):
+                    from .trigger_source import DEFAULT_TRIGGER_HUNTS
+                    self.owner.triggers.timing_changed(DEFAULT_TRIGGER_HUNTS)
                 await self.owner.components.magic.reset_engines()
                 self.owner.alerts.changed.set()
             return {'status':'ok','data':{'message':'历史配置已恢复；恢复前配置也已自动备份'}}

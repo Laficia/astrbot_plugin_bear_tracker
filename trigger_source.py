@@ -14,6 +14,7 @@ import re
 import time
 import urllib.parse
 import urllib.request
+from .trigger_preferences import validate_delays
 from .static_literals import read_literal, code_digest, minified_timer_digest
 
 BASE = "https://119.29.119.179"
@@ -37,6 +38,24 @@ def validate_trigger_hunts(hunts):
 
 def number(value):
     return isinstance(value, (int, float)) and not isinstance(value, bool) and math.isfinite(value)
+
+
+def cooldown_details(key, metadata=None):
+    """Display the same [minimum, open-duration] CD used by the reference timers."""
+    source = metadata or RULE_DATA.get('cooldown_reference', {}).get('centers', {})
+    def span(value):
+        if not isinstance(value,list) or len(value)!=2 or not all(number(n) for n in value) or value[0]<=0 or value[1]<0:
+            return None
+        return [value[0],round(value[0]+value[1],6)]
+    grouped={}
+    for center,hunts in source.items():
+        definition=hunts.get(key,{})
+        normal,maintenance=span(definition.get('rt')),span(definition.get('mt'))
+        if normal is None and maintenance is None:continue
+        identity=json.dumps([normal,maintenance])
+        row=grouped.setdefault(identity,{'data_centers':[],'normal':normal,'maintenance':maintenance})
+        row['data_centers'].append(center)
+    return list(grouped.values())
 
 
 def forecast_seed(timestamp):
@@ -242,7 +261,8 @@ def timer_lines(raw, key, world, center, definition, manual, maintenance, now):
     return list(lines.values())
 
 
-def eligible_events(data, center, worlds, definitions, manual, maintenance, now):
+def eligible_events(data, center, worlds, definitions, manual, maintenance, now, delay_hours=None):
+    delay_hours = validate_delays(delay_hours or {}, RULES)
     validate_live(data, center, now)
     windows = {key: condition_window(key, now) for key in RULES}
     events = []
@@ -267,14 +287,14 @@ def eligible_events(data, center, worlds, definitions, manual, maintenance, now)
                     continue
                 start, end = death + params[0] * 3600, death + sum(params) * 3600
                 # This is exactly the green '可触发服' phase, not the grey forced phase.
-                if start <= now < end:
+                if start + delay_hours.get(key, 0) * 3600 <= now < end:
                     opened.append((end, line, start))
             if not opened:
                 continue
             first = min(opened)
             events.append({"hunt_key": key, "world": world, "data_center": center,
                            "instance": first[1] if definition.get("ln", 1) > 1 else None,
-                           "position": None, "window_start": condition[0],
+                           "position": None, "gate_open_at": first[2], "window_start": condition[0],
                            "source_at": data["generated"],
                            "window_end": min(condition[1], max(r[0] for r in opened)),
                            "event_key": json.dumps([center, world, key, condition[0]], ensure_ascii=False, separators=(",", ":"))})
@@ -295,7 +315,7 @@ class ReferenceTriggerSource:
             raise ValueError("参考站响应过大")
         return content.decode("utf-8") if text else json.loads(content)
 
-    def fetch(self, world_centers, now=None):
+    def fetch(self, world_centers, now=None, delay_hours=None):
         if not self.metadata or time.time() - self.checked_at >= 6 * 3600:
             self.metadata = decode_page(self.read("/Srank/", text=True))
             self.checked_at = time.time()
@@ -313,7 +333,7 @@ class ReferenceTriggerSource:
                 data = self.read("/api/live?dc=" + urllib.parse.quote(center))
                 observed = time.time() if now is None else now
                 events.extend(eligible_events(data, center, worlds, self.metadata[center],
-                                              manual["reports"], maintenance["reports"], observed))
+                                              manual["reports"], maintenance["reports"], observed, delay_hours))
                 valid_worlds.update(worlds)
             except Exception as exc:
                 errors.append(center + "：" + str(exc))
