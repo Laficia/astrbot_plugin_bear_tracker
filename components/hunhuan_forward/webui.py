@@ -1,0 +1,354 @@
+"""Authenticated AstrBot plugin-view API; no additional listening port."""
+
+import asyncio
+import base64
+import binascii
+import copy
+import hashlib
+import json
+import re
+import time
+
+from astrbot.api import logger
+from astrbot.api.web import request
+
+from .core import RECALL, OneBotTransport, Rule
+from ...quiet_hours import QuietHours
+
+PREFIX = "/astrbot_plugin_hunhuan_forward/webui/"
+MAX_IMAGE_BYTES = 5 * 1024 * 1024
+MAX_TOTAL_BYTES = 12 * 1024 * 1024
+
+
+def revision(config):
+    raw = json.dumps(dict(config), sort_keys=True, ensure_ascii=False)
+    return hashlib.sha256(raw.encode()).hexdigest()[:16]
+
+
+def validate_content(body):
+    text, images = body.get("text", ""), body.get("images", [])
+    if not isinstance(text, str) or len(text) > 5000:
+        raise ValueError("文字最多 5000 字")
+    if not isinstance(images, list) or len(images) > 6:
+        raise ValueError("最多附加 6 张图片")
+    segments = [{"type": "text", "data": {"text": text}}] if text.strip() else []
+    total = 0
+    for value in images:
+        if not isinstance(value, str) or len(value) > MAX_IMAGE_BYTES * 4 // 3 + 128:
+            raise ValueError("每张图片最多 5 MB")
+        match = re.fullmatch(
+            r"data:image/(png|jpeg|gif|webp);base64,([A-Za-z0-9+/=\r\n]+)", value
+        )
+        if not match:
+            raise ValueError("仅支持 PNG、JPEG、GIF、WebP 图片")
+        try:
+            raw = base64.b64decode(
+                match[2].replace("\r", "").replace("\n", ""), validate=True
+            )
+        except (ValueError, binascii.Error) as exc:
+            raise ValueError("图片编码无效") from exc
+        signatures = {
+            "png": raw.startswith(b"\x89PNG\r\n\x1a\n"),
+            "jpeg": raw.startswith(b"\xff\xd8\xff"),
+            "gif": raw.startswith((b"GIF87a", b"GIF89a")),
+            "webp": raw.startswith(b"RIFF") and raw[8:12] == b"WEBP",
+        }
+        if not signatures[match[1]]:
+            raise ValueError("图片内容与格式不一致")
+        total += len(raw)
+        if len(raw) > MAX_IMAGE_BYTES or total > MAX_TOTAL_BYTES:
+            raise ValueError("每张最多 5 MB，全部图片合计最多 12 MB")
+        segments.append(
+            {
+                "type": "image",
+                "data": {"file": "base64://" + base64.b64encode(raw).decode()},
+            }
+        )
+    if not segments:
+        raise ValueError("请输入文字或选择图片")
+    return segments
+
+
+def validate_rules(body):
+    items, interval = body.get("rules"), body.get("send_interval_ms", 500)
+    if type(interval) is not int or not 0 <= interval <= 60000:
+        raise ValueError("发送间隔须为 0～60000 毫秒")
+    if not isinstance(items, list) or len(items) > 100:
+        raise ValueError("最多保存 100 条规则")
+    result, names = [], set()
+    for item in items:
+        rule = Rule.parse(item)
+        name = rule.name.strip()
+        if len(name) > 80 or name in names:
+            raise ValueError("规则名不能重复，且最多 80 字")
+        if type(rule.enabled) is not bool or len(rule.platform_id) > 200:
+            raise ValueError("规则机器人或启用状态无效")
+        if len(rule.words) > 100 or any(
+            not w.strip() or len(w) > 200 for w in rule.words
+        ):
+            raise ValueError("每条规则最多 100 个关键词；关键词不能为空且最多 200 字")
+        if len(rule.sources) > 100 or len(rule.targets) > 100:
+            raise ValueError("每条规则的源群和目标群分别最多 100 个")
+        names.add(name)
+        result.append(
+            {
+                "__template_key": "forward",
+                "name": name,
+                "type": rule.kind,
+                "source_groups": list(rule.sources),
+                "target_groups": list(rule.targets),
+                "keywords": list(rule.words),
+                "platform_id": rule.platform_id,
+                "enabled": rule.enabled,
+                "forward_prefix": str(item.get("forward_prefix", "[转发]")),
+            }
+        )
+    return {"rules": result, "send_interval_ms": interval}
+
+
+class ForwardWebUI:
+    def __init__(self, plugin, config):
+        self.plugin, self.config = plugin, config
+        self.settings_lock = asyncio.Lock()
+        self.jobs = {}
+        for name, method, handler in [
+            ("state", "GET", self.state),
+            ("groups", "POST", self.groups),
+            ("settings", "POST", self.settings),
+            ("match", "POST", self.match),
+            ("send", "POST", self.send),
+            ("recall", "POST", self.recall),
+        ]:
+            plugin.context.register_web_api(
+                PREFIX + name, handler, [method], "群转发控制台"
+            )
+
+    def platforms(self):
+        manager = getattr(self.plugin.context, "platform_manager", None)
+        return [
+            p
+            for p in getattr(manager, "platform_insts", [])
+            if p.meta().name == "aiocqhttp"
+        ]
+
+    def platform(self, platform_id):
+        for platform in self.platforms():
+            if platform.meta().id == platform_id:
+                return platform
+        raise ValueError("请选择已连接的 OneBot 机器人")
+
+    async def group_list(self, platform):
+        tx = OneBotTransport(platform.get_client(), 1, 0)
+        result = await tx.call("get_group_list")
+        if not isinstance(result, list):
+            raise TypeError("群列表读取失败，请检查 NapCat 连接")
+        return [
+            {
+                "id": str(g["group_id"]),
+                "name": str(g.get("group_name") or g["group_id"]),
+                "members": g.get("member_count", 0),
+            }
+            for g in result
+        ]
+
+    def public_job(self, job):
+        return copy.deepcopy({k: v for k, v in job.items() if k != "fingerprint"})
+
+    async def state(self):
+        return {
+            "status": "ok",
+            "data": {
+                "platforms": [
+                    {"id": p.meta().id, "name": p.meta().id} for p in self.platforms()
+                ],
+                "rules": copy.deepcopy(self.config.get("rules", [])),
+                "send_interval_ms": self.config.get("send_interval_ms", 500),
+                "revision": revision(self.config),
+                "errors": self.plugin.engine.errors,
+                "recent": [
+                    self.public_job(j) for j in reversed(list(self.jobs.values()))
+                ],
+                "now": time.time(),
+            },
+        }
+
+    async def groups(self):
+        body = await request.json(default={})
+        try:
+            groups = await self.group_list(self.platform(body.get("platform_id")))
+            return {"status": "ok", "data": {"groups": groups}}
+        except Exception as exc:  # noqa: BLE001
+            return {"status": "error", "message": str(exc)}
+
+    async def settings(self):
+        body = await request.json(default={})
+        try:
+            values = validate_rules(body)
+            async with self.settings_lock:
+                if body.get("revision") != revision(self.config):
+                    raise ValueError("配置已在其他页面更新，请刷新后再保存")
+                previous = dict(self.config)
+                merged = previous | values
+                # Save first, then swap matching rules without clearing recall state.
+                if hasattr(self.config, "save_config"):
+                    try:
+                        await asyncio.to_thread(self.config.save_config, merged)
+                    except OSError:
+                        self.config.clear()
+                        self.config.update(previous)
+                        raise
+                self.config.update(values)
+                self.plugin.engine.rules = [Rule.parse(i) for i in values["rules"]]
+                self.plugin.engine.errors = []
+                self.plugin.engine.interval = values["send_interval_ms"] / 1000
+                return {"status": "ok", "data": {"revision": revision(self.config)}}
+        except (KeyError, TypeError, ValueError, OSError) as exc:
+            return {"status": "error", "message": str(exc)}
+
+    async def match(self):
+        body = await request.json(default={})
+        try:
+            values = validate_rules(
+                {"rules": [body.get("rule")], "send_interval_ms": 500}
+            )
+            rule = Rule.parse(values["rules"][0])
+            text = body.get("text", "")
+            if not isinstance(text, str) or len(text) > 5000:
+                raise ValueError("测试文字最多 5000 字")
+            group = int(body.get("group_id"))
+            targets = (
+                ()
+                if text.lstrip().startswith("/") or RECALL.fullmatch(text.strip())
+                else rule.destinations(group, text, body.get("platform_id"))
+            )
+            return {
+                "status": "ok",
+                "data": {"matched": bool(targets), "targets": list(targets)},
+            }
+        except (KeyError, TypeError, ValueError) as exc:
+            return {"status": "error", "message": str(exc)}
+
+    async def send(self):
+        body = await request.json(default={})
+        try:
+            if self.plugin.engine.closed:
+                raise ValueError("插件已卸载，请刷新页面")
+            token = body.get("request_id", "")
+            if not isinstance(token, str) or not re.fullmatch(
+                r"[a-zA-Z0-9-]{16,80}", token
+            ):
+                raise ValueError("发送请求标识无效，请刷新页面")
+            fingerprint = hashlib.sha256(
+                json.dumps(body, sort_keys=True).encode()
+            ).hexdigest()
+            previous = self.jobs.get(token)
+            if previous:
+                if previous["fingerprint"] != fingerprint:
+                    raise ValueError("请求标识已使用，请重新创建发送请求")
+                return {"status": "ok", "data": self.public_job(previous)}
+            if len(self.jobs) >= 50:
+                removable = next(
+                    (
+                        key
+                        for key, job in self.jobs.items()
+                        if job["status"] not in ("sending", "recalling")
+                    ),
+                    None,
+                )
+                if removable is None:
+                    raise ValueError("发送任务繁忙，请稍后再试")
+                del self.jobs[removable]
+            platform = self.platform(body.get("platform_id"))
+            segments = validate_content(body)
+            targets = body.get("group_ids")
+            if not isinstance(targets, list) or not 1 <= len(targets) <= 50:
+                raise ValueError("请选择 1～50 个接收群")
+            targets = list(dict.fromkeys(str(int(g)) for g in targets))
+            # Reserve before yielding so duplicate requests cannot send twice.
+            job = {
+                "id": token,
+                "fingerprint": fingerprint,
+                "platform_id": platform.meta().id,
+                "created_at": time.time(),
+                "status": "sending",
+                "results": [],
+                "expires_at": 0,
+            }
+            self.jobs[token] = job
+            task = asyncio.current_task()
+            self.plugin.tasks.add(task)
+            try:
+                groups = {g["id"]: g["name"] for g in await self.group_list(platform)}
+                if any(g not in groups for g in targets):
+                    raise ValueError("所选群已不在机器人群列表中，请刷新群列表")
+                tx = OneBotTransport(platform.get_client(), 1, 0)
+                for gid in targets:
+                    row = {
+                        "group_id": gid,
+                        "name": groups[gid],
+                        "state": "unknown",
+                        "message_id": None,
+                    }
+                    job["results"].append(row)
+                    try:
+                        result = await self.plugin.engine.limited(
+                            tx.call,
+                            "send_group_msg",
+                            group_id=int(gid),
+                            message=segments,
+                        )
+                        mid = (
+                            result.get("message_id")
+                            if isinstance(result, dict)
+                            else None
+                        )
+                        if mid is not None and str(mid):
+                            row.update(state="sent", message_id=str(mid))
+                        else:
+                            row["detail"] = (
+                                "接口未返回消息 ID，请到群内核对；未自动重发"
+                            )
+                    except QuietHours as exc:
+                        row.update(state='silenced',detail=str(exc))
+                    except Exception:  # noqa: BLE001
+                        logger.exception("[HunHuan UI] 发送到群 %s 未得到成功回执", gid)
+                        row["detail"] = "未得到成功回执，请到群内核对后再决定是否重发"
+                job["status"] = "complete"
+                job["expires_at"] = time.time() + 120
+            except asyncio.CancelledError:
+                job["status"] = "interrupted"
+                raise
+            except Exception as exc:  # noqa: BLE001
+                job["status"], job["error"] = "failed", str(exc)
+            finally:
+                self.plugin.tasks.discard(task)
+            return {"status": "ok", "data": self.public_job(job)}
+        except (KeyError, TypeError, ValueError) as exc:
+            return {"status": "error", "message": str(exc)}
+
+    async def recall(self):
+        body = await request.json(default={})
+        job = self.jobs.get(body.get("id"))
+        if not job or job["status"] != "complete" or time.time() >= job["expires_at"]:
+            return {"status": "error", "message": "该批消息不可撤回或已超过两分钟"}
+        job["status"] = "recalling"
+        task = asyncio.current_task()
+        self.plugin.tasks.add(task)
+        try:
+            tx = OneBotTransport(self.platform(job["platform_id"]).get_client(), 1, 0)
+            for row in job["results"]:
+                if row["state"] != "sent":
+                    continue
+                try:
+                    await self.plugin.engine.limited(tx.delete, row["message_id"])
+                    row["state"] = "recalled"
+                    row.pop("detail", None)
+                except Exception:  # noqa: BLE001
+                    row["detail"] = "撤回失败，可在原有效期内重试"
+            job["status"] = "complete"
+            return {"status": "ok", "data": self.public_job(job)}
+        except Exception as exc:  # noqa: BLE001
+            return {"status": "error", "message": str(exc)}
+        finally:
+            job["status"] = "complete"
+            self.plugin.tasks.discard(task)

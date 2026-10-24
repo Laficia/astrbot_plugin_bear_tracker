@@ -1,0 +1,76 @@
+{
+  "send_interval_ms": {
+    "description": "转发、回执和撤回的共享间隔（毫秒）",
+    "type": "int",
+    "default": 500,
+    "hint": "与原库默认一致。负数按 0 处理。保存配置后重载插件。"
+  },
+  "rules": {
+    "description": "转发规则",
+    "type": "template_list",
+    "default": [],
+    "hint": "添加规则并填写源群、目标群及关键词。多条规则命中同一个目标时会重复转发，与原库一致。",
+    "templates": {
+      "forward": {
+        "name": "群转发规则",
+        "display_item": "name",
+        "items": {
+          "name": {
+            "description": "规则名称",
+            "type": "string",
+            "default": "重要通知"
+          },
+          "type": {
+            "description": "匹配方式",
+            "type": "string",
+            "default": "prefix",
+            "options": [
+              "prefix",
+              "keyword"
+            ],
+            "labels": [
+              "前缀",
+              "包含关键词"
+            ]
+          },
+          "source_groups": {
+            "description": "源群号列表",
+            "type": "list",
+            "default": [],
+            "hint": "每项填写一个群号。"
+          },
+          "target_groups": {
+            "description": "目标群号列表",
+            "type": "list",
+            "default": [],
+            "hint": "机器人须已加入目标群。"
+          },
+          "keywords": {
+            "description": "关键词列表",
+            "type": "list",
+            "default": [
+              "重要",
+              "紧急"
+            ]
+          },
+          "forward_prefix": {
+            "description": "原库兼容字段（不添加前缀）",
+            "type": "string",
+            "default": "[转发]",
+            "hint": "原库当前版本不会把此前缀追加到消息中，本插件保持一致。"
+          },
+          "enabled": {
+            "description": "启用此规则",
+            "type": "bool",
+            "default": true
+          },
+          "platform_id": {
+            "description": "限定机器人平台实例 ID（空为全部）",
+            "type": "string",
+            "default": ""
+          }
+        }
+      }
+    }
+  }
+}

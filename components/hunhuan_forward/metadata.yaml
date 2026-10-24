@@ -1,0 +1,14 @@
+name: astrbot_plugin_hunhuan_forward
+display_name: HunHuan 群转发
+desc: 可视化选择群聊、发送文字图片、管理关键词自动转发规则，支持批量撤回。
+version: v1.1.0
+author: local
+support_platforms:
+  - aiocqhttp
+i18n:
+  zh-CN:
+    pages:
+      console: 群转发控制台
+    views:
+      console:
+        title: 群转发控制台

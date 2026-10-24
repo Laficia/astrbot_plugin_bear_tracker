@@ -1,0 +1,14 @@
+{
+  "send_interval_ms": 500,
+  "rules": [
+    {
+      "__template_key": "forward",
+      "name": "重要通知",
+      "type": "prefix",
+      "source_groups": [123456789],
+      "target_groups": [987654321, 555666777],
+      "keywords": ["重要", "紧急"],
+      "forward_prefix": "[转发]"
+    }
+  ]
+}
