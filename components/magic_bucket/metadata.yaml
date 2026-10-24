@@ -1,0 +1,15 @@
+name: astrbot_plugin_magic_bucket
+display_name: 魔法水桶
+desc: 魔法水桶 0.11.7 的 AstrBot 移植：群转发撤回、地图补全、SS配图、查漏、狩猎采集和芒果选点广播
+version: 1.1.0
+author: local
+astrbot_version: ">=4.10.4"
+support_platforms:
+  - aiocqhttp
+i18n:
+  zh-CN:
+    pages:
+      console: 魔法水桶控制台
+    views:
+      console:
+        title: 魔法水桶控制台

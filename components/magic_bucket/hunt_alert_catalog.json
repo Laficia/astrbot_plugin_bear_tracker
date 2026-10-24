@@ -1,0 +1,261 @@
+{
+  "hunts": [
+    {
+      "k": "Agrippa the Mighty",
+      "cn": "阿格里帕",
+      "regionCn": "摩杜纳"
+    },
+    {
+      "k": "Bonnacon",
+      "cn": "火愤牛",
+      "regionCn": "西拉诺西亚"
+    },
+    {
+      "k": "Brontes",
+      "cn": "布隆特斯",
+      "regionCn": "中萨纳兰"
+    },
+    {
+      "k": "Chernobog",
+      "cn": "牛头黑神",
+      "regionCn": "拉诺西亚外地"
+    },
+    {
+      "k": "Croakadile",
+      "cn": "咕尔呱洛斯",
+      "regionCn": "拉诺西亚低地"
+    },
+    {
+      "k": "Croque-Mitaine",
+      "cn": "护土精灵",
+      "regionCn": "中拉诺西亚"
+    },
+    {
+      "k": "Laideronnette",
+      "cn": "雷德罗巨蛇",
+      "regionCn": "黑衣森林中央林区"
+    },
+    {
+      "k": "Lampalagua",
+      "cn": "巴拉乌尔",
+      "regionCn": "东萨纳兰"
+    },
+    {
+      "k": "Mindflayer",
+      "cn": "夺心魔",
+      "regionCn": "黑衣森林南部林区"
+    },
+    {
+      "k": "Minhocao",
+      "cn": "蚓螈巨虫",
+      "regionCn": "北萨纳兰"
+    },
+    {
+      "k": "Nandi",
+      "cn": "南迪",
+      "regionCn": "拉诺西亚高地"
+    },
+    {
+      "k": "Nunyunuwi",
+      "cn": "努纽努维",
+      "regionCn": "南萨纳兰"
+    },
+    {
+      "k": "Safat",
+      "cn": "萨法特",
+      "regionCn": "库尔札斯中央高地"
+    },
+    {
+      "k": "The Garlok",
+      "cn": "伽洛克",
+      "regionCn": "东拉诺西亚"
+    },
+    {
+      "k": "Thousand-cast Theda",
+      "cn": "千竿口花希达",
+      "regionCn": "黑衣森林北部林区"
+    },
+    {
+      "k": "Wulgaru",
+      "cn": "乌尔伽鲁",
+      "regionCn": "黑衣森林东部林区"
+    },
+    {
+      "k": "Zona Seeker",
+      "cn": "虚无探索者",
+      "regionCn": "西萨纳兰"
+    },
+    {
+      "k": "Bird of Paradise",
+      "cn": "极乐鸟",
+      "regionCn": "阿巴拉提亚云海"
+    },
+    {
+      "k": "Gandarewa",
+      "cn": "刚德瑞瓦",
+      "regionCn": "翻云雾海"
+    },
+    {
+      "k": "Kaiser Behemoth",
+      "cn": "凯撒贝希摩斯",
+      "regionCn": "库尔札斯西部高地"
+    },
+    {
+      "k": "Leucrotta",
+      "cn": "卢克洛塔",
+      "regionCn": "魔大陆阿济兹拉"
+    },
+    {
+      "k": "Senmurv",
+      "cn": "神穆尔鸟",
+      "regionCn": "龙堡参天高地"
+    },
+    {
+      "k": "The Pale Rider",
+      "cn": "苍白骑士",
+      "regionCn": "龙堡内陆低地"
+    },
+    {
+      "k": "Bone Crawler",
+      "cn": "爬骨怪龙",
+      "regionCn": "基拉巴尼亚山区"
+    },
+    {
+      "k": "Gamma",
+      "cn": "伽马",
+      "regionCn": "延夏"
+    },
+    {
+      "k": "Okina",
+      "cn": "巨大鳐",
+      "regionCn": "红玉海"
+    },
+    {
+      "k": "Orghana",
+      "cn": "兀鲁忽乃朝鲁",
+      "regionCn": "太阳神草原"
+    },
+    {
+      "k": "Salt and Light",
+      "cn": "盐和光",
+      "regionCn": "基拉巴尼亚湖区"
+    },
+    {
+      "k": "Udumbara",
+      "cn": "优昙婆罗花",
+      "regionCn": "基拉巴尼亚边区"
+    },
+    {
+      "k": "Aglaope",
+      "cn": "阿格拉俄珀",
+      "regionCn": "伊尔美格"
+    },
+    {
+      "k": "Forgiven Pedantry",
+      "cn": "得到宽恕的炫学",
+      "regionCn": "珂露西亚岛"
+    },
+    {
+      "k": "Gunitt",
+      "cn": "顾尼图",
+      "regionCn": "黑风海"
+    },
+    {
+      "k": "Ixtab",
+      "cn": "伊休妲",
+      "regionCn": "拉凯提卡大森林"
+    },
+    {
+      "k": "Tarchia",
+      "cn": "多智兽",
+      "regionCn": "安穆·艾兰"
+    },
+    {
+      "k": "Tyger",
+      "cn": "戾虫",
+      "regionCn": "雷克兰德"
+    },
+    {
+      "k": "Armstrong",
+      "cn": "阿姆斯特朗",
+      "regionCn": "加雷马"
+    },
+    {
+      "k": "Burfurlur the Canny",
+      "cn": "布弗鲁",
+      "regionCn": "迷津"
+    },
+    {
+      "k": "Narrow-rift",
+      "cn": "狭缝",
+      "regionCn": "天外天垓"
+    },
+    {
+      "k": "Ophioneus",
+      "cn": "俄菲翁尼厄斯",
+      "regionCn": "厄尔庇斯"
+    },
+    {
+      "k": "Ruminator",
+      "cn": "沉思之物",
+      "regionCn": "叹息海"
+    },
+    {
+      "k": "Sphatika",
+      "cn": "颇胝迦",
+      "regionCn": "萨维奈岛"
+    },
+    {
+      "k": "Atticus the Primogenitor",
+      "cn": "先驱勇士 阿提卡斯",
+      "regionCn": "遗产之地"
+    },
+    {
+      "k": "Ihnuxokiy",
+      "cn": "伊努索奇",
+      "regionCn": "克扎玛乌卡湿地"
+    },
+    {
+      "k": "Kirlirger the Abhorrent",
+      "cn": "厌忌之人 奇里格",
+      "regionCn": "奥阔帕恰山"
+    },
+    {
+      "k": "Neyoozoteel",
+      "cn": "内尤佐缇",
+      "regionCn": "亚克特尔树海"
+    },
+    {
+      "k": "Sansheya",
+      "cn": "山谢亚",
+      "regionCn": "夏劳尼荒野"
+    },
+    {
+      "k": "The Forecaster",
+      "cn": "天气预报机器人",
+      "regionCn": "活着的记忆"
+    }
+  ],
+  "worlds": [
+    "水晶塔",
+    "银泪湖",
+    "太阳海岸",
+    "伊修加德",
+    "红茶川",
+    "白银乡",
+    "白金幻象",
+    "神拳痕",
+    "潮风亭",
+    "旅人栈桥",
+    "拂晓之间",
+    "龙巢神殿",
+    "梦羽宝境"
+  ],
+  "overdueWorlds": [
+    "水晶塔",
+    "银泪湖",
+    "太阳海岸",
+    "伊修加德",
+    "红茶川"
+  ]
+}

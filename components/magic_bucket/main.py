@@ -1,0 +1,106 @@
+import asyncio
+import time
+from pathlib import Path
+
+from astrbot.api import AstrBotConfig, logger
+from astrbot.api.event import AstrMessageEvent, filter
+from astrbot.api.star import Context
+from ._host import Component as Star, StarTools
+
+from .adapter import Event, OneBotAPI
+from .s_hunt_names import ForwardBotPlugin, load_config
+from ...scoped_magic import ScopedMagicEngine
+from ...feature_controls import magic_profile
+
+
+class MagicBucket(Star):
+    def __init__(self, context: Context, config: AstrBotConfig):
+        super().__init__(context)
+        self.settings = config
+        self.engines = {}
+        self.lock = asyncio.Lock()
+        self.tasks = set()
+        self.closed = False
+        self.reconfiguring = False
+        self.last_received = None
+        self.last_error = ''
+        self.received = 0
+        if context is not None and hasattr(context, 'register_web_api'):
+            from .webui import MagicWebUI
+            self.webui = MagicWebUI(self)
+
+    async def on_group(self, event: AstrMessageEvent):
+        if self.closed or self.reconfiguring or not self.settings.get('enabled', False):
+            return
+        if event.get_platform_name() != 'aiocqhttp' or not event.get_group_id():
+            return
+        raw = event.message_obj.raw_message
+        if not isinstance(raw, dict) or raw.get('post_type', 'message') != 'message':
+            return
+        account = str(raw.get('self_id') or event.message_obj.self_id)
+        expected = str(self.settings.get('bot_uin', '')).strip()
+        if expected and account != expected:
+            return
+        if str(event.get_sender_id()) == account:
+            return
+        if not isinstance(raw.get('message'), list):
+            logger.warning('[魔法水桶] 需要 OneBot array 消息格式')
+            return
+        key = (event.get_platform_id(), account)
+        task = asyncio.current_task()
+        self.tasks.add(task)
+        self.received += 1
+        self.last_received = time.time()
+        try:
+            async with self.lock:
+                if self.closed or self.reconfiguring:
+                    return
+                engine = self.engines.get(key)
+                if engine is None:
+                    data = Path(StarTools.get_data_dir('astrbot_plugin_magic_bucket'))
+                    # Avoid unsafe platform IDs in local paths.
+                    import hashlib
+                    data = data/hashlib.sha256(repr(key).encode()).hexdigest()[:16]
+                    data.mkdir(parents=True, exist_ok=True)
+                    cfg = magic_profile(self.settings, load_config(self.settings, data))
+                    engine = ScopedMagicEngine(cfg, OneBotAPI(self.context.guard_bot(event.bot), account), self.settings.parent)
+                    try:
+                        await engine.on_load()
+                    except BaseException:
+                        if hasattr(engine, '_recall_cache'):
+                            await engine.on_close()
+                        raise
+                    self.engines[key] = engine
+                engine.api.bot = self.context.guard_bot(event.bot)
+            wrapped = Event(event, engine.api)
+            text = ''.join(s.text for s in wrapped.message.filter_text()).strip()
+            consumed = bool(engine.recall_command.fullmatch(text))
+            # Mango handler returns to the upstream dispatch; capture its result
+            # through the wrapper so only consumed commands stop propagation.
+            wrapped.consumed = False
+            await engine.onGroupMessageReceived(wrapped)
+            if consumed or wrapped.consumed:
+                event.stop_event()
+        except asyncio.CancelledError:
+            raise
+        except Exception as exc:
+            self.last_error = type(exc).__name__ + ': ' + str(exc)
+            logger.exception('[魔法水桶] 处理失败，请检查配置和 OneBot 连接')
+        finally:
+            self.tasks.discard(task)
+
+    async def terminate(self):
+        self.closed = True
+        await self.reset_engines()
+
+    async def reset_engines(self):
+        self.reconfiguring = True
+        tasks = [task for task in self.tasks if task is not asyncio.current_task()]
+        for task in tasks:
+            task.cancel()
+        await asyncio.gather(*tasks, return_exceptions=True)
+        async with self.lock:
+            for engine in self.engines.values():
+                await engine.on_close()
+            self.engines.clear()
+        self.reconfiguring = False

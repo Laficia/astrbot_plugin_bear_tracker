@@ -1,0 +1,27 @@
+{
+  "enabled": {
+    "description": "启用魔法水桶（内置现有群规则，确认接管后开启）",
+    "type": "bool",
+    "default": false
+  },
+  "bot_uin": {
+    "description": "发送账号限制（可选）；留空跟随 AstrBot 接入的 OneBot 账号，支持新增和换号",
+    "type": "string",
+    "default": ""
+  },
+  "send_interval_ms": {
+    "description": "发送间隔（毫秒）",
+    "type": "int",
+    "default": 500
+  },
+  "rules_json": {
+    "description": "转发规则 JSON 数组；留空使用原机器人现有 4 条规则",
+    "type": "text",
+    "default": ""
+  },
+  "overrides_json": {
+    "description": "高级配置 JSON 对象，递归覆盖 profile.json；所有功能参数均可在此修改",
+    "type": "text",
+    "default": "{}"
+  }
+}
