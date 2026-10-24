@@ -1,0 +1,22 @@
+name: astrbot_plugin_bear_tracker
+display_name: 莫古环的魔法水桶
+desc: FF14 S怪播报与地图标点、狩猎车文字提醒及图片指令，集成群消息转发、查漏采集、芒果广播和手动图文群发，支持统一WebUI。
+version: 2.9.0
+author: Laficia
+repo: https://github.com/Laficia/astrbot_plugin_bear_tracker
+astrbot_version: ">=4.29.1"
+support_platforms:
+  - aiocqhttp
+  - qq_official
+tags:
+  - FF14
+  - 狩猎
+  - 群管理
+help: 管理员群内 /S播报 开启；/S播报 关闭；/S播报 状态。查询 /熊计时 水晶塔 雷德罗巨蛇 S；/熊资料 雷德罗巨蛇。
+i18n:
+  zh-CN:
+    pages:
+      console: S怪控制台
+    views:
+      console:
+        title: S怪控制台

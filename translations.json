@@ -1,0 +1,2933 @@
+{
+  "hunts": {
+    "White Joker": {
+      "en": "White Joker",
+      "de": "Weiß[a] Joker",
+      "fr": "joker blanc",
+      "jp": "ホワイトジョーカー",
+      "cn": "白鬼鼠王",
+      "tw": "白鬼鼠王"
+    },
+    "Forneus": {
+      "en": "Forneus",
+      "de": "Forneus",
+      "fr": "Forneus",
+      "jp": "ファルネウス",
+      "cn": "弗内乌斯",
+      "tw": "弗內烏斯"
+    },
+    "Laideronnette": {
+      "en": "Laideronnette",
+      "de": "Laideronette",
+      "fr": "Laideronnette",
+      "jp": "レドロネット",
+      "cn": "雷德罗巨蛇",
+      "tw": "雷德羅巨蛇"
+    },
+    "Stinging Sophie": {
+      "en": "Stinging Sophie",
+      "de": "Stinkig[a] Sophie",
+      "fr": "Sophie la dardante",
+      "jp": "スティンギング・ソフィー",
+      "cn": "击刺魔蜂索菲",
+      "tw": "擊刺魔蜂索菲"
+    },
+    "Melt": {
+      "en": "Melt",
+      "de": "Schmelze",
+      "fr": "Fondu",
+      "jp": "メルティゼリー",
+      "cn": "千眼凝胶",
+      "tw": "千眼凝膠"
+    },
+    "Wulgaru": {
+      "en": "Wulgaru",
+      "de": "Wulgaru",
+      "fr": "Wulgaru",
+      "jp": "ウルガル",
+      "cn": "乌尔伽鲁",
+      "tw": "烏爾伽魯"
+    },
+    "Monarch Ogrefly": {
+      "en": "Monarch Ogrefly",
+      "de": "Monarch Ogerlibelle",
+      "fr": "Agrion Ogre Monarque",
+      "jp": "モナーク・オーガフライ",
+      "cn": "君王鬼蜻蜓",
+      "tw": "君王鬼蜻蜓"
+    },
+    "Ghede Ti Malice": {
+      "en": "Ghede Ti Malice",
+      "de": "Ghede Titus Häme",
+      "fr": "Guédé Ti-Malice",
+      "jp": "ゲーデ",
+      "cn": "盖得",
+      "tw": "蓋得"
+    },
+    "Mindflayer": {
+      "en": "Mindflayer",
+      "de": "Seelenbrenner",
+      "fr": "Flagelleur Mental",
+      "jp": "マインドフレア",
+      "cn": "夺心魔",
+      "tw": "精神吸取者"
+    },
+    "Phecda": {
+      "en": "Phecda",
+      "de": "Phecda",
+      "fr": "Phecda",
+      "jp": "フェクダ",
+      "cn": "天玑巨熊",
+      "tw": "天璣巨熊"
+    },
+    "Girtab": {
+      "en": "Girtab",
+      "de": "Girtab",
+      "fr": "Girtab",
+      "jp": "ギルタブ",
+      "cn": "尾宿蛛蝎",
+      "tw": "尾宿蛛蠍"
+    },
+    "Thousand-cast Theda": {
+      "en": "Thousand-cast Theda",
+      "de": "Tausendzahn Theda",
+      "fr": "Theda la Tripoteuse",
+      "jp": "サウザンドキャスト・セダ",
+      "cn": "千竿口花希达",
+      "tw": "千竿食腐獸希達"
+    },
+    "Sewer Syrup": {
+      "en": "Sewer Syrup",
+      "de": "Abwasser-Sirup",
+      "fr": "Syrop d'égout",
+      "jp": "スェアーシロップ",
+      "cn": "阴沟毒液",
+      "tw": "陰溝毒液"
+    },
+    "Alectryon": {
+      "en": "Alectryon",
+      "de": "Alectryon",
+      "fr": "Alectryon",
+      "jp": "アレクトリオン",
+      "cn": "阿列刻特利昂",
+      "tw": "阿列刻特利昂"
+    },
+    "Zona Seeker": {
+      "en": "Zona Seeker",
+      "de": "Zona Sucher",
+      "fr": "Zona Seeker",
+      "jp": "ゾーナ・シーカー",
+      "cn": "虚无探索者",
+      "tw": "虛無探索者"
+    },
+    "Ovjang": {
+      "en": "Ovjang",
+      "de": "Ovjang",
+      "fr": "Ovjang",
+      "jp": "アヴゼン",
+      "cn": "奥弗杰恩",
+      "tw": "奧弗傑恩"
+    },
+    "Sabotender Bailarina": {
+      "en": "Sabotender Bailarina",
+      "de": "Sabotender Bailarina",
+      "fr": "Pampa Ballerine",
+      "jp": "サボテンダー・バイラリーナ",
+      "cn": "花舞仙人刺",
+      "tw": "花舞仙人刺"
+    },
+    "Brontes": {
+      "en": "Brontes",
+      "de": "Brontes",
+      "fr": "Brontes",
+      "jp": "ブロンテス",
+      "cn": "布隆特斯",
+      "tw": "布隆特斯"
+    },
+    "Gatling": {
+      "en": "Gatling",
+      "de": "Gatling",
+      "fr": "Acanthor",
+      "jp": "ガトリングス",
+      "cn": "加特林针鼹",
+      "tw": "加特林針鼴"
+    },
+    "Maahes": {
+      "en": "Maahes",
+      "de": "Maahes",
+      "fr": "Maahes",
+      "jp": "マヘス",
+      "cn": "玛赫斯",
+      "tw": "瑪赫斯"
+    },
+    "Lampalagua": {
+      "en": "Lampalagua",
+      "de": "Balaur",
+      "fr": "Balaur",
+      "jp": "バルウール",
+      "cn": "巴拉乌尔",
+      "tw": "巴拉烏爾"
+    },
+    "Albin the Ashen": {
+      "en": "Albin the Ashen",
+      "de": "Albin Aschfahl",
+      "fr": "Albin\r\nle Blafard",
+      "jp": "死灰のアルビン",
+      "cn": "死灰复燃的阿尔宾",
+      "tw": "死灰復燃的阿爾賓"
+    },
+    "Zanigoh": {
+      "en": "Zanig'oh",
+      "de": "Zanig'oh",
+      "fr": "Zanig'oh",
+      "jp": "ザニゴ",
+      "cn": "札尼戈",
+      "tw": "札尼戈"
+    },
+    "Nunyunuwi": {
+      "en": "Nunyunuwi",
+      "de": "Nunyunuwi",
+      "fr": "Nunyunuwi",
+      "jp": "ヌニュヌウィ",
+      "cn": "努纽努维",
+      "tw": "努紐努維"
+    },
+    "Flame Sergeant Dalvag": {
+      "en": "Flame Sergeant Dalvag",
+      "de": "Dalvag",
+      "fr": "Sergent-major Dalvag",
+      "jp": "不滅のフェランド闘軍曹",
+      "cn": "永恒不灭的菲兰德副耀士",
+      "tw": "永恆不滅的菲蘭德副耀士"
+    },
+    "Dalvags Final Flame": {
+      "en": "Dalvag's Final Flame",
+      "de": "Letzt[a] Flamme[p] Dalvags",
+      "fr": "Dernière Flamme de Dalvag",
+      "jp": "ファイナルフレイム",
+      "cn": "菲兰德的遗火",
+      "tw": "菲蘭德的遺火"
+    },
+    "Minhocao": {
+      "en": "Minhocao",
+      "de": "Minhocao",
+      "fr": "Minhocao",
+      "jp": "ミニョーカオン",
+      "cn": "蚓螈巨虫",
+      "tw": "蚓螈巨蟲"
+    },
+    "Skogs Fru": {
+      "en": "Skogs Fru",
+      "de": "Skogs Fru",
+      "fr": "Skogs Fru",
+      "jp": "スコッグ・フリュー",
+      "cn": "花林女郎",
+      "tw": "花林女郎"
+    },
+    "Vogaal Ja": {
+      "en": "Vogaal Ja",
+      "de": "Vogaal Ja",
+      "fr": "Vogaal Ja",
+      "jp": "醜男のヴォガージャ",
+      "cn": "丑男子 沃迦加",
+      "tw": "醜男子 沃迦加"
+    },
+    "Croque-Mitaine": {
+      "en": "Croque-mitaine",
+      "de": "Croque Mitaine",
+      "fr": "Croque-mitaine",
+      "jp": "クロック・ミテーヌ",
+      "cn": "护土精灵",
+      "tw": "護土精靈"
+    },
+    "Barbastelle": {
+      "en": "Barbastelle",
+      "de": "Barbastelle",
+      "fr": "Barbastelle",
+      "jp": "バーバステル",
+      "cn": "宽耳凶蝠",
+      "tw": "寬耳兇蝠"
+    },
+    "Unktehi": {
+      "en": "Unktehi",
+      "de": "Unktehi",
+      "fr": "Unktehi",
+      "jp": "ウンクテヒ",
+      "cn": "乌克提希",
+      "tw": "烏克提希"
+    },
+    "Croakadile": {
+      "en": "Croakadile",
+      "de": "Quakquak",
+      "fr": "Croabéros",
+      "jp": "ケロゲロス",
+      "cn": "咕尔呱洛斯",
+      "tw": "凱羅葛洛斯"
+    },
+    "Bloody Mary": {
+      "en": "Bloody Mary",
+      "de": "Bloody Mary",
+      "fr": "Mary la Sanglante",
+      "jp": "ブラッディ・マリー",
+      "cn": "血腥玛丽",
+      "tw": "血腥瑪麗"
+    },
+    "Hellsclaw": {
+      "en": "Hellsclaw",
+      "de": "Höllenklaue",
+      "fr": "Griffe des Enfers Magitek",
+      "jp": "魔導ヘルズクロー",
+      "cn": "魔导地狱爪",
+      "tw": "魔導地獄爪"
+    },
+    "The Garlok": {
+      "en": "The Garlok",
+      "de": "Garlok",
+      "fr": "Garlok",
+      "jp": "ガーロック",
+      "cn": "伽洛克",
+      "tw": "伽洛克"
+    },
+    "Dark Helmet": {
+      "en": "Dark Helmet",
+      "de": "Dunkelhelm",
+      "fr": "Casque Noir",
+      "jp": "ダークヘルメット",
+      "cn": "暗盔魔蟹",
+      "tw": "暗盔魔蟹"
+    },
+    "Nahn": {
+      "en": "Nahn",
+      "de": "Nahn",
+      "fr": "Nahn",
+      "jp": "ナン",
+      "cn": "纳恩",
+      "tw": "納恩"
+    },
+    "Bonnacon": {
+      "en": "Bonnacon",
+      "de": "Bonnacon",
+      "fr": "Bonnacon",
+      "jp": "ボナコン",
+      "cn": "火愤牛",
+      "tw": "火憤牛"
+    },
+    "Myradrosh": {
+      "en": "Myradrosh",
+      "de": "Myradrosh",
+      "fr": "Myradrosh",
+      "jp": "ミラドロッシュ",
+      "cn": "米腊德罗斯蜂鸟",
+      "tw": "米臘德羅斯蜂鳥"
+    },
+    "Marberry": {
+      "en": "Marberry",
+      "de": "Marberry",
+      "fr": "Marberry",
+      "jp": "マーベリー",
+      "cn": "玛贝利",
+      "tw": "瑪貝利"
+    },
+    "Nandi": {
+      "en": "Nandi",
+      "de": "Nandi",
+      "fr": "Nandi",
+      "jp": "ナンディ",
+      "cn": "南迪",
+      "tw": "南迪"
+    },
+    "Vuokho": {
+      "en": "Vuokho",
+      "de": "Vuokho",
+      "fr": "Vuokho",
+      "jp": "ヴオコー",
+      "cn": "巫刻猎鹫",
+      "tw": "巫刻獵鷲"
+    },
+    "Cornu": {
+      "en": "Cornu",
+      "de": "Cornu",
+      "fr": "Cornu",
+      "jp": "コンヌ",
+      "cn": "角祖",
+      "tw": "角祖"
+    },
+    "Chernobog": {
+      "en": "Chernobog",
+      "de": "Czernobog",
+      "fr": "Czernobog",
+      "jp": "チェルノボーグ",
+      "cn": "牛头黑神",
+      "tw": "牛頭黑神"
+    },
+    "Naul": {
+      "en": "Naul",
+      "de": "Naul",
+      "fr": "Naul",
+      "jp": "ナウル",
+      "cn": "纳乌尔",
+      "tw": "納烏爾"
+    },
+    "Marraco": {
+      "en": "Marraco",
+      "de": "Marraco",
+      "fr": "Marraco",
+      "jp": "マラク",
+      "cn": "马拉克",
+      "tw": "馬拉克"
+    },
+    "Safat": {
+      "en": "Safat",
+      "de": "Safat",
+      "fr": "Safat",
+      "jp": "サファト",
+      "cn": "萨法特",
+      "tw": "薩法特"
+    },
+    "Leech King": {
+      "en": "Leech King",
+      "de": "Egelkönig",
+      "fr": "Roi des Sangsues",
+      "jp": "リーチキング",
+      "cn": "水蛭王",
+      "tw": "水蛭王"
+    },
+    "Kurrea": {
+      "en": "Kurrea",
+      "de": "Kurrea",
+      "fr": "Kurrea",
+      "jp": "クーレア",
+      "cn": "库雷亚",
+      "tw": "庫雷亞"
+    },
+    "Agrippa the Mighty": {
+      "en": "Agrippa the Mighty",
+      "de": "Agrippa",
+      "fr": "Agrippa",
+      "jp": "アグリッパ",
+      "cn": "阿格里帕",
+      "tw": "阿格里帕"
+    },
+    "Alteci": {
+      "en": "Alteci",
+      "de": "Artic",
+      "fr": "Altek",
+      "jp": "アルティック",
+      "cn": "阿尔提克",
+      "tw": "阿爾提克"
+    },
+    "Kreutzet": {
+      "en": "Kreutzet",
+      "de": "Kreutzet",
+      "fr": "Kreutzet",
+      "jp": "クルーゼ",
+      "cn": "克鲁泽",
+      "tw": "克魯澤"
+    },
+    "Mirka": {
+      "en": "Mirka",
+      "de": "Mirka",
+      "fr": "Mirka",
+      "jp": "ミルカ",
+      "cn": "米勒卡",
+      "tw": "米勒卡"
+    },
+    "Lyuba": {
+      "en": "Lyuba",
+      "de": "Lyuba",
+      "fr": "Lyuba",
+      "jp": "リューバ",
+      "cn": "卢芭",
+      "tw": "盧芭"
+    },
+    "Kaiser Behemoth": {
+      "en": "Kaiser Behemoth",
+      "de": "Kaiser-Behemoth",
+      "fr": "Béhémoth Empereur",
+      "jp": "カイザーベヒーモス",
+      "cn": "凯撒贝希摩斯",
+      "tw": "凱撒凶惡巨獸"
+    },
+    "Gnath cometdrone": {
+      "en": "Gnath Cometdrone",
+      "de": "Gnath-Kometdrohne",
+      "fr": "Gnathe Myrmicomète",
+      "jp": "グナース・コメットドローン",
+      "cn": "骨颌彗星兵",
+      "tw": "骨頜彗星兵"
+    },
+    "Thextera": {
+      "en": "Thextera",
+      "de": "Dexter",
+      "fr": "Texta",
+      "jp": "テクスタ",
+      "cn": "提克斯塔",
+      "tw": "提克斯塔"
+    },
+    "Pylraster": {
+      "en": "Pylraster",
+      "de": "Xhauron",
+      "fr": "Pirlasta",
+      "jp": "パイルラスタ",
+      "cn": "派拉斯特暴龙",
+      "tw": "派拉斯特暴龍"
+    },
+    "Lord of the Wyverns": {
+      "en": "Lord of the Wyverns",
+      "de": "Wyvern-Lord",
+      "fr": "Seigneur des Wyvernes",
+      "jp": "ワイバーンロード",
+      "cn": "双足飞龙之王",
+      "tw": "雙足飛龍之王"
+    },
+    "Senmurv": {
+      "en": "Senmurv",
+      "de": "Simurgh",
+      "fr": "Sênmurw",
+      "jp": "セーンムルウ",
+      "cn": "神穆尔鸟",
+      "tw": "神莫爾鳥"
+    },
+    "Scitalis": {
+      "en": "Scitalis",
+      "de": "Scitalis",
+      "fr": "Scitalis",
+      "jp": "スキタリス",
+      "cn": "斯奇塔利斯",
+      "tw": "斯奇塔利斯"
+    },
+    "The Scarecrow": {
+      "en": "The Scarecrow",
+      "de": "Tyranno",
+      "fr": "Dracosaure Primus",
+      "jp": "スケアクロウ",
+      "cn": "惊慌稻草龙",
+      "tw": "驚慌稻草龍"
+    },
+    "Bune": {
+      "en": "Bune",
+      "de": "Bune",
+      "fr": "Bune",
+      "jp": "ブネ",
+      "cn": "布涅",
+      "tw": "布涅"
+    },
+    "Agathos": {
+      "en": "Agathos",
+      "de": "Agathos",
+      "fr": "Agathos",
+      "jp": "アガトス",
+      "cn": "阿伽托斯",
+      "tw": "阿伽託斯"
+    },
+    "Gandarewa": {
+      "en": "Gandarewa",
+      "de": "Gandalva",
+      "fr": "Gandharva",
+      "jp": "ガンダルヴァ",
+      "cn": "刚德瑞瓦",
+      "tw": "乾闥婆"
+    },
+    "Pterygotus": {
+      "en": "Pterygotus",
+      "de": "Pterygotus",
+      "fr": "Pterygotus",
+      "jp": "プテリゴトゥス",
+      "cn": "翼肢鲎",
+      "tw": "翼肢鱟"
+    },
+    "False Gigantopithecus": {
+      "en": "False Gigantopithecus",
+      "de": "Gigantopithecus",
+      "fr": "Gigantopithèque",
+      "jp": "ブラクキ",
+      "cn": "布拉巨猿",
+      "tw": "布拉巨猿"
+    },
+    "Slipkinx Steeljoints": {
+      "en": "Slipkinx Steeljoints",
+      "de": "Rutschfix Stahlscharnier",
+      "fr": "Slipkinx Joints-d'acier",
+      "jp": "機兵のスリップキンクス",
+      "cn": "机工兵 斯利普金克斯",
+      "tw": "機工兵 斯利普金克斯"
+    },
+    "Stolas": {
+      "en": "Stolas",
+      "de": "Stolas",
+      "fr": "Stolas",
+      "jp": "ストラス",
+      "cn": "斯特拉斯",
+      "tw": "斯特拉斯"
+    },
+    "The Pale Rider": {
+      "en": "The Pale Rider",
+      "de": "Bleich[a] Reiter",
+      "fr": "Cavalier Pâle",
+      "jp": "ペイルライダー",
+      "cn": "苍白骑士",
+      "tw": "蒼白騎士"
+    },
+    "Squonk": {
+      "en": "Squonk",
+      "de": "Squonk",
+      "fr": "Squonk",
+      "jp": "スクオンク",
+      "cn": "斯奎克",
+      "tw": "斯奎克"
+    },
+    "Sanu Vali of Dancing Wings": {
+      "en": "Sanu Vali of Dancing Wings",
+      "de": "Sanu Vali [t] Tanzend[a] Schwinge",
+      "fr": "Sanu Vali",
+      "jp": "舞手のサヌバリ",
+      "cn": "飞舞翼 萨努瓦力",
+      "tw": "飛舞翼 薩努瓦力"
+    },
+    "Enkelados": {
+      "en": "Enkelados",
+      "de": "Engedoras",
+      "fr": "Enkélados",
+      "jp": "エンケドラス",
+      "cn": "恩克拉多斯",
+      "tw": "恩克拉多斯"
+    },
+    "Sisiutl": {
+      "en": "Sisiutl",
+      "de": "Sisiutl",
+      "fr": "Sisiutl",
+      "jp": "シシウトゥル",
+      "cn": "西斯尤",
+      "tw": "西斯尤"
+    },
+    "Bird of Paradise": {
+      "en": "Bird of Paradise",
+      "de": "Paradiesvogel",
+      "fr": "Oiseau de Paradis",
+      "jp": "極楽鳥",
+      "cn": "极乐鸟",
+      "tw": "極樂鳥"
+    },
+    "Lycidas": {
+      "en": "Lycidas",
+      "de": "Lykidas",
+      "fr": "Lycidas",
+      "jp": "リュキダス",
+      "cn": "利西达斯",
+      "tw": "利西達斯"
+    },
+    "Omni": {
+      "en": "Omni",
+      "de": "Omni",
+      "fr": "Omni",
+      "jp": "オムニ",
+      "cn": "全能机甲",
+      "tw": "全能機甲"
+    },
+    "Campacti": {
+      "en": "Campacti",
+      "de": "Campacti",
+      "fr": "Campacti",
+      "jp": "キャムパクティ",
+      "cn": "坎帕提",
+      "tw": "坎帕提"
+    },
+    "Stench Blossom": {
+      "en": "Stench Blossom",
+      "de": "Pestwurz",
+      "fr": "Fleur Nauséabonde",
+      "jp": "センチブロッサム",
+      "cn": "恶臭狂花",
+      "tw": "惡臭狂花"
+    },
+    "Leucrotta": {
+      "en": "Leucrotta",
+      "de": "Leucrotta",
+      "fr": "leucrotta",
+      "jp": "レウクロッタ",
+      "cn": "卢克洛塔",
+      "tw": "盧克洛塔"
+    },
+    "Shadow-Dweller Yamini": {
+      "en": "Shadow-dweller Yamini",
+      "de": "Schattenkauer-Yamini",
+      "fr": "Yamini la Nocturne",
+      "jp": "宵闇のヤミニ",
+      "cn": "影中暗 雅弥尼",
+      "tw": "影中暗 雅彌尼"
+    },
+    "Ouzelum": {
+      "en": "Ouzelum",
+      "de": "Ouzelum",
+      "fr": "Ouzelum",
+      "jp": "オゼルム",
+      "cn": "奥祖鲁姆",
+      "tw": "奧祖魯姆"
+    },
+    "Orcus": {
+      "en": "Orcus",
+      "de": "Orcus",
+      "fr": "Orcus",
+      "jp": "オルクス",
+      "cn": "奥迦斯",
+      "tw": "奧迦斯"
+    },
+    "Erle": {
+      "en": "Erle",
+      "de": "Erle",
+      "fr": "Erle",
+      "jp": "アール",
+      "cn": "女王蜂",
+      "tw": "女王蜂"
+    },
+    "Udumbara": {
+      "en": "Udumbara",
+      "de": "Udumbara",
+      "fr": "Udumbara",
+      "jp": "ウドンゲ",
+      "cn": "优昙婆罗花",
+      "tw": "優曇婆羅花"
+    },
+    "Gwas-y-neidr": {
+      "en": "Gwas-y-neidr",
+      "de": "Gwas-y-neidr",
+      "fr": "Gwas-y-neidr",
+      "jp": "グアス・ア・ニードル",
+      "cn": "蛇仆蚂蜓",
+      "tw": "蛇僕螞蜓"
+    },
+    "Buccaboo": {
+      "en": "Buccaboo",
+      "de": "Buccaboo",
+      "fr": "Bucca-boo",
+      "jp": "ブッカブー",
+      "cn": "布卡卜",
+      "tw": "布卡卜"
+    },
+    "Vochstein": {
+      "en": "Vochstein",
+      "de": "Vochstein",
+      "fr": "Vochstein",
+      "jp": "バックスタイン",
+      "cn": "弗克施泰因",
+      "tw": "弗克施泰因"
+    },
+    "Aqrabuamelu": {
+      "en": "Aqrabuamelu",
+      "de": "Aqrabuamelu",
+      "fr": "Aqrabuamelu",
+      "jp": "アクラブアメル",
+      "cn": "熔骨炎蝎",
+      "tw": "熔骨炎蠍"
+    },
+    "Bone Crawler": {
+      "en": "Bone Crawler",
+      "de": "Knochenkriecher",
+      "fr": "Mangeur d'os",
+      "jp": "ボーンクローラー",
+      "cn": "爬骨怪龙",
+      "tw": "爬骨怪龍"
+    },
+    "Manes": {
+      "en": "Manes",
+      "de": "Manes",
+      "fr": "Manes",
+      "jp": "マネス",
+      "cn": "玛涅斯",
+      "tw": "瑪涅斯"
+    },
+    "Kiwa": {
+      "en": "Kiwa",
+      "de": "Kiwa",
+      "fr": "Kiwa",
+      "jp": "キワ",
+      "cn": "奇洼",
+      "tw": "奇窪"
+    },
+    "Mahisha": {
+      "en": "Mahisha",
+      "de": "Mahisha",
+      "fr": "Mahisha",
+      "jp": "マヒシャ",
+      "cn": "马希沙",
+      "tw": "馬希沙"
+    },
+    "Luminare": {
+      "en": "Luminare",
+      "de": "Luminare",
+      "fr": "Luminare",
+      "jp": "ルミナーレ",
+      "cn": "泛光晶体",
+      "tw": "泛光晶體"
+    },
+    "Salt and Light": {
+      "en": "Salt and Light",
+      "de": "Salzlicht",
+      "fr": "Salaclux",
+      "jp": "ソルト・アンド・ライト",
+      "cn": "盐和光",
+      "tw": "鹽和光"
+    },
+    "Gauki Strongblade": {
+      "en": "Gauki Strongblade",
+      "de": "Gauki Starkklinge",
+      "fr": "Gauki la Lame Forte",
+      "jp": "剣豪ガウキ",
+      "cn": "剑豪 刑具",
+      "tw": "劍豪 刑具"
+    },
+    "Guhuo Niao": {
+      "en": "Guhuo Niao",
+      "de": "Guhuo Niao",
+      "fr": "Guhuo Niao",
+      "jp": "姑獲鳥",
+      "cn": "姑获鸟",
+      "tw": "姑獲鳥"
+    },
+    "Funa Yurei": {
+      "en": "Funa Yurei",
+      "de": "Funa Yurei",
+      "fr": "Funa Yurei",
+      "jp": "船幽霊",
+      "cn": "船幽灵",
+      "tw": "船幽靈"
+    },
+    "Oni Yumemi": {
+      "en": "Oni Yumemi",
+      "de": "Oni Yumemi",
+      "fr": "Oni Yumemi",
+      "jp": "オニユメミ",
+      "cn": "鬼观梦",
+      "tw": "鬼觀夢"
+    },
+    "Okina": {
+      "en": "Okina",
+      "de": "Okina",
+      "fr": "Okina",
+      "jp": "オキナ",
+      "cn": "巨大鳐",
+      "tw": "巨大魟"
+    },
+    "Deidar": {
+      "en": "Deidar",
+      "de": "Deidar",
+      "fr": "Deidar",
+      "jp": "デイダラ",
+      "cn": "大太",
+      "tw": "大太"
+    },
+    "Gyorai Quickstrike": {
+      "en": "Gyorai Quickstrike",
+      "de": "Gyorai Schnellschlag",
+      "fr": "Gyorai le Vif",
+      "jp": "雷撃のギョライ",
+      "cn": "闪雷击 鱼雷",
+      "tw": "閃雷擊 魚雷"
+    },
+    "Gajasura": {
+      "en": "Gajasura",
+      "de": "Gajasura",
+      "fr": "Gajasura",
+      "jp": "ガジャースラ",
+      "cn": "象魔修罗",
+      "tw": "象魔修羅"
+    },
+    "Angada": {
+      "en": "Angada",
+      "de": "Angada",
+      "fr": "Angada",
+      "jp": "アンガダ",
+      "cn": "安迦达",
+      "tw": "安迦達"
+    },
+    "Gamma": {
+      "en": "Gamma",
+      "de": "Gamma",
+      "fr": "Gamma",
+      "jp": "ガンマ",
+      "cn": "伽马",
+      "tw": "伽馬"
+    },
+    "Kurma": {
+      "en": "Kurma",
+      "de": "Kurma",
+      "fr": "Kurma",
+      "jp": "クールマ",
+      "cn": "俱利摩",
+      "tw": "俱利摩"
+    },
+    "Aswang": {
+      "en": "Aswang",
+      "de": "Aswang",
+      "fr": "Aswang",
+      "jp": "アスワング",
+      "cn": "阿苏黄",
+      "tw": "阿蘇黃"
+    },
+    "Girimekhala": {
+      "en": "Girimekhala",
+      "de": "Girimekhala",
+      "fr": "Girimekhala",
+      "jp": "ギリメカラ",
+      "cn": "基里麦卡拉",
+      "tw": "基裏麥卡拉"
+    },
+    "Sum": {
+      "en": "Sum",
+      "de": "Sum",
+      "fr": "Sum",
+      "jp": "ソム",
+      "cn": "硕姆",
+      "tw": "碩姆"
+    },
+    "Orghana": {
+      "en": "Orghana",
+      "de": "Orghana",
+      "fr": "Orghana",
+      "jp": "オルガナ",
+      "cn": "兀鲁忽乃朝鲁",
+      "tw": "兀魯忽乃朝魯"
+    },
+    "La Velue": {
+      "en": "La Velue",
+      "de": "La Velue",
+      "fr": "Velue",
+      "jp": "ラ・ヴェリュ",
+      "cn": "浓毛兽",
+      "tw": "濃毛獸"
+    },
+    "Itzpapalotl": {
+      "en": "Itzpapalotl",
+      "de": "Itzpapalotl",
+      "fr": "Itzpapalotl",
+      "jp": "イツパパロツル",
+      "cn": "伊兹帕帕洛特尔",
+      "tw": "伊茲帕帕洛特爾"
+    },
+    "Nuckelavee": {
+      "en": "Nuckelavee",
+      "de": "Nuckelavee",
+      "fr": "Nuckelavee",
+      "jp": "ナックラヴィー",
+      "cn": "纳克拉维",
+      "tw": "納克拉維"
+    },
+    "Nariphon": {
+      "en": "Nariphon",
+      "de": "Nariphon",
+      "fr": "Nariphon",
+      "jp": "ナリーポン",
+      "cn": "纳里蓬",
+      "tw": "納裏蓬"
+    },
+    "Tyger": {
+      "en": "Tyger",
+      "de": "Tyger",
+      "fr": "Tygre",
+      "jp": "ティガー",
+      "cn": "戾虫",
+      "tw": "戾蟲"
+    },
+    "Coquecigrue": {
+      "en": "Coquecigrue",
+      "de": "Coquecigrue",
+      "fr": "Coquecigrue",
+      "jp": "コクシグルー",
+      "cn": "三合鸟儿",
+      "tw": "三合鳥兒"
+    },
+    "Indomitable": {
+      "en": "Indomitable",
+      "de": "Unbezähmbar",
+      "fr": "Indomptable",
+      "jp": "インドミタブル",
+      "cn": "不屈号",
+      "tw": "不屈號"
+    },
+    "Lil Murderer": {
+      "en": "Li'l Murderer",
+      "de": "Klein[a] Mörder",
+      "fr": "Traître",
+      "jp": "リルマーダー",
+      "cn": "小小杀手",
+      "tw": "小小殺手"
+    },
+    "Huracan": {
+      "en": "Huracan",
+      "de": "Huracan",
+      "fr": "Huracan",
+      "jp": "フラカン",
+      "cn": "乌拉坎",
+      "tw": "烏拉坎"
+    },
+    "Forgiven Pedantry": {
+      "en": "Forgiven Pedantry",
+      "de": "Geläutert[a] Pedanterie",
+      "fr": "Pédanterie Pardonnée",
+      "jp": "フォーギヴン・ペダントリー",
+      "cn": "得到宽恕的炫学",
+      "tw": "得到寬恕的炫學"
+    },
+    "Worm of the Well": {
+      "en": "Worm of the Well",
+      "de": "Wurm[p] des Brunnens",
+      "fr": "Verpuy",
+      "jp": "ウェルウォーム",
+      "cn": "大井巨虫",
+      "tw": "大井巨蟲"
+    },
+    "Juggler Hecatomb": {
+      "en": "Juggler Hecatomb",
+      "de": "Gaukler[p] Hecatomb",
+      "fr": "Jongleur Hécatombe",
+      "jp": "ジャグラー・ヘカトゥーム",
+      "cn": "残虐杂技师",
+      "tw": "殘虐雜技師"
+    },
+    "Maliktender": {
+      "en": "Maliktender",
+      "de": "Malikkaktor",
+      "fr": "Malikpampa",
+      "jp": "マリクテンダー",
+      "cn": "马利克巨人掌",
+      "tw": "馬利克巨人掌"
+    },
+    "Sugaar": {
+      "en": "Sugaar",
+      "de": "Sugaar",
+      "fr": "Sugaar",
+      "jp": "シュガール",
+      "cn": "休格尔",
+      "tw": "休格爾"
+    },
+    "Tarchia": {
+      "en": "Tarchia",
+      "de": "Tarchia",
+      "fr": "Tarchia",
+      "jp": "タルキア",
+      "cn": "多智兽",
+      "tw": "多智獸"
+    },
+    "Domovoi": {
+      "en": "Domovoi",
+      "de": "Domovoi",
+      "fr": "Domovoï",
+      "jp": "ドモヴォーイ",
+      "cn": "杜莫伊",
+      "tw": "杜莫伊"
+    },
+    "Vulpangue": {
+      "en": "Vulpangue",
+      "de": "Vulpangue",
+      "fr": "Vulpangue",
+      "jp": "ヴルパングエ",
+      "cn": "狐首虺",
+      "tw": "狐首虺"
+    },
+    "The Mudman": {
+      "en": "The Mudman",
+      "de": "Matschklops",
+      "fr": "Tas de Boue",
+      "jp": "泥人",
+      "cn": "泥人",
+      "tw": "泥人"
+    },
+    "O Poorest Pauldia": {
+      "en": "O Poorest Pauldia",
+      "de": "Gepeinigt[a] Pauldia",
+      "fr": "Pauldia",
+      "jp": "ポールディア",
+      "cn": "保尔迪雅",
+      "tw": "保爾迪雅"
+    },
+    "Aglaope": {
+      "en": "Aglaope",
+      "de": "Aglaope",
+      "fr": "Aglaope",
+      "jp": "アグラオペ",
+      "cn": "阿格拉俄珀",
+      "tw": "阿格拉俄珀"
+    },
+    "Mindmaker": {
+      "en": "Mindmaker",
+      "de": "Freigeist",
+      "fr": "Maître-penseur",
+      "jp": "マインドメーカー",
+      "cn": "启灵果",
+      "tw": "啓靈果"
+    },
+    "Pachamama": {
+      "en": "Pachamama",
+      "de": "Pachamama",
+      "fr": "Pachamama",
+      "jp": "パチャママ",
+      "cn": "帕查玛玛",
+      "tw": "帕查瑪瑪"
+    },
+    "Supay": {
+      "en": "Supay",
+      "de": "Supay",
+      "fr": "Supay",
+      "jp": "スペイ",
+      "cn": "苏帕伊",
+      "tw": "蘇帕伊"
+    },
+    "Grassman": {
+      "en": "Grassman",
+      "de": "Grasmann",
+      "fr": "Sasquatch Arboricole",
+      "jp": "グラスマン",
+      "cn": "格拉斯曼",
+      "tw": "格拉斯曼"
+    },
+    "Ixtab": {
+      "en": "Ixtab",
+      "de": "Ixtab",
+      "fr": "Ixtab",
+      "jp": "イシュタム",
+      "cn": "伊休妲",
+      "tw": "伊休妲"
+    },
+    "Gilshs Aath Swiftclaw": {
+      "en": "Gilshs Aath Swiftclaw",
+      "de": "Gilshs Aath",
+      "fr": "Gilshs Aath\r\nl'étrangleur",
+      "jp": "手掴のギウスィー・アース",
+      "cn": "徒手抓鱼 基乌嘶·渊斯",
+      "tw": "徒手抓魚 基烏嘶·淵斯"
+    },
+    "Deacon": {
+      "en": "Deacon",
+      "de": "Diakon",
+      "fr": "Diacre",
+      "jp": "ディーコン",
+      "cn": "助祭大蟹",
+      "tw": "助祭大蟹"
+    },
+    "Rusalka": {
+      "en": "Rusalka",
+      "de": "Rusalka",
+      "fr": "Roussalka",
+      "jp": "ルサルカ",
+      "cn": "卢莎卡",
+      "tw": "盧莎卡"
+    },
+    "Baal": {
+      "en": "Baal",
+      "de": "Baal",
+      "fr": "Baal",
+      "jp": "バール",
+      "cn": "巴力",
+      "tw": "巴力"
+    },
+    "Gunitt": {
+      "en": "Gunitt",
+      "de": "Gunitt",
+      "fr": "Gunitt",
+      "jp": "グニット",
+      "cn": "顾尼图",
+      "tw": "顧尼圖"
+    },
+    "Green Archon": {
+      "en": "Green Archon",
+      "de": "Grün[a] Exeget",
+      "fr": "Preux Feuillu",
+      "jp": "草賢人",
+      "cn": "草贤人",
+      "tw": "草賢人"
+    },
+    "ü-u-ü-u": {
+      "en": "ü-u-ü-u",
+      "de": "Ü-u-ü-u",
+      "fr": "Ü-u-ü-u",
+      "jp": "ウーヴウーヴ",
+      "cn": "哞哞",
+      "tw": "哞哞"
+    },
+    "Hulder": {
+      "en": "Hulder",
+      "de": "Hulder",
+      "fr": "Huldre",
+      "jp": "フルドラ",
+      "cn": "胡睹",
+      "tw": "胡睹"
+    },
+    "Storsie": {
+      "en": "Storsie",
+      "de": "Storsie",
+      "fr": "Storsie",
+      "jp": "ストーシー",
+      "cn": "斯图希",
+      "tw": "斯圖希"
+    },
+    "Burfurlur the Canny": {
+      "en": "Burfurlur the Canny",
+      "de": "Burfurlur [t] Gerissen[a]",
+      "fr": "Le Burfurlur",
+      "jp": "ブーフールー",
+      "cn": "布弗鲁",
+      "tw": "布弗魯"
+    },
+    "Vajrakumara": {
+      "en": "Vajrakumara",
+      "de": "Vajrakumara",
+      "fr": "Vajrakumara",
+      "jp": "ヴァジュラクマーラ",
+      "cn": "金刚鸠摩罗",
+      "tw": "金剛鳩摩羅"
+    },
+    "Iravati": {
+      "en": "Iravati",
+      "de": "Iravati",
+      "fr": "Iravati",
+      "jp": "イラーヴァティ",
+      "cn": "伊罗婆缇",
+      "tw": "伊羅婆緹"
+    },
+    "Yilan": {
+      "en": "Yilan",
+      "de": "Yilan",
+      "fr": "Yilan",
+      "jp": "ユラン",
+      "cn": "尤兰",
+      "tw": "尤蘭"
+    },
+    "Sugriva": {
+      "en": "Sugriva",
+      "de": "Sugriva",
+      "fr": "Sugriva",
+      "jp": "スグリーヴァ",
+      "cn": "须羯里婆",
+      "tw": "須羯裏婆"
+    },
+    "Sphatika": {
+      "en": "Sphatika",
+      "de": "Sphatika",
+      "fr": "Sphatika",
+      "jp": "スパティカ",
+      "cn": "颇胝迦",
+      "tw": "頗胝迦"
+    },
+    "Warmonger": {
+      "en": "Warmonger",
+      "de": "Kriegstreiber",
+      "fr": "Belliciste",
+      "jp": "ウォーモンガー",
+      "cn": "战争贩子",
+      "tw": "戰爭販子"
+    },
+    "Emperors Rose": {
+      "en": "Emperor's Rose",
+      "de": "Rose[p] des Kaisers",
+      "fr": "Rosier de l'empereur",
+      "jp": "エンペラーズローズ",
+      "cn": "皇帝的玫瑰",
+      "tw": "皇帝的玫瑰"
+    },
+    "Minerva": {
+      "en": "Minerva",
+      "de": "Minerva",
+      "fr": "Minerva",
+      "jp": "ミネルウァ",
+      "cn": "密涅瓦",
+      "tw": "密涅瓦"
+    },
+    "Aegeiros": {
+      "en": "Aegeiros",
+      "de": "Aegeiros",
+      "fr": "Ægeiros",
+      "jp": "アイゲイロス",
+      "cn": "黑杨树精",
+      "tw": "黑楊樹精"
+    },
+    "Armstrong": {
+      "en": "Armstrong",
+      "de": "Armstrong",
+      "fr": "Armstrong",
+      "jp": "アームストロング",
+      "cn": "阿姆斯特朗",
+      "tw": "阿姆斯特朗"
+    },
+    "Daphnia Magna": {
+      "en": "Daphnia Magna",
+      "de": "Daphnia Magna",
+      "fr": "Magna Daphnie",
+      "jp": "ダフニアマグナ",
+      "cn": "巨月蚤",
+      "tw": "巨月蚤"
+    },
+    "Genesis Rock": {
+      "en": "Genesis Rock",
+      "de": "Genesisfels",
+      "fr": "Pierre de la Genèse",
+      "jp": "ジェネシスロック",
+      "cn": "起源石",
+      "tw": "起源石"
+    },
+    "Mousse Princess": {
+      "en": "Mousse Princess",
+      "de": "Mousse-Prinzessin",
+      "fr": "Princesse Mousse",
+      "jp": "ムースプリンセス",
+      "cn": "慕斯公主",
+      "tw": "慕斯公主"
+    },
+    "Lunatender Queen": {
+      "en": "Lunatender Queen",
+      "de": "Lunatender-Königin",
+      "fr": "Pampa Sélénienne\r\nReine",
+      "jp": "ルナテンダー・クイーン",
+      "cn": "月面仙人刺女王",
+      "tw": "月面仙人刺女王"
+    },
+    "Ruminator": {
+      "en": "Ruminator",
+      "de": "Grübler",
+      "fr": "Ruminateur",
+      "jp": "ルミネイター",
+      "cn": "沉思之物",
+      "tw": "沉思之物"
+    },
+    "Yumcax": {
+      "en": "Yumcax",
+      "de": "Yumcax",
+      "fr": "Yumcax",
+      "jp": "ユムカクス",
+      "cn": "尤姆卡克斯",
+      "tw": "尤姆卡克斯"
+    },
+    "Shockmaw": {
+      "en": "Shockmaw",
+      "de": "Schockschlund",
+      "fr": "Choc-gueule",
+      "jp": "ショックモー",
+      "cn": "肖科莫",
+      "tw": "肖科莫"
+    },
+    "Petalodus": {
+      "en": "Petalodus",
+      "de": "Petalodus",
+      "fr": "Petalodus",
+      "jp": "ペタロドゥス",
+      "cn": "瓣齿鲨",
+      "tw": "瓣齒鯊"
+    },
+    "Gurangatch": {
+      "en": "Gurangatch",
+      "de": "Gurangatch",
+      "fr": "Gurangatch",
+      "jp": "グランガチ",
+      "cn": "固兰盖奇",
+      "tw": "固蘭蓋奇"
+    },
+    "Ophioneus": {
+      "en": "Ophioneus",
+      "de": "Ophioneus",
+      "fr": "Ophion",
+      "jp": "オピオネウス",
+      "cn": "俄菲翁尼厄斯",
+      "tw": "俄菲翁尼厄斯"
+    },
+    "Level Cheater": {
+      "en": "Level Cheater",
+      "de": "Stufenschummler",
+      "fr": "Tricheniveau",
+      "jp": "レベルチーター",
+      "cn": "等级作弊仪",
+      "tw": "等級作弊儀"
+    },
+    "Oskh Rhei": {
+      "en": "Oskh Rhei",
+      "de": "Oskh Rhei",
+      "fr": "Oskh Rhei",
+      "jp": "オスク・レイ",
+      "cn": "欧斯克·雷伊",
+      "tw": "歐斯克·雷伊"
+    },
+    "Arch-Eta": {
+      "en": "Arch-Eta",
+      "de": "Erz-Eta",
+      "fr": "Arch-Êta",
+      "jp": "アーチイータ",
+      "cn": "伊塔总领",
+      "tw": "伊塔總領"
+    },
+    "Fan Ail": {
+      "en": "Fan Ail",
+      "de": "Fan Ail",
+      "fr": "Fan Ail",
+      "jp": "ファン・アイル",
+      "cn": "凡·艾尔",
+      "tw": "凡·艾爾"
+    },
+    "Narrow-rift": {
+      "en": "Narrow-rift",
+      "de": "Enger Riss",
+      "fr": "Rift-étroit",
+      "jp": "ナロー＝リフト",
+      "cn": "狭缝",
+      "tw": "狹縫"
+    },
+    "Chupacabra": {
+      "en": "Chupacabra",
+      "de": "Chupacabra",
+      "fr": "Chupacabra",
+      "jp": "チュパカブラ",
+      "cn": "卓伯卡布拉",
+      "tw": "卓伯卡布拉"
+    },
+    "Mad Maguey": {
+      "en": "Mad Maguey",
+      "de": "Aggressiv[a] Agave",
+      "fr": "Pita Dément",
+      "jp": "マッドマゲイ",
+      "cn": "疯狂龙舌兰",
+      "tw": "瘋狂龍舌蘭"
+    },
+    "Queen Hawk": {
+      "en": "Queen Hawk",
+      "de": "Falkenkönigin",
+      "fr": "Reine Des Guêpes",
+      "jp": "クイーンホーク",
+      "cn": "女王鹰蜂",
+      "tw": "女王鷹蜂"
+    },
+    "Nechuciho": {
+      "en": "Nechuciho",
+      "de": "Nechuciho",
+      "fr": "Nechukiho",
+      "jp": "ネチュキホ",
+      "cn": "内丘奇霍",
+      "tw": "內丘奇霍"
+    },
+    "Kirlirger the Abhorrent": {
+      "en": "Kirlirger the Abhorrent",
+      "de": "Kirlirger [T] Abscheulich[a]",
+      "fr": "Kirlirger L'abominable",
+      "jp": "厭忌のキーリーゲー",
+      "cn": "厌忌之人 奇里格",
+      "tw": "厭忌之人 奇裏格"
+    },
+    "The Slammer": {
+      "en": "The Slammer",
+      "de": "Rammkopf",
+      "fr": "Marteleur",
+      "jp": "ラムヘッド",
+      "cn": "撞角头",
+      "tw": "撞角頭"
+    },
+    "Go'ozoabek'be": {
+      "en": "Go'ozoabek'Be",
+      "de": "Go'ozoabek'Be",
+      "fr": "Go'ozoabek'Be",
+      "jp": "ゴーゾアックベ",
+      "cn": "格佐亚库拜",
+      "tw": "格佐亞庫拜"
+    },
+    "The Raintriller": {
+      "en": "The Raintriller",
+      "de": "Regentriller",
+      "fr": "Trilleur De Pluie",
+      "jp": "レイントリラー",
+      "cn": "惊雨蟾蜍",
+      "tw": "驚雨蟾蜍"
+    },
+    "Pkuucha": {
+      "en": "Pkuucha",
+      "de": "Pkuucha",
+      "fr": "Pkuucha",
+      "jp": "プクーチャ",
+      "cn": "普库恰",
+      "tw": "普庫恰"
+    },
+    "Ihnuxokiy": {
+      "en": "Ihnuxokiy",
+      "de": "Ihnuxokiy",
+      "fr": "Ihnuxokiy",
+      "jp": "イヌショキー",
+      "cn": "伊努索奇",
+      "tw": "伊努索奇"
+    },
+    "Leafscourge Hadoll Ja": {
+      "en": "Leafscourge Hadoll Ja",
+      "de": "Blattgeißel[P] Hadoll Ja",
+      "fr": "Hadoll Ja Le Foufeuillu",
+      "jp": "緑葉のハドージャ",
+      "cn": "绿叶飞花 哈杜加",
+      "tw": "綠葉飛花 哈杜加"
+    },
+    "Xty'iinbek": {
+      "en": "Xty'iinbek",
+      "de": "Xty'iinbek",
+      "fr": "Xty'iinbek",
+      "jp": "シュティーンベク",
+      "cn": "休提因别克",
+      "tw": "休提因別克"
+    },
+    "Starcrier": {
+      "en": "Starcrier",
+      "de": "Sternschreier",
+      "fr": "Furopluminescent",
+      "jp": "幻煌鳥",
+      "cn": "幻煌鸟",
+      "tw": "幻煌鳥"
+    },
+    "Rrax Yity'a": {
+      "en": "Rrax Yity'a",
+      "de": "Rrax Yity'a",
+      "fr": "Rrax Yity'a",
+      "jp": "ラシュイチャ",
+      "cn": "血鸣鼠",
+      "tw": "血鳴鼠"
+    },
+    "Neyoozoteel": {
+      "en": "Neyoozoteel",
+      "de": "Neyoozoteel",
+      "fr": "Neyozzoteel",
+      "jp": "ネヨーゾテール",
+      "cn": "内尤佐缇",
+      "tw": "內尤佐緹"
+    },
+    "Nopalitender Fabuloso": {
+      "en": "Nopalitender Fabuloso",
+      "de": "Feigenkaktor[P] Fabuloso",
+      "fr": "Pampa De Barbarie Fabuleux",
+      "jp": "ノパルテンダー・ファビュローソー",
+      "cn": "绝妙圆扇刺",
+      "tw": "絕妙圓扇刺"
+    },
+    "Uktena": {
+      "en": "Uktena",
+      "de": "Uktena",
+      "fr": "Uktena",
+      "jp": "ウクテナ",
+      "cn": "乌克提纳",
+      "tw": "烏克提納"
+    },
+    "Yehehetoaua'pyo": {
+      "en": "Yehehetoaua'pyo",
+      "de": "Yehehetoaua'pyo",
+      "fr": "Yehehetoaua'pyo",
+      "jp": "エヘヘトーワポ",
+      "cn": "艾海海陶瓦泡",
+      "tw": "艾海海陶瓦泡"
+    },
+    "Keheniheyamewi": {
+      "en": "Keheniheyamewi",
+      "de": "Keheniheyamewi",
+      "fr": "Keheniheyamewi",
+      "jp": "ケヘニヘヤメウィ",
+      "cn": "凯海尼海亚麦尤伊",
+      "tw": "凱海尼海亞麥尤伊"
+    },
+    "Sansheya": {
+      "en": "Sansheya",
+      "de": "Sansheya",
+      "fr": "Sansheya",
+      "jp": "サンシェヤ",
+      "cn": "山谢亚",
+      "tw": "山謝亞"
+    },
+    "Gallowsbeak": {
+      "en": "Gallowsbeak",
+      "de": "Galgenschnabel",
+      "fr": "Gibec",
+      "jp": "ギャロウズビーク",
+      "cn": "斩首魔鸟",
+      "tw": "斬首魔鳥"
+    },
+    "Gargant": {
+      "en": "Gargant",
+      "de": "Gargant",
+      "fr": "Gargant",
+      "jp": "ガルガント",
+      "cn": "高康特",
+      "tw": "高康特"
+    },
+    "Heshuala": {
+      "en": "Heshuala",
+      "de": "Heshuala",
+      "fr": "Heshuala",
+      "jp": "ヘシュワラ",
+      "cn": "海休瓦拉",
+      "tw": "海休瓦拉"
+    },
+    "Urna Variabilis": {
+      "en": "Urna Variabilis",
+      "de": "Urna Variabilis",
+      "fr": "Pod Variant",
+      "jp": "ヴァリアポッド",
+      "cn": "多变装置",
+      "tw": "多變裝置"
+    },
+    "Atticus the Primogenitor": {
+      "en": "Atticus the Primogenitor",
+      "de": "Atticus [T] Primogenitor",
+      "fr": "Atticus Le Primogéniteur",
+      "jp": "先駆けのアティカス",
+      "cn": "先驱勇士 阿提卡斯",
+      "tw": "先驅勇士 阿提卡斯"
+    },
+    "Jewel Bearer": {
+      "en": "Jewel Bearer",
+      "de": "Juwelenträger",
+      "fr": "Porte-Joyaux",
+      "jp": "ジュエルベアラー",
+      "cn": "携宝精",
+      "tw": "攜寶精"
+    },
+    "13th Child": {
+      "en": "13th Child",
+      "de": "Dreizehnt[a] Kind",
+      "fr": "Treizième Enfant",
+      "jp": "サーティーンス・チャイルド",
+      "cn": "第十三个孩子",
+      "tw": "第十三個孩子"
+    },
+    "Sally the Sweeper": {
+      "en": "Sally the Sweeper",
+      "de": "Sally [T] Fegerin",
+      "fr": "Sally La Balayeuse",
+      "jp": "サリー・ザ・スイーパー",
+      "cn": "清除者萨利",
+      "tw": "清除者薩利"
+    },
+    "Cat's Eye": {
+      "en": "Cat's Eye",
+      "de": "Katzenauge",
+      "fr": "Œil-De-Chat",
+      "jp": "キャッツアイ",
+      "cn": "猫眼",
+      "tw": "貓眼"
+    },
+    "The Forecaster": {
+      "en": "The Forecaster",
+      "de": "Wetterreporter",
+      "fr": "Monsieur Météo",
+      "jp": "ウェザーリポーター",
+      "cn": "天气预报机器人",
+      "tw": "天氣預報機器人"
+    },
+    "FATE Odin": {
+      "en": "Steel Reign",
+      "de": "Der dunkle Reiter",
+      "fr": "Défi\u0002\u001d\u0001\u0003: le Chevalier des ombres",
+      "jp": "古の闘神「オーディン」",
+      "cn": "上古斗神——奥丁",
+      "tw": "上古鬥神——奧丁"
+    },
+    "FATE Behemoth": {
+      "en": "He Taketh It with His Eyes",
+      "de": "Kein Weg zurück",
+      "fr": "Défi\u0002\u001d\u0001\u0003: contre-traque",
+      "jp": "手負いの魔獣「ベヒーモス」",
+      "cn": "受伤的魔兽贝希摩斯",
+      "tw": "受傷的魔獸貝希摩斯"
+    },
+    "FATE Core Blimey": {
+      "en": "Core Blimey",
+      "de": "Erdkern für Erdseim",
+      "fr": "Ne jetez pas les noyaux !",
+      "jp": "青燐精製所のお手伝い",
+      "cn": "核心危机",
+      "tw": "核心危機"
+    },
+    "FATE Noctilucale": {
+      "en": "Prey Online",
+      "de": "Ultima: Ein Prototyp tankt auf",
+      "fr": "Proto-Ultima\u0002\u001d\u0001\u0003: la menace surgie du passé",
+      "jp": "太古の脅威：ノクチルカ撃滅戦",
+      "cn": "太古威胁 夜光花歼灭战",
+      "tw": "太古威脅 夜光花殲滅戰"
+    },
+    "FATE Coeurlregina": {
+      "en": "Coeurls Chase Boys Chase Coeurls",
+      "de": "Entmachtung der Königin",
+      "fr": "Défi\u0002\u001d\u0001\u0003: coeurls brisés",
+      "jp": "幻影の女王「クァールレギナ」",
+      "cn": "幻影女王——长须豹女王",
+      "tw": "幻影女王——長鬚豹女王"
+    },
+    "FATE El Miacid": {
+      "en": "El Miacid",
+      "de": "Entscheidung am Weiland-Fluss",
+      "fr": "Ça Vathe mieux comme ça",
+      "jp": "境界の川",
+      "cn": "分界河",
+      "tw": "分界河"
+    },
+    "FATE Cerf": {
+      "en": "Cerf's Up",
+      "de": "Der Dracheneierkrieg",
+      "fr": "Bas les hippogriffes",
+      "jp": "卵をめぐる竜の戦争",
+      "cn": "龙卵引起的战争",
+      "tw": "龍卵引起的戰爭"
+    },
+    "FATE Elephant in the Brume": {
+      "en": "Elephant in the Brume",
+      "de": "Svarog der Schreckliche",
+      "fr": "Défi\u0002\u001d\u0001\u0003: l'exécution de Svarog",
+      "jp": "雲霧街の虐殺者「スヴァローグ」",
+      "cn": "云雾街虐杀者——斯瓦洛格",
+      "tw": "雲霧街虐殺者——斯瓦洛格"
+    },
+    "FATE Special Tarasque Force": {
+      "en": "Special Tarasque Force",
+      "de": "Die Hasspredigerin",
+      "fr": "Défi\u0002\u001d\u0001\u0003: terrasser la Tarasque",
+      "jp": "爆着の甲竜「タラスク」",
+      "cn": "坚甲铁龙——塔拉斯克",
+      "tw": "堅甲鐵龍——塔拉斯克"
+    },
+    "FATE Ixion": {
+      "en": "A Horse Outside",
+      "de": "Höllenross",
+      "fr": "Défi\u0002\u001d\u0001\u0003: l'étalon survolté",
+      "jp": "伝説の雷馬「イクシオン」",
+      "cn": "传说中的雷马——伊克西翁",
+      "tw": "傳說中的雷馬——伊克西翁"
+    },
+    "FATE Foxy Lady": {
+      "en": "Foxy Lady",
+      "de": "Fuchsige Dame",
+      "fr": "Défi\u0002\u001d\u0001\u0003: la renarde fait surface",
+      "jp": "九尾の妖狐「玉藻御前」",
+      "cn": "九尾妖狐玉藻御前",
+      "tw": "九尾妖狐玉藻御前"
+    },
+    "FATE Diakka Round": {
+      "en": "Diakka Round",
+      "de": "Dickes Ding",
+      "fr": "Au diable les diakkas\u0002\u001d\u0001\u0003!",
+      "jp": "グゥレイト！",
+      "cn": "太棒了！",
+      "tw": "太棒了！"
+    },
+    "FATE Archaeotania": {
+      "en": "The Head, the Tail, the Whole Damned Thing",
+      "de": "Schrecken der Tiefsee Archaeotania: Die Bestie",
+      "fr": "L'annonciatrice du chaos\u0002\u001d\u0001\u0003: bataille au sommet des fonds",
+      "jp": "厄災のアルケオタニア：深海の討伐戦",
+      "cn": "灾厄的古塔尼亚之深海讨伐战",
+      "tw": "災厄的古塔尼亞之深海討伐戰"
+    },
+    "FATE Formidable": {
+      "en": "A Finale Most Formidable",
+      "de": "Ein formidabler Kampf: Der Gigant",
+      "fr": "Formidable\u0002\u001d\u0001\u0003: l'arme secrète",
+      "jp": "激闘フォーミダブル：切り札起動",
+      "cn": "激斗畏惧装甲之秘密武器",
+      "tw": "激鬥畏懼裝甲之祕密武器"
+    },
+    "FATE Daivadipa": {
+      "en": "Devout Pilgrims vs. Daivadipa",
+      "de": "Im Dienste der Mrga: Blasphemie",
+      "fr": "Le culte des Mrga\u0002\u001d\u0001\u0003: le faux dieu",
+      "jp": "ムリガ信仰：偽りの神",
+      "cn": "兽道诸神信仰：伪神降临",
+      "tw": "獸道諸神信仰：僞神降臨"
+    },
+    "FATE Chi": {
+      "en": "Omicron Recall: Killing Order",
+      "de": "Aus dem Speicher von Chi: Zerstörung",
+      "fr": "Mémoire vive\u0002\u001d\u0001\u0003: arrêter le processus",
+      "jp": "カイのメモリーより：侵略兵器の破壊",
+      "cn": "侵略兵器召回指令：破坏侵略兵器希",
+      "tw": "侵略兵器召回指令：破壞侵略兵器希"
+    },
+    "FATE Behemoth Chain #1": {
+      "en": "Behold Now Behemoth",
+      "de": "Der legendäre Behemoth",
+      "fr": "Défi\u0002\u001d\u0001\u0003: l'ire du béhémoth",
+      "jp": "伝説の魔獣「ベヒーモス」",
+      "cn": "传说的魔兽——贝希摩斯",
+      "tw": "傳說的魔獸——貝希摩斯"
+    },
+    "FATE Coeurlregina Chain #1": {
+      "en": "Long Live the Coeurl",
+      "de": "Angriff der Königin",
+      "fr": "Défi\u0002\u001d\u0001\u0003: mort à la reine des coeurls",
+      "jp": "雷獣の女王「クァールレギナ」",
+      "cn": "雷兽女王——长须豹女王",
+      "tw": "雷獸女王——長鬚豹女王"
+    },
+    "FATE Coeurlregina Chain #2": {
+      "en": "Coeurls Chase Boys",
+      "de": "Rückkehr der Königin",
+      "fr": "Défi\u0002\u001d\u0001\u0003: du coeurl à l'ouvrage",
+      "jp": "逆襲の女王「クァールレギナ」",
+      "cn": "逆袭女王——长须豹女王",
+      "tw": "逆襲女王——長鬚豹女王"
+    },
+    "FATE Foxy Lady Chain #1": {
+      "en": "Outfoxed",
+      "de": "Ausgefuchst",
+      "fr": "Rusera bien qui rusera le dernier",
+      "jp": "その名はミクズメ",
+      "cn": "其名为藻女",
+      "tw": "其名爲藻女"
+    },
+    "FATE Archaeotania Chain #1": {
+      "en": "Where Has the Dagon",
+      "de": "Schrecken der Tiefsee Archaeotania: Die jpgd beginnt",
+      "fr": "L'annonciatrice du chaos\u0002\u001d\u0001\u0003: l'ouverture de la chasse",
+      "jp": "厄災のアルケオタニア：追跡開始",
+      "cn": "灾厄的古塔尼亚之开始追踪",
+      "tw": "災厄的古塔尼亞之開始追蹤"
+    },
+    "FATE Archaeotania Chain #2": {
+      "en": "Ondo of Blood",
+      "de": "Schrecken der Tiefsee Archaeotania: Zumshs Ritual",
+      "fr": "L'annonciatrice du chaos\u0002\u001d\u0001\u0003: Zumshs la terreur des abysses",
+      "jp": "厄災のアルケオタニア：ズムスィー登場",
+      "cn": "灾厄的古塔尼亚之兹姆嘶登场",
+      "tw": "災厄的古塔尼亞之茲姆嘶登場"
+    },
+    "FATE Archaeotania Chain #3": {
+      "en": "Lookin' Back on the Track",
+      "de": "Schrecken der Tiefsee Archaeotania: Luntenschwarm",
+      "fr": "L'annonciatrice du chaos\u0002\u001d\u0001\u0003: oléofurors furax",
+      "jp": "厄災のアルケオタニア：テウスィー防衛",
+      "cn": "灾厄的古塔尼亚之保护提乌嘶",
+      "tw": "災厄的古塔尼亞之保護提烏嘶"
+    },
+    "FATE Archaeotania Chain #4": {
+      "en": "Coral Support",
+      "de": "Schrecken der Tiefsee Archaeotania: Dunkle Grotten",
+      "fr": "L'annonciatrice du chaos\u0002\u001d\u0001\u0003: expédition spéléologique",
+      "jp": "厄災のアルケオタニア：テウスィー護衛",
+      "cn": "灾厄的古塔尼亚之护卫提乌嘶",
+      "tw": "災厄的古塔尼亞之護衛提烏嘶"
+    },
+    "FATE Archaeotania Chain #5": {
+      "en": "Low Coral Fiber",
+      "de": "Schrecken der Tiefsee Archaeotania: Blutkorallen",
+      "fr": "L'annonciatrice du chaos\u0002\u001d\u0001\u0003: pêche aux coraux",
+      "jp": "厄災のアルケオタニア：紅血珊瑚の収集",
+      "cn": "灾厄的古塔尼亚之收集红血珊瑚",
+      "tw": "災厄的古塔尼亞之收集紅血珊瑚"
+    },
+    "FATE Archaeotania Chain #6": {
+      "en": "Nothing Like a Trappin' Life",
+      "de": "Schrecken der Tiefsee Archaeotania: Köder",
+      "fr": "L'annonciatrice du chaos\u0002\u001d\u0001\u0003: les rets de Zumshs",
+      "jp": "厄災のアルケオタニア：決戦の下準備",
+      "cn": "灾厄的古塔尼亚之准备决战",
+      "tw": "災厄的古塔尼亞之準備決戰"
+    },
+    "FATE Formidable Chain #1": {
+      "en": "Ironbeard Builders - Rebuilt",
+      "de": "Krieg der Baumeister: Konstruktionsphase",
+      "fr": "Bataille d'ingénieurs\u0002\u001d\u0001\u0003: automate en con\u0002\u0016\u0001\u0003struc\u0002\u0016\u0001\u0003tion",
+      "jp": "ビルドウォリアーズ：オートマトン製作",
+      "cn": "制作战士之自走人偶",
+      "tw": "製作戰士之自走人偶"
+    },
+    "FATE Formidable Chain #2": {
+      "en": "Ironbeard Builders - Resist",
+      "de": "Krieg der Baumeister: Testphase",
+      "fr": "Bataille d'ingénieurs\u0002\u001d\u0001\u0003: dernière mise au point",
+      "jp": "ビルドウォリアーズ：試作品実戦テスト",
+      "cn": "制作战士之实机测试",
+      "tw": "製作戰士之實機測試"
+    },
+    "FATE Formidable Chain #3": {
+      "en": "Ironbeard Builders - Revolt",
+      "de": "Krieg der Baumeister: Duell der Giganten",
+      "fr": "Bataille d'ingénieurs\u0002\u001d\u0001\u0003: la lutte finale",
+      "jp": "ビルドウォリアーズ：没収試合",
+      "cn": "制作战士之不公平对决",
+      "tw": "製作戰士之不公平對決"
+    },
+    "FATE Formidable Chain #4": {
+      "en": "Foes Most Formidable",
+      "de": "Ein formidabler Kampf: Die Bedrohung",
+      "fr": "Formidable\u0002\u001d\u0001\u0003: la menace",
+      "jp": "激闘フォーミダブル：迫る脅威",
+      "cn": "激斗畏惧装甲之危险逼近",
+      "tw": "激鬥畏懼裝甲之危險逼近"
+    },
+    "FATE Formidable Chain #5": {
+      "en": "A Family Most Formidable",
+      "de": "Ein formidabler Kampf: Ein finsterer Plan",
+      "fr": "Formidable\u0002\u001d\u0001\u0003: la filature",
+      "jp": "激闘動フォーミダブル：新たな情報",
+      "cn": "激斗畏惧装甲之新的情报",
+      "tw": "激鬥畏懼裝甲之新的情報"
+    },
+    "FATE Daivadipa Chain #1": {
+      "en": "Devout Pilgrims vs. the Jungle Lizards",
+      "de": "Im Dienste der Mrga: Pilger in Not",
+      "fr": "Le culte des Mrga\u0002\u001d\u0001\u0003: pélerin perdu",
+      "jp": "ムリガ信仰：迷える巡礼者",
+      "cn": "ムリガ信仰：迷える巡礼者",
+      "tw": "ムリガ信仰：迷える巡禮者"
+    },
+    "FATE Daivadipa Chain #2": {
+      "en": "Devout Pilgrims vs. the Apalala",
+      "de": "Im Dienste der Mrga: Stoßgebet",
+      "fr": "Le culte des Mrga\u0002\u001d\u0001\u0003: l'heure de la prière",
+      "jp": "ムリガ信仰：祈りの時",
+      "cn": "ムリガ信仰：祈りの時",
+      "tw": "ムリガ信仰：祈りの時"
+    },
+    "FATE Chi Chain #1": {
+      "en": "Omicron Recall: Comms Expansion",
+      "de": "Aus dem Speicher von Chi: Aufrüstung des Kommunikators",
+      "fr": "Mémoire vive\u0002\u001d\u0001\u0003: mise à niveau",
+      "jp": "カイのメモリーより：通信機拡張",
+      "cn": "カイのメモリーより：通信機拡張",
+      "tw": "カイのメモリーより：通信機拡張"
+    },
+    "FATE Chi Chain #2": {
+      "en": "Omicron Recall: Secure Connection",
+      "de": "Aus dem Speicher von Chi: Gefahrenabwehr",
+      "fr": "Mémoire vive\u0002\u001d\u0001\u0003: pare-feu",
+      "jp": "カイのメモリーより：N-6205防衛",
+      "cn": "カイのメモリーより：N-6205防衛",
+      "tw": "カイのメモリーより：N-6205防衛"
+    },
+    "FATE Mascot Chain #1": {
+      "en": "Mascot March",
+      "de": "Alles andere als fade, diese Parade",
+      "fr": "Mica le mu: début du spectacle",
+      "jp": "マイカ・ザ・ムー：出発進行",
+      "cn": "亩鼠米卡：盛装巡游开始",
+      "tw": "畝鼠米卡：盛裝巡遊開始"
+    },
+    "FATE Mascot Chain #2": {
+      "en": "Mascot Mayhem",
+      "de": "Bizarres Zwischenspiel",
+      "fr": "Mica le mu: la grotesque parade",
+      "jp": "マイカ・ザ・ムー：大行進",
+      "cn": "亩鼠米卡：盛装巡游一路向前",
+      "tw": "畝鼠米卡：盛裝巡遊一路向前"
+    },
+    "FATE Ttokrrone Chain #1": {
+      "en": "The Serpentlord Stirs",
+      "de": "Künder seines Erwachens",
+      "fr": "Ttokkrone: prélude à l'éveil",
+      "jp": "トクローネ：目覚めの予兆",
+      "cn": "蛇王得酷热涅：苏醒的征兆",
+      "tw": "蛇王得酷熱涅：甦醒的徵兆"
+    },
+    "FATE Ttokrrone Chain #2": {
+      "en": "The Serpentlord Speaks",
+      "de": "Das Erwachen rückt näher",
+      "fr": "Ttokkrone: le roi des serpents",
+      "jp": "トクローネ：目覚めの前兆",
+      "cn": "蛇王得酷热涅：苏醒的前兆",
+      "tw": "蛇王得酷熱涅：甦醒的前兆"
+    },
+    "FATE Ttokrrone Chain #3": {
+      "en": "The Serpentlord Sires",
+      "de": "Vorbereitung der Jagd",
+      "fr": "Ttokkrone: la grande chasse commence",
+      "jp": "トクローネ：狩猟の下準備",
+      "cn": "蛇王得酷热涅：狩猎前的准备",
+      "tw": "蛇王得酷熱涅：狩獵前的準備"
+    },
+    "FATE Ttokrrone Chain #4": {
+      "en": "The Serpentlord Suffers",
+      "de": "Mit Blut fängt man Schlangen",
+      "fr": "Ttokrrone: massacre ophidien",
+      "jp": "トクローネ：狩猟の秘策",
+      "cn": "蛇王得酷热涅：狩猎的杀手锏",
+      "tw": "蛇王得酷熱涅：狩獵的殺手鐧"
+    },
+    "FATE Ttokrrone": {
+      "en": "The Serpentlord Seethes",
+      "de": "In den sandigen Schlund",
+      "fr": "Ttokrrone: lutte ensablée",
+      "jp": "トクローネ：荒野の死闘",
+      "cn": "蛇王得酷热涅：荒野的死斗",
+      "tw": "蛇王得酷熱涅：荒野的死鬥"
+    },
+    "FATE Mascot": {
+      "en": "Mascot Murder",
+      "de": "Mordendes Maskottchen",
+      "fr": "Mica le mu: le grand final",
+      "jp": "マイカ・ザ・ムー：大団円",
+      "cn": "亩鼠米卡：盛装巡游皆大欢喜",
+      "tw": "畝鼠米卡：盛裝巡遊皆大歡喜"
+    }
+  },
+  "regions": {
+    "Central Shroud": {
+      "en": "Central Shroud",
+      "de": "Tiefer Wald",
+      "fr": "Forêt centrale",
+      "jp": "黒衣森：中央森林",
+      "cn": "黑衣森林中央林区",
+      "tw": "黑衣森林中央林區"
+    },
+    "East Shroud": {
+      "en": "East Shroud",
+      "de": "Ostwald",
+      "fr": "Forêt de l'est",
+      "jp": "黒衣森：東部森林",
+      "cn": "黑衣森林东部林区",
+      "tw": "黑衣森林東部林區"
+    },
+    "South Shroud": {
+      "en": "South Shroud",
+      "de": "Südwald",
+      "fr": "Forêt du sud",
+      "jp": "黒衣森：南部森林",
+      "cn": "黑衣森林南部林区",
+      "tw": "黑衣森林南部林區"
+    },
+    "North Shroud": {
+      "en": "North Shroud",
+      "de": "Nordwald",
+      "fr": "Forêt du nord",
+      "jp": "黒衣森：北部森林",
+      "cn": "黑衣森林北部林区",
+      "tw": "黑衣森林北部林區"
+    },
+    "Western Thanalan": {
+      "en": "Western Thanalan",
+      "de": "Westliches Thanalan",
+      "fr": "Thanalan occidental",
+      "jp": "西ザナラーン",
+      "cn": "西萨纳兰",
+      "tw": "西薩納蘭"
+    },
+    "Central Thanalan": {
+      "en": "Central Thanalan",
+      "de": "Zentrales Thanalan",
+      "fr": "Thanalan central",
+      "jp": "中央ザナラーン",
+      "cn": "中萨纳兰",
+      "tw": "中薩納蘭"
+    },
+    "Eastern Thanalan": {
+      "en": "Eastern Thanalan",
+      "de": "Östliches Thanalan",
+      "fr": "Thanalan oriental",
+      "jp": "東ザナラーン",
+      "cn": "东萨纳兰",
+      "tw": "東薩納蘭"
+    },
+    "Southern Thanalan": {
+      "en": "Southern Thanalan",
+      "de": "Südliches Thanalan",
+      "fr": "Thanalan méridional",
+      "jp": "南ザナラーン",
+      "cn": "南萨纳兰",
+      "tw": "南薩納蘭"
+    },
+    "Northern Thanalan": {
+      "en": "Northern Thanalan",
+      "de": "Nördliches Thanalan",
+      "fr": "Thanalan septentrional",
+      "jp": "北ザナラーン",
+      "cn": "北萨纳兰",
+      "tw": "北薩納蘭"
+    },
+    "Middle La Noscea": {
+      "en": "Middle La Noscea",
+      "de": "Zentrales La Noscea",
+      "fr": "Noscea centrale",
+      "jp": "中央ラノシア",
+      "cn": "中拉诺西亚",
+      "tw": "中拉諾西亞"
+    },
+    "Lower La Noscea": {
+      "en": "Lower La Noscea",
+      "de": "Unteres La Noscea",
+      "fr": "Basse-Noscea",
+      "jp": "低地ラノシア",
+      "cn": "拉诺西亚低地",
+      "tw": "拉諾西亞低地"
+    },
+    "Eastern La Noscea": {
+      "en": "Eastern La Noscea",
+      "de": "Östliches La Noscea",
+      "fr": "Noscea orientale",
+      "jp": "東ラノシア",
+      "cn": "东拉诺西亚",
+      "tw": "東拉諾西亞"
+    },
+    "Western La Noscea": {
+      "en": "Western La Noscea",
+      "de": "Westliches La Noscea",
+      "fr": "Noscea occidentale",
+      "jp": "西ラノシア",
+      "cn": "西拉诺西亚",
+      "tw": "西拉諾西亞"
+    },
+    "Upper La Noscea": {
+      "en": "Upper La Noscea",
+      "de": "Oberes La Noscea",
+      "fr": "Haute-Noscea",
+      "jp": "高地ラノシア",
+      "cn": "拉诺西亚高地",
+      "tw": "拉諾西亞高地"
+    },
+    "Outer La Noscea": {
+      "en": "Outer La Noscea",
+      "de": "Äußeres La Noscea",
+      "fr": "Noscea extérieure",
+      "jp": "外地ラノシア",
+      "cn": "拉诺西亚外地",
+      "tw": "拉諾西亞外地"
+    },
+    "Coerthas Central Highlands": {
+      "en": "Coerthas Central Highlands",
+      "de": "Zentrales Hochland von Coerthas",
+      "fr": "Hautes terres du Coerthas central",
+      "jp": "クルザス中央高地",
+      "cn": "库尔札斯中央高地",
+      "tw": "庫爾札斯中央高地"
+    },
+    "Mor Dhona": {
+      "en": "Mor Dhona",
+      "de": "Mor Dhona",
+      "fr": "Mor Dhona",
+      "jp": "モードゥナ",
+      "cn": "摩杜纳",
+      "tw": "摩杜納"
+    },
+    "All Shroud": {
+      "en": "All Shroud",
+      "de": "Tiefer Wald",
+      "fr": "Forêt",
+      "jp": "黒衣森",
+      "cn": "黑衣森林",
+      "tw": "黑衣森林"
+    },
+    "Coerthas Western Highlands": {
+      "en": "Coerthas Western Highlands",
+      "de": "Westliches Hochland von Coerthas",
+      "fr": "Hautes terres du Coerthas occidental",
+      "jp": "クルザス西部高地",
+      "cn": "库尔札斯西部高地",
+      "tw": "庫爾札斯西部高地"
+    },
+    "The Dravanian Forelands": {
+      "en": "The Dravanian Forelands",
+      "de": "Dravanisches Vorland",
+      "fr": "Avant-pays dravanien",
+      "jp": "高地ドラヴァニア",
+      "cn": "龙堡参天高地",
+      "tw": "龍堡參天高地"
+    },
+    "The Churning Mists": {
+      "en": "The Churning Mists",
+      "de": "Wallende Nebel",
+      "fr": "L'Écume des cieux de Dravania",
+      "jp": "ドラヴァニア雲海",
+      "cn": "翻云雾海",
+      "tw": "翻雲霧海"
+    },
+    "The Dravanian Hinterlands": {
+      "en": "The Dravanian Hinterlands",
+      "de": "Dravanisches Hinterland",
+      "fr": "Arrière-pays dravanien",
+      "jp": "低地ドラヴァニア",
+      "cn": "龙堡内陆低地",
+      "tw": "龍堡內陸低地"
+    },
+    "The Sea of Clouds": {
+      "en": "The Sea of Clouds",
+      "de": "Abalathisches Wolkenmeer",
+      "fr": "L'Écume des cieux d'Abalathia",
+      "jp": "アバラシア雲海",
+      "cn": "阿巴拉提亚云海",
+      "tw": "阿巴拉提亞雲海"
+    },
+    "Azys Lla": {
+      "en": "Azys Lla",
+      "de": "Azys Lla",
+      "fr": "Azys Lla",
+      "jp": "アジス・ラー",
+      "cn": "魔大陆阿济兹拉",
+      "tw": "魔大陸阿濟茲拉"
+    },
+    "The Fringes": {
+      "en": "The Fringes",
+      "de": "Abanisches Grenzland",
+      "fr": "Les Marges",
+      "jp": "ギラバニア辺境地帯",
+      "cn": "基拉巴尼亚边区",
+      "tw": "基拉巴尼亞邊區"
+    },
+    "The Peaks": {
+      "en": "The Peaks",
+      "de": "Die Zinnen",
+      "fr": "Les Pics",
+      "jp": "ギラバニア山岳地帯",
+      "cn": "基拉巴尼亚山区",
+      "tw": "基拉巴尼亞山區"
+    },
+    "The Lochs": {
+      "en": "The Lochs",
+      "de": "Das Fenn",
+      "fr": "Les Lacs",
+      "jp": "ギラバニア湖畔地帯",
+      "cn": "基拉巴尼亚湖区",
+      "tw": "基拉巴尼亞湖區"
+    },
+    "The Ruby Sea": {
+      "en": "The Ruby Sea",
+      "de": "Rubinsee",
+      "fr": "Mer de Rubis",
+      "jp": "紅玉海",
+      "cn": "红玉海",
+      "tw": "紅玉海"
+    },
+    "Yanxia": {
+      "en": "Yanxia",
+      "de": "Yanxia",
+      "fr": "Yanxia",
+      "jp": "ヤンサ",
+      "cn": "延夏",
+      "tw": "延夏"
+    },
+    "The Azim Steppe": {
+      "en": "The Azim Steppe",
+      "de": "Azim-Steppe",
+      "fr": "Steppe d'Azim",
+      "jp": "アジムステップ",
+      "cn": "太阳神草原",
+      "tw": "太陽神草原"
+    },
+    "Lakeland": {
+      "en": "Lakeland",
+      "de": "Seenland",
+      "fr": "Grand-Lac",
+      "jp": "レイクランド",
+      "cn": "雷克兰德",
+      "tw": "雷克蘭德"
+    },
+    "Kholusia": {
+      "en": "Kholusia",
+      "de": "Kholusia",
+      "fr": "Kholusia",
+      "jp": "コルシア島",
+      "cn": "珂露西亚岛",
+      "tw": "珂露西亞島"
+    },
+    "Amh Araeng": {
+      "en": "Amh Araeng",
+      "de": "Amh Araeng",
+      "fr": "Amh Araeng",
+      "jp": "アム・アレーン",
+      "cn": "安穆·艾兰",
+      "tw": "安穆·艾蘭"
+    },
+    "Il Mheg": {
+      "en": "Il Mheg",
+      "de": "Il Mheg",
+      "fr": "Il Mheg",
+      "jp": "イル・メグ",
+      "cn": "伊尔美格",
+      "tw": "伊爾美格"
+    },
+    "The Rak'tika Greatwood": {
+      "en": "The Rak'tika Greatwood",
+      "de": "Der Große Wald Rak'tika",
+      "fr": "Rak'tika",
+      "jp": "ラケティカ大森林",
+      "cn": "拉凯提卡大森林",
+      "tw": "拉凱提卡大森林"
+    },
+    "The Tempest": {
+      "en": "The Tempest",
+      "de": "Tempest",
+      "fr": "La Tempête",
+      "jp": "テンペスト",
+      "cn": "黑风海",
+      "tw": "黑風海"
+    },
+    "Labyrinthos": {
+      "en": "Labyrinthos",
+      "de": "Labyrinthos",
+      "fr": "Le Labyrinthos",
+      "jp": "ラヴィリンソス",
+      "cn": "迷津",
+      "tw": "迷津"
+    },
+    "Thavnair": {
+      "en": "Thavnair",
+      "de": "Thavnair",
+      "fr": "Thavnair",
+      "jp": "サベネア島",
+      "cn": "萨维奈岛",
+      "tw": "薩維奈島"
+    },
+    "Garlemald": {
+      "en": "Garlemald",
+      "de": "Garlemald",
+      "fr": "Garlemald",
+      "jp": "ガレマルド",
+      "cn": "加雷马",
+      "tw": "加雷馬"
+    },
+    "Mare Lamentorum": {
+      "en": "Mare Lamentorum",
+      "de": "Mare Lamentorum",
+      "fr": "Mare Lamentorum",
+      "jp": "嘆きの海",
+      "cn": "叹息海",
+      "tw": "嘆息海"
+    },
+    "Elpis": {
+      "en": "Elpis",
+      "de": "Elpis",
+      "fr": "Elpis",
+      "jp": "エルピス",
+      "cn": "厄尔庇斯",
+      "tw": "厄爾庇斯"
+    },
+    "Ultima Thule": {
+      "en": "Ultima Thule",
+      "de": "Ultima Thule",
+      "fr": "Ultima Thulé",
+      "jp": "ウルティマ・トゥーレ",
+      "cn": "天外天垓",
+      "tw": "天外天垓"
+    },
+    "Urqopacha": {
+      "en": "Urqopacha",
+      "de": "Urqopacha",
+      "fr": "Urqopacha",
+      "jp": "オルコ・パチャ",
+      "cn": "奥阔帕恰山",
+      "tw": "奧闊帕恰山"
+    },
+    "Kozama'uka": {
+      "en": "Kozama'uka",
+      "de": "Kozama'uka",
+      "fr": "Kozama'uka",
+      "jp": "コザマル・カ",
+      "cn": "克扎玛乌卡湿地",
+      "tw": "克扎瑪烏卡溼地"
+    },
+    "Yak T'el": {
+      "en": "Yak T'el",
+      "de": "Yak T'el",
+      "fr": "Yak T'el",
+      "jp": "ヤクテル樹海",
+      "cn": "亚克特尔树海",
+      "tw": "亞克特爾樹海"
+    },
+    "Shaaloani": {
+      "en": "Shaaloani",
+      "de": "Shaaloani",
+      "fr": "Shaaloani",
+      "jp": "シャーローニ荒野",
+      "cn": "夏劳尼荒野",
+      "tw": "夏勞尼荒野"
+    },
+    "Heritage Found": {
+      "en": "Heritage Found",
+      "de": "Ewiges Erbe",
+      "fr": "L'hoirie Recouvrée",
+      "jp": "ヘリテージファウンド",
+      "cn": "遗产之地",
+      "tw": "遺產之地"
+    },
+    "Living Memory": {
+      "en": "Living Memory",
+      "de": "Lebende Erinnerung",
+      "fr": "La Mémoire Vivante",
+      "jp": "リビング・メモリー",
+      "cn": "活着的记忆",
+      "tw": "活着的記憶"
+    }
+  },
+  "conditions": {
+    "Laideronnette": {
+      "en": "Automatic spawn after 30 minutes in real life time of continuous rain.",
+      "de": "Automatic spawn after 30 minutes in real life time of continuous rain.",
+      "fr": "Automatic spawn after 30 minutes in real life time of continuous rain.",
+      "jp": "Automatic spawn after 30 minutes in real life time of continuous rain.",
+      "cn": "当区域内持续下了30分钟（现实时间）的雨后，由系统自动触发",
+      "tw": "當區域內持續下了30分鐘（現實時間）的雨後，由系統自動觸發"
+    },
+    "Wulgaru": {
+      "en": "Upon initiation of a Battle Leve. Chance Spawn.",
+      "de": "Upon initiation of a Battle Leve. Chance Spawn.",
+      "fr": "Upon initiation of a Battle Leve. Chance Spawn.",
+      "jp": "Upon initiation of a Battle Leve. Chance Spawn.",
+      "cn": "开始战斗理符任务后有低几率触发",
+      "tw": "開始戰鬥理符任務後有低幾率觸發"
+    },
+    "Mindflayer": {
+      "en": "Walk (or fly) over spawn points during New Moon night (starting at 12am on first night and 5pm on 2nd to 4th night).",
+      "de": "Walk (or fly) over spawn points during New Moon night (starting at 12am on first night and 5pm on 2nd to 4th night).",
+      "fr": "Walk (or fly) over spawn points during New Moon night (starting at 12am on first night and 5pm on 2nd to 4th night).",
+      "jp": "Walk (or fly) over spawn points during New Moon night (starting at 12am on first night and 5pm on 2nd to 4th night).",
+      "cn": "在艾欧泽亚时间新月的午夜0点以后的夜晚（第一天是午夜0点开始，第二至第四天是晚5点开始），当玩家走过或飞过触发点的时候触发。",
+      "tw": "在艾歐澤亞時間新月的午夜0點以後的夜晚（第一天是午夜0點開始，第二至第四天是晚5點開始），當玩家走過或飛過觸發點的時候觸發。"
+    },
+    "Thousand-cast Theda": {
+      "en": "Upon catching Judgeray (!!!) between 5pm EzT to 9pm EzT. Chance Spawn.",
+      "de": "Upon catching Judgeray (!!!) between 5pm EzT to 9pm EzT. Chance Spawn.",
+      "fr": "Upon catching Judgeray (!!!) between 5pm EzT to 9pm EzT. Chance Spawn.",
+      "jp": "Upon catching Judgeray (!!!) between 5pm EzT to 9pm EzT. Chance Spawn.",
+      "cn": "在黑衣森林北部林区钓到大鱼（!!!）审判鳐的时候有几率触发。审判鳐只在艾欧泽亚时间晚5点至晚9点能钓到。",
+      "tw": "在黑衣森林北部林區釣到大魚（!!!）審判鰩的時候有幾率觸發。審判鰩只在艾歐澤亞時間晚5點至晚9點能釣到。"
+    },
+    "Zona Seeker": {
+      "en": "Upon catching Glimmerscale (!!!) during Clear Sky or Fair Sky. Chance Spawn.",
+      "de": "Upon catching Glimmerscale (!!!) during Clear Sky or Fair Sky. Chance Spawn.",
+      "fr": "Upon catching Glimmerscale (!!!) during Clear Sky or Fair Sky. Chance Spawn.",
+      "jp": "Upon catching Glimmerscale (!!!) during Clear Sky or Fair Sky. Chance Spawn.",
+      "cn": "在西萨纳兰钓到大鱼（!!!）铜镜的时候有几率触发。铜镜只在碧空和晴朗天气时能钓到。",
+      "tw": "在西薩納蘭釣到大魚（!!!）銅鏡的時候有幾率觸發。銅鏡只在碧空和晴朗天氣時能釣到。"
+    },
+    "Brontes": {
+      "en": "At (or above) spawn point, eat food.",
+      "de": "At (or above) spawn point, eat food.",
+      "fr": "At (or above) spawn point, eat food.",
+      "jp": "At (or above) spawn point, eat food.",
+      "cn": "在触发点上（可在飞行状态）吃任何食物后触发。",
+      "tw": "在觸發點上（可在飛行狀態）喫任何食物後觸發。"
+    },
+    "Lampalagua": {
+      "en": "Upon initiation of a Battle Leve. Chance Spawn.",
+      "de": "Upon initiation of a Battle Leve. Chance Spawn.",
+      "fr": "Upon initiation of a Battle Leve. Chance Spawn.",
+      "jp": "Upon initiation of a Battle Leve. Chance Spawn.",
+      "cn": "开始战斗理符任务后有低几率触发",
+      "tw": "開始戰鬥理符任務後有低幾率觸發"
+    },
+    "Nunyunuwi": {
+      "en": "For 60 minutes in real life without a single FATE failed. Timer reset upon one FATE failed (uninitiated FATE count as fail)",
+      "de": "For 60 minutes in real life without a single FATE failed. Timer reset upon one FATE failed (uninitiated FATE count as fail)",
+      "fr": "For 60 minutes in real life without a single FATE failed. Timer reset upon one FATE failed (uninitiated FATE count as fail)",
+      "jp": "For 60 minutes in real life without a single FATE failed. Timer reset upon one FATE failed (uninitiated FATE count as fail)",
+      "cn": "在现实时间60分钟内，南萨纳兰没有任何FATE失败之后触发。未开始而消失的FATE也算是失败。",
+      "tw": "在現實時間60分鐘內，南薩納蘭沒有任何FATE失敗之後觸發。未開始而消失的FATE也算是失敗。"
+    },
+    "Minhocao": {
+      "en": "Defeat 100 Earth Sprites. FATE also count (but not necessarily faster because of Sync)",
+      "de": "Defeat 100 Earth Sprites. FATE also count (but not necessarily faster because of Sync)",
+      "fr": "Defeat 100 Earth Sprites. FATE also count (but not necessarily faster because of Sync)",
+      "jp": "Defeat 100 Earth Sprites. FATE also count (but not necessarily faster because of Sync)",
+      "cn": "击杀100只土元精。该区域内的FATE“核心危机”内的土元精也算，单刷约10分钟能完成。",
+      "tw": "擊殺100只土元精。該區域內的FATE“核心危機”內的土元精也算，單刷約10分鐘能完成。"
+    },
+    "Croque-Mitaine": {
+      "en": "Gather Grade 3 La Noscean Topsoil (Lv50 Legendary Mining Node) between 7pm EzT to 10pm EzT",
+      "de": "Gather Grade 3 La Noscean Topsoil (Lv50 Legendary Mining Node) between 7pm EzT to 10pm EzT",
+      "fr": "Gather Grade 3 La Noscean Topsoil (Lv50 Legendary Mining Node) between 7pm EzT to 10pm EzT",
+      "jp": "Gather Grade 3 La Noscean Topsoil (Lv50 Legendary Mining Node) between 7pm EzT to 10pm EzT",
+      "cn": "采集3级拉诺西亚土壤（50级未知的石场）后有几率触发。艾欧泽亚时间晚7点至晚10点可以采集，每人每晚仅1次机会。",
+      "tw": "採集3級拉諾西亞土壤（50級未知的石場）後有幾率觸發。艾歐澤亞時間晚7點至晚10點可以採集，每人每晚僅1次機會。"
+    },
+    "Croakadile": {
+      "en": "Walk (or fly) over spawn points during any of the Full Moon nights (starting at 5pm to second day 3am).",
+      "de": "Walk (or fly) over spawn points during any of the Full Moon nights (starting at 5pm to second day 3am).",
+      "fr": "Walk (or fly) over spawn points during any of the Full Moon nights (starting at 5pm to second day 3am).",
+      "jp": "Walk (or fly) over spawn points during any of the Full Moon nights (starting at 5pm to second day 3am).",
+      "cn": "在艾欧泽亚时间满月的夜晚（晚5点至早3点），当玩家走过或飞过触发点的时候触发。",
+      "tw": "在艾歐澤亞時間滿月的夜晚（晚5點至早3點），當玩家走過或飛過觸發點的時候觸發。"
+    },
+    "The Garlok": {
+      "en": "Automatic spawn after 200 minutes in real life time of no rain.",
+      "de": "Automatic spawn after 200 minutes in real life time of no rain.",
+      "fr": "Automatic spawn after 200 minutes in real life time of no rain.",
+      "jp": "Automatic spawn after 200 minutes in real life time of no rain.",
+      "cn": "当区域内连续200分钟（现实时间）没有下雨后，由系统自动触发",
+      "tw": "當區域內連續200分鐘（現實時間）沒有下雨後，由系統自動觸發"
+    },
+    "Bonnacon": {
+      "en": "Gather La Noscean Leek (Lv50 Legendary Botanist Node) between 8am EzT to 11am EzT",
+      "de": "Gather La Noscean Leek (Lv50 Legendary Botanist Node) between 8am EzT to 11am EzT",
+      "fr": "Gather La Noscean Leek (Lv50 Legendary Botanist Node) between 8am EzT to 11am EzT",
+      "jp": "Gather La Noscean Leek (Lv50 Legendary Botanist Node) between 8am EzT to 11am EzT",
+      "cn": "采集拉诺西亚韭菜（50级未知的草场）后有几率触发。艾欧泽亚时间早8点至早11点可以采集。",
+      "tw": "採集拉諾西亞韭菜（50級未知的草場）後有幾率觸發。艾歐澤亞時間早8點至早11點可以採集。"
+    },
+    "Nandi": {
+      "en": "Walk (or fly) over spawn points with any minion.",
+      "de": "Walk (or fly) over spawn points with any minion.",
+      "fr": "Walk (or fly) over spawn points with any minion.",
+      "jp": "Walk (or fly) over spawn points with any minion.",
+      "cn": "当玩家带着任意宠物走过或飞过触发点的时候触发。",
+      "tw": "當玩家帶着任意寵物走過或飛過觸發點的時候觸發。"
+    },
+    "Chernobog": {
+      "en": "Upon dying in map. Chance spawn.",
+      "de": "Upon dying in map. Chance spawn.",
+      "fr": "Upon dying in map. Chance spawn.",
+      "jp": "Upon dying in map. Chance spawn.",
+      "cn": "当玩家死亡时有几率触发。蓝魔自爆也算死亡。",
+      "tw": "當玩家死亡時有幾率觸發。藍魔自爆也算死亡。"
+    },
+    "Safat": {
+      "en": "Upon reaching critical health (1HP) in map. Chance spawn.",
+      "de": "Upon reaching critical health (1HP) in map. Chance spawn.",
+      "fr": "Upon reaching critical health (1HP) in map. Chance spawn.",
+      "jp": "Upon reaching critical health (1HP) in map. Chance spawn.",
+      "cn": "当玩家生命垂危时（1HP)有几率触发。",
+      "tw": "當玩家生命垂危時（1HP)有幾率觸發。"
+    },
+    "Agrippa the Mighty": {
+      "en": "Upon opening Treasure Chest in map. Chance spawn. Alexandrite Map also count.",
+      "de": "Upon opening Treasure Chest in map. Chance spawn. Alexandrite Map also count.",
+      "fr": "Upon opening Treasure Chest in map. Chance spawn. Alexandrite Map also count.",
+      "jp": "Upon opening Treasure Chest in map. Chance spawn. Alexandrite Map also count.",
+      "cn": "当玩家打开寻宝宝箱时几率触发。神秘地图也算寻宝地图。",
+      "tw": "當玩家打開尋寶寶箱時幾率觸發。神祕地圖也算尋寶地圖。"
+    },
+    "Kaiser Behemoth": {
+      "en": "Walk (or fly) over spawn points with Behemoth Heir, minion purchased with 400 Centurio Seals from Ardolain in Foundation (x:12, y:11).",
+      "de": "Walk (or fly) over spawn points with Behemoth Heir, minion purchased with 400 Centurio Seals from Ardolain in Foundation (x:12, y:11).",
+      "fr": "Walk (or fly) over spawn points with Behemoth Heir, minion purchased with 400 Centurio Seals from Ardolain in Foundation (x:12, y:11).",
+      "jp": "Walk (or fly) over spawn points with Behemoth Heir, minion purchased with 400 Centurio Seals from Ardolain in Foundation (x:12, y:11).",
+      "cn": "当玩家带着皇家贝希摩斯宝宝(宠物)走过或飞过触发点的时候触发。该宠物是从忘忧骑士亭用400兵团徽章购买。",
+      "tw": "當玩家帶着皇家貝希摩斯寶寶(寵物)走過或飛過觸發點的時候觸發。該寵物是從忘憂騎士亭用400兵團徽章購買。"
+    },
+    "Senmurv": {
+      "en": "Complete the 'Cerf's Up' FATE 5 times in a row. The FATE is blocked by 'El Miacid', 'Elephant in the Brume', or 'Special Tarasque Force'. Clearing those can increase spawn rate of 'Cerf's Up'.",
+      "de": "Complete the 'Cerf's Up' FATE 5 times in a row. The FATE is blocked by 'El Miacid', 'Elephant in the Brume', or 'Special Tarasque Force'. Clearing those can increase spawn rate of 'Cerf's Up'.",
+      "fr": "Complete the 'Cerf's Up' FATE 5 times in a row. The FATE is blocked by 'El Miacid', 'Elephant in the Brume', or 'Special Tarasque Force'. Clearing those can increase spawn rate of 'Cerf's Up'.",
+      "jp": "Complete the 'Cerf's Up' FATE 5 times in a row. The FATE is blocked by 'El Miacid', 'Elephant in the Brume', or 'Special Tarasque Force'. Clearing those can increase spawn rate of 'Cerf's Up'.",
+      "cn": "在龙堡参天高地连续完成5次临危受命“龙卵引起的战争”并无失败。",
+      "tw": "在龍堡參天高地連續完成5次臨危受命“龍卵引起的戰爭”並無失敗。"
+    },
+    "Gandarewa": {
+      "en": "Gather Aurum Regis Ore (Lv60 Legendary Mining Node) and Seventh Heaven (Lv60 Legendary Botanist Node) 50 times each between 2am EzT to 6am EzT and 2pm EzT to 6pm EzT",
+      "de": "Gather Aurum Regis Ore (Lv60 Legendary Mining Node) and Seventh Heaven (Lv60 Legendary Botanist Node) 50 times each between 2am EzT to 6am EzT and 2pm EzT to 6pm EzT",
+      "fr": "Gather Aurum Regis Ore (Lv60 Legendary Mining Node) and Seventh Heaven (Lv60 Legendary Botanist Node) 50 times each between 2am EzT to 6am EzT and 2pm EzT to 6pm EzT",
+      "jp": "Gather Aurum Regis Ore (Lv60 Legendary Mining Node) and Seventh Heaven (Lv60 Legendary Botanist Node) 50 times each between 2am EzT to 6am EzT and 2pm EzT to 6pm EzT",
+      "cn": "采集皇金矿（60级传说的矿脉，02:00-04:00,14:00-16:00）和星极花（60级传说的草场，04:00-06:00,16:00-18:00）各50次后触发。",
+      "tw": "採集皇金礦（60級傳說的礦脈，02:00-04:00,14:00-16:00）和星極花（60級傳說的草場，04:00-06:00,16:00-18:00）各50次後觸發。"
+    },
+    "The Pale Rider": {
+      "en": "Upon opening Treasure Chest in Timeworn Wyvernskin Map Treasure Maps. Chance spawn.",
+      "de": "Upon opening Treasure Chest in Timeworn Wyvernskin Map Treasure Maps. Chance spawn.",
+      "fr": "Upon opening Treasure Chest in Timeworn Wyvernskin Map Treasure Maps. Chance spawn.",
+      "jp": "Upon opening Treasure Chest in Timeworn Wyvernskin Map Treasure Maps. Chance spawn.",
+      "cn": "当玩家打开寻宝宝箱时几率触发。",
+      "tw": "當玩家打開尋寶寶箱時幾率觸發。"
+    },
+    "Bird of Paradise": {
+      "en": "When B-Rank Squonk cast 'Chirp'. Chance spawn.",
+      "de": "When B-Rank Squonk cast 'Chirp'. Chance spawn.",
+      "fr": "When B-Rank Squonk cast 'Chirp'. Chance spawn.",
+      "jp": "When B-Rank Squonk cast 'Chirp'. Chance spawn.",
+      "cn": "当B级狩猎目标斯奎克使用技能“唧唧咋咋”后有几率触发",
+      "tw": "當B級狩獵目標斯奎克使用技能“唧唧咋咋”後有幾率觸發"
+    },
+    "Leucrotta": {
+      "en": "Defeat 50 Allagan Chimera (x:31, y:7), 50 Meracydian Vouivre (x:12, y:38), and 50 Lesser Hydra (x:12, y:35)",
+      "de": "Defeat 50 Allagan Chimera (x:31, y:7), 50 Meracydian Vouivre (x:12, y:38), and 50 Lesser Hydra (x:12, y:35)",
+      "fr": "Defeat 50 Allagan Chimera (x:31, y:7), 50 Meracydian Vouivre (x:12, y:38), and 50 Lesser Hydra (x:12, y:35)",
+      "jp": "Defeat 50 Allagan Chimera (x:31, y:7), 50 Meracydian Vouivre (x:12, y:38), and 50 Lesser Hydra (x:12, y:35)",
+      "cn": "击杀50只亚拉戈奇美拉(x:31, y:7), 50只美拉西迪亚薇薇尔飞龙(x:12, y:38), 和50只小海德拉(x:12, y:35)后触发。",
+      "tw": "擊殺50只亞拉戈奇美拉(x:31, y:7), 50只美拉西迪亞薇薇爾飛龍(x:12, y:38), 和50只小海德拉(x:12, y:35)後觸發。"
+    },
+    "Udumbara": {
+      "en": "Defeat 100 Leshy (x:11, y:14) and 100 Diakka (x:10, y:29). Diakka also spawn in a FATE but it is generally much slower than killing field mobs. However, it is likely that some FATEs are cleared after timer is ready, so always work on Diakka after Leshy to avoid overkilling.",
+      "de": "Defeat 100 Leshy (x:11, y:14) and 100 Diakka (x:10, y:29). Diakka also spawn in a FATE but it is generally much slower than killing field mobs. However, it is likely that some FATEs are cleared after timer is ready, so always work on Diakka after Leshy to avoid overkilling.",
+      "fr": "Defeat 100 Leshy (x:11, y:14) and 100 Diakka (x:10, y:29). Diakka also spawn in a FATE but it is generally much slower than killing field mobs. However, it is likely that some FATEs are cleared after timer is ready, so always work on Diakka after Leshy to avoid overkilling.",
+      "jp": "Defeat 100 Leshy (x:11, y:14) and 100 Diakka (x:10, y:29). Diakka also spawn in a FATE but it is generally much slower than killing field mobs. However, it is likely that some FATEs are cleared after timer is ready, so always work on Diakka after Leshy to avoid overkilling.",
+      "cn": "击杀100只莱西(x:11, y:14), 和100只狄亚卡(x:10, y:29)后触发。因为狄亚卡是本区域内其中一个临危受命的讨伐目标，有几率100只击杀目标在尝试触发前已经达成，所以一般推荐是击杀莱西先。",
+      "tw": "擊殺100只萊西(x:11, y:14), 和100只狄亞卡(x:10, y:29)後觸發。因爲狄亞卡是本區域內其中一個臨危受命的討伐目標，有幾率100只擊殺目標在嘗試觸發前已經達成，所以一般推薦是擊殺萊西先。"
+    },
+    "Bone Crawler": {
+      "en": "Spawn when you take Chocobo Taxi between Ala Gannha and Ala Ghiri, message shows up half-way through the map. Chance spawn.",
+      "de": "Spawn when you take Chocobo Taxi between Ala Gannha and Ala Ghiri, message shows up half-way through the map. Chance spawn.",
+      "fr": "Spawn when you take Chocobo Taxi between Ala Gannha and Ala Ghiri, message shows up half-way through the map. Chance spawn.",
+      "jp": "Spawn when you take Chocobo Taxi between Ala Gannha and Ala Ghiri, message shows up half-way through the map. Chance spawn.",
+      "cn": "使用陆行鸟运输，当飞行至路程的一半的时候有几率触发。",
+      "tw": "使用陸行鳥運輸，當飛行至路程的一半的時候有幾率觸發。"
+    },
+    "Salt and Light": {
+      "en": "Spawn when discard any item 50 times. Not a stack of 50, but 50 individual discards.",
+      "de": "Spawn when discard any item 50 times. Not a stack of 50, but 50 individual discards.",
+      "fr": "Spawn when discard any item 50 times. Not a stack of 50, but 50 individual discards.",
+      "jp": "Spawn when discard any item 50 times. Not a stack of 50, but 50 individual discards.",
+      "cn": "丢弃物品50次（不是50件，而是50次）。",
+      "tw": "丟棄物品50次（不是50件，而是50次）。"
+    },
+    "Okina": {
+      "en": "Defeat 100 Yumemi and 100 Naked Yumemi (They are spread over 3 underwater cave around (x:25, y:26), (x:21, y:26), (x:15, y:13). There are 2-3 of each type in each cave)",
+      "de": "Defeat 100 Yumemi and 100 Naked Yumemi (They are spread over 3 underwater cave around (x:25, y:26), (x:21, y:26), (x:15, y:13). There are 2-3 of each type in each cave)",
+      "fr": "Defeat 100 Yumemi and 100 Naked Yumemi (They are spread over 3 underwater cave around (x:25, y:26), (x:21, y:26), (x:15, y:13). There are 2-3 of each type in each cave)",
+      "jp": "Defeat 100 Yumemi and 100 Naked Yumemi (They are spread over 3 underwater cave around (x:25, y:26), (x:21, y:26), (x:15, y:13). There are 2-3 of each type in each cave)",
+      "cn": "击杀100只观梦螺和100只无壳观梦螺(x:25, y:26), (x:21, y:26), (x:15, y:13)后，在满月时间段触发。",
+      "tw": "擊殺100只觀夢螺和100只無殼觀夢螺(x:25, y:26), (x:21, y:26), (x:15, y:13)後，在滿月時間段觸發。"
+    },
+    "Gamma": {
+      "en": "Walk (or fly) over spawn points with Toy Alexander at night (5pm EzT to 8am EzT), minion obtained from Alexander Raid - The Soul of the Creator (A12)",
+      "de": "Walk (or fly) over spawn points with Toy Alexander at night (5pm EzT to 8am EzT), minion obtained from Alexander Raid - The Soul of the Creator (A12)",
+      "fr": "Walk (or fly) over spawn points with Toy Alexander at night (5pm EzT to 8am EzT), minion obtained from Alexander Raid - The Soul of the Creator (A12)",
+      "jp": "Walk (or fly) over spawn points with Toy Alexander at night (5pm EzT to 8am EzT), minion obtained from Alexander Raid - The Soul of the Creator (A12)",
+      "cn": "在艾欧泽亚时间晚5点至早9点的时候，当玩家带着迷你亚历山大(宠物)走过或飞过触发点的时候触发。该宠物是从亚历山大机神城天动之章4奖励箱子掉落。",
+      "tw": "在艾歐澤亞時間晚5點至早9點的時候，當玩家帶着迷你亞歷山大(寵物)走過或飛過觸發點的時候觸發。該寵物是從亞歷山大機神城天動之章4獎勵箱子掉落。"
+    },
+    "Orghana": {
+      "en": "Complete the 'Not Just A Tribute' FATE 1 time then fly over the spawn points. 'Not Just A Tribute' doesn't have to be cleared after Timer is ready, as long as the previous Tribute had not failed.",
+      "de": "Complete the 'Not Just A Tribute' FATE 1 time then fly over the spawn points. 'Not Just A Tribute' doesn't have to be cleared after Timer is ready, as long as the previous Tribute had not failed.",
+      "fr": "Complete the 'Not Just A Tribute' FATE 1 time then fly over the spawn points. 'Not Just A Tribute' doesn't have to be cleared after Timer is ready, as long as the previous Tribute had not failed.",
+      "jp": "Complete the 'Not Just A Tribute' FATE 1 time then fly over the spawn points. 'Not Just A Tribute' doesn't have to be cleared after Timer is ready, as long as the previous Tribute had not failed.",
+      "cn": "完成临危受命“石人英雄——格尔该朝鲁”后，从触发点上走过或飞过后触发。触发者本身不需要完成该临危受命，只要上一个“石人英雄——格尔该朝鲁”并未失败，就可以触发。",
+      "tw": "完成臨危受命“石人英雄——格爾該朝魯”後，從觸發點上走過或飛過後觸發。觸發者本身不需要完成該臨危受命，只要上一個“石人英雄——格爾該朝魯”並未失敗，就可以觸發。"
+    },
+    "Tyger": {
+      "en": "Spawn when discard a 'Rail Tenderloin' (drop from Kholusia, or gemstone merchant).",
+      "de": "Spawn when discard a 'Rail Tenderloin' (drop from Kholusia, or gemstone merchant).",
+      "fr": "Spawn when discard a 'Rail Tenderloin' (drop from Kholusia, or gemstone merchant).",
+      "jp": "Spawn when discard a 'Rail Tenderloin' (drop from Kholusia, or gemstone merchant).",
+      "cn": "丢弃一个秧鸡胸脯肉后触发。",
+      "tw": "丟棄一個秧雞胸脯肉後觸發。"
+    },
+    "Forgiven Pedantry": {
+      "en": "Gather Dwarven Cotton Bolls. Very low chance spawn (rumor that it takes 50 gathering attempt to be count as one spawn attempt).",
+      "de": "Gather Dwarven Cotton Bolls. Very low chance spawn (rumor that it takes 50 gathering attempt to be count as one spawn attempt).",
+      "fr": "Gather Dwarven Cotton Bolls. Very low chance spawn (rumor that it takes 50 gathering attempt to be count as one spawn attempt).",
+      "jp": "Gather Dwarven Cotton Bolls. Very low chance spawn (rumor that it takes 50 gathering attempt to be count as one spawn attempt).",
+      "cn": "图内矮人棉采集次数到达50次触发",
+      "tw": "圖內矮人棉採集次數到達50次觸發"
+    },
+    "Tarchia": {
+      "en": "Blue Mage Skill #21 'Self-Destruction' at spawn point. Chance spawn.",
+      "de": "Blue Mage Skill #21 'Self-Destruction' at spawn point. Chance spawn.",
+      "fr": "Blue Mage Skill #21 'Self-Destruction' at spawn point. Chance spawn.",
+      "jp": "Blue Mage Skill #21 'Self-Destruction' at spawn point. Chance spawn.",
+      "cn": "在触发点上使用青魔法师技能21：“自爆”后触发",
+      "tw": "在觸發點上使用青魔法師技能21：“自爆”後觸發"
+    },
+    "Aglaope": {
+      "en": "Walk (or fly) over spawn points with Scarlet Peacock, minion obtained from crafting using materials drop from Extreme Trial 'Hell's Kier'",
+      "de": "Walk (or fly) over spawn points with Scarlet Peacock, minion obtained from crafting using materials drop from Extreme Trial 'Hell's Kier'",
+      "fr": "Walk (or fly) over spawn points with Scarlet Peacock, minion obtained from crafting using materials drop from Extreme Trial 'Hell's Kier'",
+      "jp": "Walk (or fly) over spawn points with Scarlet Peacock, minion obtained from crafting using materials drop from Extreme Trial 'Hell's Kier'",
+      "cn": "当玩家带着朱孔雀(宠物)走过或飞过触发点的时候触发。该宠物是用从朱雀诗魂战掉落的材料制作（70级配方）。可交易可购买。",
+      "tw": "當玩家帶着朱孔雀(寵物)走過或飛過觸發點的時候觸發。該寵物是用從朱雀詩魂戰掉落的材料製作（70級配方）。可交易可購買。"
+    },
+    "Ixtab": {
+      "en": "Defeat 100 Cracked Ronkan Dolls, 100 Cracked Ronkan Thorn, and 100 Cracked Ronkan Vessel (They are all in the island at x:25, y:12)",
+      "de": "Defeat 100 Cracked Ronkan Dolls, 100 Cracked Ronkan Thorn, and 100 Cracked Ronkan Vessel (They are all in the island at x:25, y:12)",
+      "fr": "Defeat 100 Cracked Ronkan Dolls, 100 Cracked Ronkan Thorn, and 100 Cracked Ronkan Vessel (They are all in the island at x:25, y:12)",
+      "jp": "Defeat 100 Cracked Ronkan Dolls, 100 Cracked Ronkan Thorn, and 100 Cracked Ronkan Vessel (They are all in the island at x:25, y:12)",
+      "cn": "击杀100只破裂的隆卡石蒺藜, 100只破裂的隆卡人偶, 和100只破裂的隆卡器皿后触发。三种敌人都可在（x:25, y:12）的岛上找到。",
+      "tw": "擊殺100只破裂的隆卡石蒺藜, 100只破裂的隆卡人偶, 和100只破裂的隆卡器皿後觸發。三種敵人都可在（x:25, y:12）的島上找到。"
+    },
+    "Gunitt": {
+      "en": "When Clionid (x:26, y:6) cast 'Buccal Cones'. Clionid cast 'Buccal Cones' after devour 3 Deep-sea Leeches neearby. Chance spawn.",
+      "de": "When Clionid (x:26, y:6) cast 'Buccal Cones'. Clionid cast 'Buccal Cones' after devour 3 Deep-sea Leeches neearby. Chance spawn.",
+      "fr": "When Clionid (x:26, y:6) cast 'Buccal Cones'. Clionid cast 'Buccal Cones' after devour 3 Deep-sea Leeches neearby. Chance spawn.",
+      "jp": "When Clionid (x:26, y:6) cast 'Buccal Cones'. Clionid cast 'Buccal Cones' after devour 3 Deep-sea Leeches neearby. Chance spawn.",
+      "cn": "当冰海天使(x:26, y:6)使用技能“口锥”后触发。该技能只在冰海天使吸收三只深海水蛭后使用。",
+      "tw": "當冰海天使(x:26, y:6)使用技能“口錐”後觸發。該技能只在冰海天使吸收三隻深海水蛭後使用。"
+    },
+    "Burfurlur the Canny": {
+      "en": "During Day time (9am-5pm) walk (or fly) over spawn point with Tiny Troll minion, obtained from Lv89 dungeon. Require Clear Sky or Fair Sky.",
+      "de": "During Day time (9am-5pm) walk (or fly) over spawn point with Tiny Troll minion, obtained from Lv89 dungeon. Require Clear Sky or Fair Sky.",
+      "fr": "During Day time (9am-5pm) walk (or fly) over spawn point with Tiny Troll minion, obtained from Lv89 dungeon. Require Clear Sky or Fair Sky.",
+      "jp": "During Day time (9am-5pm) walk (or fly) over spawn point with Tiny Troll minion, obtained from Lv89 dungeon. Require Clear Sky or Fair Sky.",
+      "cn": "在艾欧泽亚时间早9点至晚5点的碧空或晴朗天气的时候，当玩家带着小巨魔(宠物)走过或飞过触发点的时候触发。该宠物是从89级副本最后奖励箱子掉落。",
+      "tw": "在艾歐澤亞時間早9點至晚5點的碧空或晴朗天氣的時候，當玩家帶着小巨魔(寵物)走過或飛過觸發點的時候觸發。該寵物是從89級副本最後獎勵箱子掉落。"
+    },
+    "Sphatika": {
+      "en": "Defeat 100 Asvattha, 100 Pisaca, and 100 Vajralangula.",
+      "de": "Defeat 100 Asvattha, 100 Pisaca, and 100 Vajralangula.",
+      "fr": "Defeat 100 Asvattha, 100 Pisaca, and 100 Vajralangula.",
+      "jp": "Defeat 100 Asvattha, 100 Pisaca, and 100 Vajralangula.",
+      "cn": "击杀100只魔界花，100只毕舍遮，和100只金刚尾后触发。",
+      "tw": "擊殺100只魔界花，100只畢舍遮，和100只金剛尾後觸發。"
+    },
+    "Armstrong": {
+      "en": "Upon dying at spawn point while wearing 'Mended Imperial Pot Helm' and 'Mended Imperial Short Robe'. These are from ARR Main Scenario Quest, reclaimed from Calamity Salvagers.",
+      "de": "Upon dying at spawn point while wearing 'Mended Imperial Pot Helm' and 'Mended Imperial Short Robe'. These are from ARR Main Scenario Quest, reclaimed from Calamity Salvagers.",
+      "fr": "Upon dying at spawn point while wearing 'Mended Imperial Pot Helm' and 'Mended Imperial Short Robe'. These are from ARR Main Scenario Quest, reclaimed from Calamity Salvagers.",
+      "jp": "Upon dying at spawn point while wearing 'Mended Imperial Pot Helm' and 'Mended Imperial Short Robe'. These are from ARR Main Scenario Quest, reclaimed from Calamity Salvagers.",
+      "cn": "身穿“修好的帝国盔帽”和“修好的帝国短袍”后，在触发点上死亡（可自杀）后触发。这些装备不需要实际装备，可以使用投影装备。",
+      "tw": "身穿“修好的帝國盔帽”和“修好的帝國短袍”後，在觸發點上死亡（可自殺）後觸發。這些裝備不需要實際裝備，可以使用投影裝備。"
+    },
+    "Ruminator": {
+      "en": "Defeat 100 Thinkers (x:19, y:22, 9 per loop), 100 Wanderers (x:27, y:26, 15 per loop), and 100 Weepers (x:31, y:32, 8 per loop).",
+      "de": "Defeat 100 Thinkers (x:19, y:22, 9 per loop), 100 Wanderers (x:27, y:26, 15 per loop), and 100 Weepers (x:31, y:32, 8 per loop).",
+      "fr": "Defeat 100 Thinkers (x:19, y:22, 9 per loop), 100 Wanderers (x:27, y:26, 15 per loop), and 100 Weepers (x:31, y:32, 8 per loop).",
+      "jp": "Defeat 100 Thinkers (x:19, y:22, 9 per loop), 100 Wanderers (x:27, y:26, 15 per loop), and 100 Weepers (x:31, y:32, 8 per loop).",
+      "cn": "击杀100只思考之物，100只彷徨之物，和100只叹息之物后触发。",
+      "tw": "擊殺100只思考之物，100只彷徨之物，和100只嘆息之物後觸發。"
+    },
+    "Ophioneus": {
+      "en": "Spawn when discard a stack of 5 'Eggs of Elpis' (drop from Bird of Elpis (x:28, y:23), gemstone merchant, or Lv86 Egg of Elpis Battlecraft Retainer Venture [iLvl 519]).",
+      "de": "Spawn when discard a stack of 5 'Eggs of Elpis' (drop from Bird of Elpis (x:28, y:23), gemstone merchant, or Lv86 Egg of Elpis Battlecraft Retainer Venture [iLvl 519]).",
+      "fr": "Spawn when discard a stack of 5 'Eggs of Elpis' (drop from Bird of Elpis (x:28, y:23), gemstone merchant, or Lv86 Egg of Elpis Battlecraft Retainer Venture [iLvl 519]).",
+      "jp": "Spawn when discard a stack of 5 'Eggs of Elpis' (drop from Bird of Elpis (x:28, y:23), gemstone merchant, or Lv86 Egg of Elpis Battlecraft Retainer Venture [iLvl 519]).",
+      "cn": "一次性丢弃5个“厄尔庇斯蛋”后触发。",
+      "tw": "一次性丟棄5個“厄爾庇斯蛋”後觸發。"
+    },
+    "Narrow-rift": {
+      "en": "Walk (or fly) over spawn points with 10 Wee Ea (require 10 players), minion obtained from Rank 3 Share FATE at Ultima Thule, purchased with 500 gemstones",
+      "de": "Walk (or fly) over spawn points with 10 Wee Ea (require 10 players), minion obtained from Rank 3 Share FATE at Ultima Thule, purchased with 500 gemstones",
+      "fr": "Walk (or fly) over spawn points with 10 Wee Ea (require 10 players), minion obtained from Rank 3 Share FATE at Ultima Thule, purchased with 500 gemstones",
+      "jp": "Walk (or fly) over spawn points with 10 Wee Ea (require 10 players), minion obtained from Rank 3 Share FATE at Ultima Thule, purchased with 500 gemstones",
+      "cn": "当最少10名玩家带着10只小异亚(宠物)走过或飞过触发点的时候触发。该宠物是从天外天垓处NPC用500双色宝石购买（要求危命任务完成度3）。",
+      "tw": "當最少10名玩家帶着10只小異亞(寵物)走過或飛過觸發點的時候觸發。該寵物是從天外天垓處NPC用500雙色寶石購買（要求危命任務完成度3）。"
+    },
+    "Kirlirger the Abhorrent": {
+      "en": "Walk (or fly) over spawn points during the New Moon nights (starting at 5pm to second day 9am) with Fog weather.",
+      "de": "Walk (or fly) over spawn points during the New Moon nights (starting at 5pm to second day 9am) with Fog weather.",
+      "fr": "Walk (or fly) over spawn points during the New Moon nights (starting at 5pm to second day 9am) with Fog weather.",
+      "jp": "Walk (or fly) over spawn points during the New Moon nights (starting at 5pm to second day 9am) with Fog weather.",
+      "cn": "在艾欧泽亚时间新月的夜晚（晚0点至早8点）并且天气为大雾时，当玩家走过或飞过触发点的时候触发。",
+      "tw": "在艾歐澤亞時間新月的夜晚（晚0點至早8點）並且天氣爲大霧時，當玩家走過或飛過觸發點的時候觸發。"
+    },
+    "Ihnuxokiy": {
+      "en": "Walk (or fly) over spawn points with Morpho Minion, minion obtained from Lv60 dungeon: The Lost City of Amdapor (Hard)",
+      "de": "Walk (or fly) over spawn points with Morpho Minion, minion obtained from Lv60 dungeon: The Lost City of Amdapor (Hard)",
+      "fr": "Walk (or fly) over spawn points with Morpho Minion, minion obtained from Lv60 dungeon: The Lost City of Amdapor (Hard)",
+      "jp": "Walk (or fly) over spawn points with Morpho Minion, minion obtained from Lv60 dungeon: The Lost City of Amdapor (Hard)",
+      "cn": "当玩家带着蓝闪蝶(宠物)走过或飞过触发点的时候触发。该宠物是从60级副本掉落。",
+      "tw": "當玩家帶着藍閃蝶(寵物)走過或飛過觸發點的時候觸發。該寵物是從60級副本掉落。"
+    },
+    "Neyoozoteel": {
+      "en": "Discard Stack of 50 \"Fishmeal\". (Sold for 21 Gil in Merchant)",
+      "de": "Discard Stack of 50 \"Fishmeal\". (Sold for 21 Gil in Merchant)",
+      "fr": "Discard Stack of 50 \"Fishmeal\". (Sold for 21 Gil in Merchant)",
+      "jp": "Discard Stack of 50 \"Fishmeal\". (Sold for 21 Gil in Merchant)",
+      "cn": "一次性舍弃50个(或以上)道具“鱼粉”(可以在NPC处以21金币购买：也可以自己搓，3条罗敏萨鳀鱼和1个火之碎晶可以搓12个粉)",
+      "tw": "一次性捨棄50個(或以上)道具“魚粉”(可以在NPC處以21金幣購買：也可以自己搓，3條羅敏薩鯷魚和1個火之碎晶可以搓12個粉)"
+    },
+    "Sansheya": {
+      "en": "Complete FATE \"You Are What You Drink\" (I will add FATE Tracker for this later)",
+      "de": "Complete FATE \"You Are What You Drink\" (I will add FATE Tracker for this later)",
+      "fr": "Complete FATE \"You Are What You Drink\" (I will add FATE Tracker for this later)",
+      "jp": "Complete FATE \"You Are What You Drink\" (I will add FATE Tracker for this later)",
+      "cn": "连续三次完成位于(14.0，23.5)的FATE “恶魔的火种——饮火魔”",
+      "tw": "連續三次完成位於(14.0，23.5)的FATE “惡魔的火種——飲火魔”"
+    },
+    "Atticus the Primogenitor": {
+      "en": "Cook \"Rroneek Steak\" High Quality (Lv99) anywhere in the map.",
+      "de": "Cook \"Rroneek Steak\" High Quality (Lv99) anywhere in the map.",
+      "fr": "Cook \"Rroneek Steak\" High Quality (Lv99) anywhere in the map.",
+      "jp": "Cook \"Rroneek Steak\" High Quality (Lv99) anywhere in the map.",
+      "cn": "在本图任意地点(不一定要在触发点上)使用职业“烹调师”完成道具“Rroneek Steak”的HQ制作(99级厨子的配方)",
+      "tw": "在本圖任意地點(不一定要在觸發點上)使用職業“烹調師”完成道具“Rroneek Steak”的HQ製作(99級廚子的配方)"
+    },
+    "The Forecaster": {
+      "en": "Cast BLU Spell \"Norterlies\" (#52, Obtained from Coerthas Western Highlands) on spawn point.",
+      "de": "Cast BLU Spell \"Norterlies\" (#52, Obtained from Coerthas Western Highlands) on spawn point.",
+      "fr": "Cast BLU Spell \"Norterlies\" (#52, Obtained from Coerthas Western Highlands) on spawn point.",
+      "jp": "Cast BLU Spell \"Norterlies\" (#52, Obtained from Coerthas Western Highlands) on spawn point.",
+      "cn": "使用职业“青魔”在触发点使用技能“狂风暴雪”(52号技能)",
+      "tw": "使用職業“青魔”在觸發點使用技能“狂風暴雪”(52號技能)"
+    },
+    "FATE Odin": {
+      "en": "You will see the weather turns Tension. Fun fact, Odin will have the appearance of who last kill him.",
+      "de": "You will see the weather turns Tension. Fun fact, Odin will have the appearance of who last kill him.",
+      "fr": "You will see the weather turns Tension. Fun fact, Odin will have the appearance of who last kill him.",
+      "jp": "You will see the weather turns Tension. Fun fact, Odin will have the appearance of who last kill him.",
+      "cn": "You will see the weather turns Tension. Fun fact, Odin will have the appearance of who last kill him.",
+      "tw": "You will see the weather turns Tension. Fun fact, Odin will have the appearance of who last kill him."
+    },
+    "FATE Behemoth": {
+      "en": "Behemoth comes with 2-Part FATE Behold Now Behemoth (tailing Behemoth) and He Taketh It with His Eyes (Boss FATE)",
+      "de": "Behemoth comes with 2-Part FATE Behold Now Behemoth (tailing Behemoth) and He Taketh It with His Eyes (Boss FATE)",
+      "fr": "Behemoth comes with 2-Part FATE Behold Now Behemoth (tailing Behemoth) and He Taketh It with His Eyes (Boss FATE)",
+      "jp": "Behemoth comes with 2-Part FATE Behold Now Behemoth (tailing Behemoth) and He Taketh It with His Eyes (Boss FATE)",
+      "cn": "Behemoth comes with 2-Part FATE Behold Now Behemoth (tailing Behemoth) and He Taketh It with His Eyes (Boss FATE)",
+      "tw": "Behemoth comes with 2-Part FATE Behold Now Behemoth (tailing Behemoth) and He Taketh It with His Eyes (Boss FATE)"
+    },
+    "FATE Coeurlregina": {
+      "en": "Coeurlregina spawned during Royal Levin weather, with a 3-Part FATE. The first FATE (reward 1 Horn) is on 12 hours timer, and the 2nd (reward 3 Horns) and 3rd (reward 5 Horns) FATE are 4 hours after last FATE finished.",
+      "de": "Coeurlregina spawned during Royal Levin weather, with a 3-Part FATE. The first FATE (reward 1 Horn) is on 12 hours timer, and the 2nd (reward 3 Horns) and 3rd (reward 5 Horns) FATE are 4 hours after last FATE finished.",
+      "fr": "Coeurlregina spawned during Royal Levin weather, with a 3-Part FATE. The first FATE (reward 1 Horn) is on 12 hours timer, and the 2nd (reward 3 Horns) and 3rd (reward 5 Horns) FATE are 4 hours after last FATE finished.",
+      "jp": "Coeurlregina spawned during Royal Levin weather, with a 3-Part FATE. The first FATE (reward 1 Horn) is on 12 hours timer, and the 2nd (reward 3 Horns) and 3rd (reward 5 Horns) FATE are 4 hours after last FATE finished.",
+      "cn": "Coeurlregina spawned during Royal Levin weather, with a 3-Part FATE. The first FATE (reward 1 Horn) is on 12 hours timer, and the 2nd (reward 3 Horns) and 3rd (reward 5 Horns) FATE are 4 hours after last FATE finished.",
+      "tw": "Coeurlregina spawned during Royal Levin weather, with a 3-Part FATE. The first FATE (reward 1 Horn) is on 12 hours timer, and the 2nd (reward 3 Horns) and 3rd (reward 5 Horns) FATE are 4 hours after last FATE finished."
+    },
+    "FATE Noctilucale": {
+      "en": "Noctilucale spawned AFTER Hyperelectricity weather, which can interrupt any weathers so it is not in the standard 8 hours weather loop.",
+      "de": "Noctilucale spawned AFTER Hyperelectricity weather, which can interrupt any weathers so it is not in the standard 8 hours weather loop.",
+      "fr": "Noctilucale spawned AFTER Hyperelectricity weather, which can interrupt any weathers so it is not in the standard 8 hours weather loop.",
+      "jp": "Noctilucale spawned AFTER Hyperelectricity weather, which can interrupt any weathers so it is not in the standard 8 hours weather loop.",
+      "cn": "Noctilucale spawned AFTER Hyperelectricity weather, which can interrupt any weathers so it is not in the standard 8 hours weather loop.",
+      "tw": "Noctilucale spawned AFTER Hyperelectricity weather, which can interrupt any weathers so it is not in the standard 8 hours weather loop."
+    },
+    "FATE Foxy Lady": {
+      "en": "Chance to spawn random amount of time after Outfoxed is done (Chained by Kinko and Ginko FATEs), given the random timer is ready. When Foxy Lady spawns, the Namai Elder will appear at the broken Shrine.",
+      "de": "Chance to spawn random amount of time after Outfoxed is done (Chained by Kinko and Ginko FATEs), given the random timer is ready. When Foxy Lady spawns, the Namai Elder will appear at the broken Shrine.",
+      "fr": "Chance to spawn random amount of time after Outfoxed is done (Chained by Kinko and Ginko FATEs), given the random timer is ready. When Foxy Lady spawns, the Namai Elder will appear at the broken Shrine.",
+      "jp": "Chance to spawn random amount of time after Outfoxed is done (Chained by Kinko and Ginko FATEs), given the random timer is ready. When Foxy Lady spawns, the Namai Elder will appear at the broken Shrine.",
+      "cn": "Chance to spawn random amount of time after Outfoxed is done (Chained by Kinko and Ginko FATEs), given the random timer is ready. When Foxy Lady spawns, the Namai Elder will appear at the broken Shrine.",
+      "tw": "Chance to spawn random amount of time after Outfoxed is done (Chained by Kinko and Ginko FATEs), given the random timer is ready. When Foxy Lady spawns, the Namai Elder will appear at the broken Shrine."
+    },
+    "FATE Ixion": {
+      "en": "Spawn when weather is Quick Levin. It is important that you need Stygian Ash to remove Ixion's Invulnerability. You can buy it off marketboard or just do map in the region.",
+      "de": "Spawn when weather is Quick Levin. It is important that you need Stygian Ash to remove Ixion's Invulnerability. You can buy it off marketboard or just do map in the region.",
+      "fr": "Spawn when weather is Quick Levin. It is important that you need Stygian Ash to remove Ixion's Invulnerability. You can buy it off marketboard or just do map in the region.",
+      "jp": "Spawn when weather is Quick Levin. It is important that you need Stygian Ash to remove Ixion's Invulnerability. You can buy it off marketboard or just do map in the region.",
+      "cn": "Spawn when weather is Quick Levin. It is important that you need Stygian Ash to remove Ixion's Invulnerability. You can buy it off marketboard or just do map in the region.",
+      "tw": "Spawn when weather is Quick Levin. It is important that you need Stygian Ash to remove Ixion's Invulnerability. You can buy it off marketboard or just do map in the region."
+    },
+    "FATE Formidable": {
+      "en": "Formidable is spawned, if the timer is ready, after completing a 5-Part FATE Chain: Ironbeard-Buliders (Resist, Revolt and Rebuilt) and Most Formidable (Foes, Family, then finally, the Finale).",
+      "de": "Formidable is spawned, if the timer is ready, after completing a 5-Part FATE Chain: Ironbeard-Buliders (Resist, Revolt and Rebuilt) and Most Formidable (Foes, Family, then finally, the Finale).",
+      "fr": "Formidable is spawned, if the timer is ready, after completing a 5-Part FATE Chain: Ironbeard-Buliders (Resist, Revolt and Rebuilt) and Most Formidable (Foes, Family, then finally, the Finale).",
+      "jp": "Formidable is spawned, if the timer is ready, after completing a 5-Part FATE Chain: Ironbeard-Buliders (Resist, Revolt and Rebuilt) and Most Formidable (Foes, Family, then finally, the Finale).",
+      "cn": "Formidable is spawned, if the timer is ready, after completing a 5-Part FATE Chain: Ironbeard-Buliders (Resist, Revolt and Rebuilt) and Most Formidable (Foes, Family, then finally, the Finale).",
+      "tw": "Formidable is spawned, if the timer is ready, after completing a 5-Part FATE Chain: Ironbeard-Buliders (Resist, Revolt and Rebuilt) and Most Formidable (Foes, Family, then finally, the Finale)."
+    },
+    "FATE Archaeotania": {
+      "en": "Archaeotania is spawned, if the timer is ready, after completing a 6-Part FATE Chain: Where Has the Dagon (x:23.2, y:22.8), Ondo of Blood (x:28.8, y:12.6), Lookin' Back on the Track (x:24.2, y:17.9), Coral Support (x:35.3, y:9.5) (x:36.1, y:5.3), Low Coral Fiber, and Nothing Like A Trappin' Life (x:26.9, y:24.7).",
+      "de": "Archaeotania is spawned, if the timer is ready, after completing a 6-Part FATE Chain: Where Has the Dagon (x:23.2, y:22.8), Ondo of Blood (x:28.8, y:12.6), Lookin' Back on the Track (x:24.2, y:17.9), Coral Support (x:35.3, y:9.5) (x:36.1, y:5.3), Low Coral Fiber, and Nothing Like A Trappin' Life (x:26.9, y:24.7).",
+      "fr": "Archaeotania is spawned, if the timer is ready, after completing a 6-Part FATE Chain: Where Has the Dagon (x:23.2, y:22.8), Ondo of Blood (x:28.8, y:12.6), Lookin' Back on the Track (x:24.2, y:17.9), Coral Support (x:35.3, y:9.5) (x:36.1, y:5.3), Low Coral Fiber, and Nothing Like A Trappin' Life (x:26.9, y:24.7).",
+      "jp": "Archaeotania is spawned, if the timer is ready, after completing a 6-Part FATE Chain: Where Has the Dagon (x:23.2, y:22.8), Ondo of Blood (x:28.8, y:12.6), Lookin' Back on the Track (x:24.2, y:17.9), Coral Support (x:35.3, y:9.5) (x:36.1, y:5.3), Low Coral Fiber, and Nothing Like A Trappin' Life (x:26.9, y:24.7).",
+      "cn": "Archaeotania is spawned, if the timer is ready, after completing a 6-Part FATE Chain: Where Has the Dagon (x:23.2, y:22.8), Ondo of Blood (x:28.8, y:12.6), Lookin' Back on the Track (x:24.2, y:17.9), Coral Support (x:35.3, y:9.5) (x:36.1, y:5.3), Low Coral Fiber, and Nothing Like A Trappin' Life (x:26.9, y:24.7).",
+      "tw": "Archaeotania is spawned, if the timer is ready, after completing a 6-Part FATE Chain: Where Has the Dagon (x:23.2, y:22.8), Ondo of Blood (x:28.8, y:12.6), Lookin' Back on the Track (x:24.2, y:17.9), Coral Support (x:35.3, y:9.5) (x:36.1, y:5.3), Low Coral Fiber, and Nothing Like A Trappin' Life (x:26.9, y:24.7)."
+    },
+    "FATE Daivadipa": {
+      "en": "The Daivadipa FATE spawn after completing the following FATE Chain: 1) Devout Pilgrims vs. the Jungle Lizards (x23.2, y22.8) and 2) Devout Pilgrims vs. the Apalala (x33.8, y27.8), if the random timer is ready.",
+      "de": "The Daivadipa FATE spawn after completing the following FATE Chain: 1) Devout Pilgrims vs. the Jungle Lizards (x23.2, y22.8) and 2) Devout Pilgrims vs. the Apalala (x33.8, y27.8), if the random timer is ready.",
+      "fr": "The Daivadipa FATE spawn after completing the following FATE Chain: 1) Devout Pilgrims vs. the Jungle Lizards (x23.2, y22.8) and 2) Devout Pilgrims vs. the Apalala (x33.8, y27.8), if the random timer is ready.",
+      "jp": "The Daivadipa FATE spawn after completing the following FATE Chain: 1) Devout Pilgrims vs. the Jungle Lizards (x23.2, y22.8) and 2) Devout Pilgrims vs. the Apalala (x33.8, y27.8), if the random timer is ready.",
+      "cn": "The Daivadipa FATE spawn after completing the following FATE Chain: 1) Devout Pilgrims vs. the Jungle Lizards (x23.2, y22.8) and 2) Devout Pilgrims vs. the Apalala (x33.8, y27.8), if the random timer is ready.",
+      "tw": "The Daivadipa FATE spawn after completing the following FATE Chain: 1) Devout Pilgrims vs. the Jungle Lizards (x23.2, y22.8) and 2) Devout Pilgrims vs. the Apalala (x33.8, y27.8), if the random timer is ready."
+    },
+    "FATE Chi": {
+      "en": "The Chi FATE is on random timer, spawned by completing other Omicron related FATEs",
+      "de": "The Chi FATE is on random timer, spawned by completing other Omicron related FATEs",
+      "fr": "The Chi FATE is on random timer, spawned by completing other Omicron related FATEs",
+      "jp": "The Chi FATE is on random timer, spawned by completing other Omicron related FATEs",
+      "cn": "The Chi FATE is on random timer, spawned by completing other Omicron related FATEs",
+      "tw": "The Chi FATE is on random timer, spawned by completing other Omicron related FATEs"
+    },
+    "FATE Ttokrrone": {
+      "en": "?????",
+      "de": "?????",
+      "fr": "?????",
+      "jp": "?????",
+      "cn": "?????",
+      "tw": "?????"
+    },
+    "FATE Mascot": {
+      "en": "?????",
+      "de": "?????",
+      "fr": "?????",
+      "jp": "?????",
+      "cn": "?????",
+      "tw": "?????"
+    }
+  },
+  "guide": {
+    "timerNameHeader": {
+      "en": "Click on Hunt Icon to bring up spawn condition information.",
+      "cn": "点击此处可查看触发条件",
+      "tw": "點擊此處可查看觸發條件"
+    },
+    "timerRegionHeader": {
+      "en": "Click on Map Icon to bring up spawn point map.",
+      "cn": "点击此处可以查看狩猎点位",
+      "tw": "點擊此處可以查看狩獵點位"
+    },
+    "brankOnlyPoint": {
+      "en": "This is a B-Rank-Only spot.",
+      "cn": "此处不会出现S怪",
+      "tw": "此處不會出現S怪"
+    },
+    "timerTimerHeader1": {
+      "en": "Spawn Timer measured in 3 modes:",
+      "cn": "触发时间分为3种状态：",
+      "tw": "觸發時間分爲3種狀態："
+    },
+    "timerTimerHeader2": {
+      "en": "Time until spawn window open (Hours:Minutes)",
+      "cn": "红：不可触发期（为倒计时）",
+      "tw": "紅：不可觸發期（爲倒計時）"
+    },
+    "timerTimerHeader3": {
+      "en": "Time since spawn window open (Hours:Minutes)",
+      "cn": "绿：可触发期（为正计时，百分比为进度而非概率）",
+      "tw": "綠：可觸發期（爲正計時，百分比爲進度而非概率）"
+    },
+    "timerTimerHeader4": {
+      "en": "Time since spawn window open, and is capped (Hours:Minutes)",
+      "cn": "蓝：强制期（为正计时，绝大部分S在此时间内必定可触发）",
+      "tw": "藍：強制期（爲正計時，絕大部分S在此時間內必定可觸發）"
+    },
+    "timerSecondaryTimerHeader1": {
+      "en": "Condition Timer:",
+      "cn": "条件时间：部分S有特殊的要求，如月相、天气等。",
+      "tw": "條件時間：部分S有特殊的要求，如月相、天氣等。"
+    },
+    "timerSecondaryTimerHeader2": {
+      "en": "Red: Condition is not met",
+      "cn": "红：未满足触发条件（为倒计时）",
+      "tw": "紅：未滿足觸發條件（爲倒計時）"
+    },
+    "timerSecondaryTimerHeader3": {
+      "en": "Green: Condition is met",
+      "cn": "绿：满足了触发条件（为倒计时）",
+      "tw": "綠：滿足了觸發條件（爲倒計時）"
+    },
+    "timerSecondaryTimerHeader4": {
+      "en": "FATE Related Timers:",
+      "cn": "FATE相关计时：",
+      "tw": "FATE相關計時："
+    },
+    "timerSecondaryTimerHeader6": {
+      "en": "Red: Since last FATE Completion",
+      "cn": "红：距离上次死亡已过时间",
+      "tw": "紅：距離上次死亡已過時間"
+    },
+    "timerSecondaryTimerHeader5": {
+      "en": "Green: Since last FATE seen",
+      "cn": "绿：距离最近发现时间",
+      "tw": "綠：距離最近發現時間"
+    },
+    "timerSecondaryTimerHeader7": {
+      "en": "Click to pull up last 6 FATE Status",
+      "cn": "左键点击显示过去6个FATE的完成情况",
+      "tw": "左鍵點擊顯示過去6個FATE的完成情況"
+    },
+    "selectWorldPatchInfo1": {
+      "en": "Left Click to toggle ON/OFF",
+      "cn": "左键单击开启/关闭选项",
+      "tw": "左鍵單擊開啓/關閉選項"
+    },
+    "selectWorldPatchInfo2": {
+      "en": "Right Click to select single or all",
+      "cn": "右键可以单选或全选",
+      "tw": "右鍵可以單選或全選"
+    },
+    "huntInfoHistory1": {
+      "en": "Click \"History Search\" will pull up last 20 known death reports.",
+      "cn": "点击“检索历史记录”会显示过去20次死亡记录",
+      "tw": "點擊“檢索歷史記錄”會顯示過去20次死亡記錄"
+    },
+    "huntInfoHistory2": {
+      "en": "Click \"Revert\" will report error in records.",
+      "cn": "点击”报错“会申请撤销错误记录",
+      "tw": "點擊”報錯“會申請撤銷錯誤記錄"
+    },
+    "spawnMapControl1": {
+      "en": "Green Dots indicate Not Mapped spots. Red Dots indicate Mapped spots.",
+      "cn": "绿点：可能的触发点位。红点：经Sonar认证的非触发点位。黄点：经玩家认证的非触发点位。",
+      "tw": "綠點：可能的觸發點位。紅點：經Sonar認證的非觸發點位。黃點：經玩家認證的非觸發點位。"
+    },
+    "spawnMapControl2": {
+      "en": "Hover over red dots will display date and player that reported the mapped spot.",
+      "cn": "请确定有怪在点位上刷新后，再将绿色点掉",
+      "tw": "請確定有怪在點位上刷新後，再將綠色點掉"
+    },
+    "spawnMapControl3": {
+      "en": "Click on a map spot will toggle state between Mapped/Not Mapped, unless it is marked as \"Verified\"",
+      "cn": "点击触发点会切换排点状态，除非排点被标记为（已验证）",
+      "tw": "點擊觸發點會切換排點狀態，除非排點被標記爲（已驗證）"
+    },
+    "trainToolGuide1": {
+      "en": "Click on map icon on left of the A ranks to bring up spawn point map. Clicking Blue Point will mark that location as Found location.",
+      "cn": "点击A怪名字左边的地图会打开触发点地图。点击蓝色触发点会标识该点为发现地点。",
+      "tw": "點擊A怪名字左邊的地圖會打開觸發點地圖。點擊藍色觸發點會標識該點爲發現地點。"
+    },
+    "trainToolGuide2": {
+      "en": "Right click on Flagged A rank will remove the flag",
+      "cn": "右键标识红旗会移除红旗。",
+      "tw": "右鍵標識紅旗會移除紅旗。"
+    }
+  }
+}

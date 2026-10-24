@@ -1,0 +1,286 @@
+{
+  "source": "https://119.29.119.179/Srank/",
+  "audited_on": "2026-10-24",
+  "source_rules_sha256": "27a2a87bbb5a93f3e6535b32fbe067fbd7fcaf8deb00480b3b53e0de9d1cc3fc",
+  "rules": {
+    "Laideronnette": {
+      "kind": "weather_hold",
+      "zone": "Central Shroud",
+      "hold": 1800,
+      "include": [
+        "Rain"
+      ]
+    },
+    "The Garlok": {
+      "kind": "weather_hold",
+      "zone": "Eastern La Noscea",
+      "hold": 12000,
+      "exclude": [
+        "Rain",
+        "Showers"
+      ]
+    },
+    "Zona Seeker": {
+      "kind": "weather",
+      "zone": "Western Thanalan",
+      "include": [
+        "Clear Skies",
+        "Fair Skies"
+      ]
+    },
+    "Croque-Mitaine": {
+      "kind": "et_window",
+      "hours": [
+        [
+          19,
+          22
+        ]
+      ]
+    },
+    "Bonnacon": {
+      "kind": "et_window",
+      "hours": [
+        [
+          8,
+          11
+        ]
+      ]
+    },
+    "Thousand-cast Theda": {
+      "kind": "et_window",
+      "hours": [
+        [
+          17,
+          21
+        ]
+      ]
+    },
+    "Gamma": {
+      "kind": "et_window",
+      "hours": [
+        [
+          17,
+          32
+        ]
+      ]
+    },
+    "Mindflayer": {
+      "kind": "et_window",
+      "hours": [
+        [
+          17,
+          27
+        ]
+      ],
+      "days": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "first_day_hours": [
+        [
+          0,
+          3
+        ]
+      ]
+    },
+    "Croakadile": {
+      "kind": "et_window",
+      "hours": [
+        [
+          17,
+          27
+        ]
+      ],
+      "days": [
+        16,
+        17,
+        18,
+        19
+      ]
+    },
+    "Okina": {
+      "kind": "et_window",
+      "hours": [
+        [
+          12,
+          108
+        ]
+      ],
+      "days": [
+        16
+      ]
+    },
+    "Burfurlur the Canny": {
+      "kind": "et_window",
+      "hours": [
+        [
+          9,
+          17
+        ]
+      ],
+      "zone": "Labyrinthos",
+      "weather": [
+        "Clear Skies",
+        "Fair Skies"
+      ]
+    },
+    "Kirlirger the Abhorrent": {
+      "kind": "et_window",
+      "hours": [
+        [
+          0,
+          8
+        ]
+      ],
+      "days": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "zone": "Urqopacha",
+      "weather": [
+        "Fog"
+      ]
+    },
+    "Gandarewa": {
+      "kind": "et_window",
+      "hours": [
+        [
+          2,
+          6
+        ],
+        [
+          14,
+          18
+        ]
+      ]
+    }
+  },
+  "weather": {
+    "Central Shroud": [
+      [
+        5,
+        "Thunder"
+      ],
+      [
+        20,
+        "Rain"
+      ],
+      [
+        30,
+        "Fog"
+      ],
+      [
+        40,
+        "Clouds"
+      ],
+      [
+        55,
+        "Fair Skies"
+      ],
+      [
+        85,
+        "Clear Skies"
+      ],
+      [
+        100,
+        "Fair Skies"
+      ]
+    ],
+    "Eastern La Noscea": [
+      [
+        5,
+        "Fog"
+      ],
+      [
+        50,
+        "Clear Skies"
+      ],
+      [
+        80,
+        "Fair Skies"
+      ],
+      [
+        90,
+        "Clouds"
+      ],
+      [
+        95,
+        "Rain"
+      ],
+      [
+        100,
+        "Showers"
+      ]
+    ],
+    "Western Thanalan": [
+      [
+        40,
+        "Clear Skies"
+      ],
+      [
+        60,
+        "Fair Skies"
+      ],
+      [
+        85,
+        "Clouds"
+      ],
+      [
+        95,
+        "Fog"
+      ],
+      [
+        100,
+        "Rain"
+      ]
+    ],
+    "Labyrinthos": [
+      [
+        15,
+        "Clear Skies"
+      ],
+      [
+        60,
+        "Fair Skies"
+      ],
+      [
+        85,
+        "Clouds"
+      ],
+      [
+        100,
+        "Rain"
+      ]
+    ],
+    "Urqopacha": [
+      [
+        20,
+        "Clear Skies"
+      ],
+      [
+        50,
+        "Fair Skies"
+      ],
+      [
+        70,
+        "Clouds"
+      ],
+      [
+        80,
+        "Fog"
+      ],
+      [
+        90,
+        "Wind"
+      ],
+      [
+        100,
+        "Snow"
+      ]
+    ]
+  }
+}

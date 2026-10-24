@@ -1,0 +1,536 @@
+{
+  "schema": 1,
+  "audited_at": "2026-10-23",
+  "coordinate_system": "in-game map XY, full unmodified square map texture",
+  "formula": "pixel=(coordinate-1)*size_factor/4100*texture_dimension",
+  "sources": [
+    "https://raw.githubusercontent.com/xivapi/ffxiv-datamining/master/csv/en/Map.csv",
+    "https://raw.githubusercontent.com/xivapi/ffxiv-datamining/master/csv/en/PlaceName.csv",
+    "https://github.com/goatcorp/Dalamud/blob/master/Dalamud/Game/Text/SeStringHandling/Payloads/MapLinkPayload.cs",
+    "https://tracker.beartoolkit.com/static/images/HuntRegions/"
+  ],
+  "notes": [
+    "Only open-world elite-hunt maps listed here are supported. Extra interior maps sharing a place name are not silently substituted.",
+    "Heavensward SizeFactor is 95: extent is 43.1578947368, not the frontend rounded 43.",
+    "No CSS Y compression is applied to the original square texture. Map offsets apply only when world X/Z is converted into game map XY."
+  ],
+  "maps": {
+    "Central Shroud": {
+      "map_row": 4,
+      "texture_id": "f1f1/00",
+      "size_factor": 100,
+      "offset_x": 0,
+      "offset_y": 0,
+      "texture_size": [
+        2048,
+        2048
+      ]
+    },
+    "East Shroud": {
+      "map_row": 5,
+      "texture_id": "f1f2/00",
+      "size_factor": 100,
+      "offset_x": 0,
+      "offset_y": 0,
+      "texture_size": [
+        2048,
+        2048
+      ]
+    },
+    "South Shroud": {
+      "map_row": 6,
+      "texture_id": "f1f3/00",
+      "size_factor": 100,
+      "offset_x": 0,
+      "offset_y": 0,
+      "texture_size": [
+        2048,
+        2048
+      ]
+    },
+    "North Shroud": {
+      "map_row": 7,
+      "texture_id": "f1f4/00",
+      "size_factor": 100,
+      "offset_x": 0,
+      "offset_y": 0,
+      "texture_size": [
+        2048,
+        2048
+      ]
+    },
+    "Western Thanalan": {
+      "map_row": 20,
+      "texture_id": "w1f1/00",
+      "size_factor": 100,
+      "offset_x": 0,
+      "offset_y": 0,
+      "texture_size": [
+        2048,
+        2048
+      ]
+    },
+    "Central Thanalan": {
+      "map_row": 21,
+      "texture_id": "w1f2/00",
+      "size_factor": 100,
+      "offset_x": 0,
+      "offset_y": 0,
+      "texture_size": [
+        2048,
+        2048
+      ]
+    },
+    "Eastern Thanalan": {
+      "map_row": 22,
+      "texture_id": "w1f3/00",
+      "size_factor": 100,
+      "offset_x": 0,
+      "offset_y": 0,
+      "texture_size": [
+        2048,
+        2048
+      ]
+    },
+    "Southern Thanalan": {
+      "map_row": 23,
+      "texture_id": "w1f4/01",
+      "size_factor": 100,
+      "offset_x": 0,
+      "offset_y": 0,
+      "texture_size": [
+        2048,
+        2048
+      ]
+    },
+    "Northern Thanalan": {
+      "map_row": 24,
+      "texture_id": "w1f5/00",
+      "size_factor": 100,
+      "offset_x": 0,
+      "offset_y": 0,
+      "texture_size": [
+        2048,
+        2048
+      ]
+    },
+    "Middle La Noscea": {
+      "map_row": 15,
+      "texture_id": "s1f1/00",
+      "size_factor": 100,
+      "offset_x": 0,
+      "offset_y": 0,
+      "texture_size": [
+        2048,
+        2048
+      ]
+    },
+    "Lower La Noscea": {
+      "map_row": 16,
+      "texture_id": "s1f2/00",
+      "size_factor": 100,
+      "offset_x": 0,
+      "offset_y": 0,
+      "texture_size": [
+        2048,
+        2048
+      ]
+    },
+    "Eastern La Noscea": {
+      "map_row": 17,
+      "texture_id": "s1f3/01",
+      "size_factor": 100,
+      "offset_x": 0,
+      "offset_y": 0,
+      "texture_size": [
+        2048,
+        2048
+      ]
+    },
+    "Western La Noscea": {
+      "map_row": 18,
+      "texture_id": "s1f4/00",
+      "size_factor": 100,
+      "offset_x": 0,
+      "offset_y": 0,
+      "texture_size": [
+        2048,
+        2048
+      ]
+    },
+    "Upper La Noscea": {
+      "map_row": 19,
+      "texture_id": "s1f5/00",
+      "size_factor": 100,
+      "offset_x": 0,
+      "offset_y": 0,
+      "texture_size": [
+        2048,
+        2048
+      ]
+    },
+    "Outer La Noscea": {
+      "map_row": 30,
+      "texture_id": "s1f6/00",
+      "size_factor": 100,
+      "offset_x": 0,
+      "offset_y": 0,
+      "texture_size": [
+        2048,
+        2048
+      ]
+    },
+    "Coerthas Central Highlands": {
+      "map_row": 53,
+      "texture_id": "r1f1/00",
+      "size_factor": 100,
+      "offset_x": 0,
+      "offset_y": 0,
+      "texture_size": [
+        2048,
+        2048
+      ]
+    },
+    "Mor Dhona": {
+      "map_row": 25,
+      "texture_id": "l1f1/01",
+      "size_factor": 100,
+      "offset_x": 0,
+      "offset_y": 0,
+      "texture_size": [
+        2048,
+        2048
+      ]
+    },
+    "Coerthas Western Highlands": {
+      "map_row": 211,
+      "texture_id": "r2f1/00",
+      "size_factor": 95,
+      "offset_x": 0,
+      "offset_y": 0,
+      "texture_size": [
+        2048,
+        2048
+      ]
+    },
+    "The Dravanian Forelands": {
+      "map_row": 212,
+      "texture_id": "d2f1/00",
+      "size_factor": 95,
+      "offset_x": 0,
+      "offset_y": 0,
+      "texture_size": [
+        2048,
+        2048
+      ]
+    },
+    "The Churning Mists": {
+      "map_row": 214,
+      "texture_id": "d2f3/00",
+      "size_factor": 95,
+      "offset_x": 0,
+      "offset_y": 0,
+      "texture_size": [
+        2048,
+        2048
+      ]
+    },
+    "The Dravanian Hinterlands": {
+      "map_row": 213,
+      "texture_id": "d2f2/00",
+      "size_factor": 95,
+      "offset_x": 0,
+      "offset_y": 0,
+      "texture_size": [
+        2048,
+        2048
+      ]
+    },
+    "The Sea of Clouds": {
+      "map_row": 215,
+      "texture_id": "a2f1/00",
+      "size_factor": 95,
+      "offset_x": 0,
+      "offset_y": 0,
+      "texture_size": [
+        2048,
+        2048
+      ]
+    },
+    "Azys Lla": {
+      "map_row": 216,
+      "texture_id": "a2f2/00",
+      "size_factor": 95,
+      "offset_x": 0,
+      "offset_y": 0,
+      "texture_size": [
+        2048,
+        2048
+      ]
+    },
+    "The Fringes": {
+      "map_row": 367,
+      "texture_id": "g3f1/00",
+      "size_factor": 100,
+      "offset_x": 0,
+      "offset_y": 0,
+      "texture_size": [
+        2048,
+        2048
+      ]
+    },
+    "The Peaks": {
+      "map_row": 368,
+      "texture_id": "g3f2/00",
+      "size_factor": 100,
+      "offset_x": 0,
+      "offset_y": 0,
+      "texture_size": [
+        2048,
+        2048
+      ]
+    },
+    "The Lochs": {
+      "map_row": 369,
+      "texture_id": "g3f3/00",
+      "size_factor": 100,
+      "offset_x": 0,
+      "offset_y": 0,
+      "texture_size": [
+        2048,
+        2048
+      ]
+    },
+    "The Ruby Sea": {
+      "map_row": 371,
+      "texture_id": "e3f1/00",
+      "size_factor": 100,
+      "offset_x": 0,
+      "offset_y": 0,
+      "texture_size": [
+        2048,
+        2048
+      ]
+    },
+    "Yanxia": {
+      "map_row": 354,
+      "texture_id": "e3f2/00",
+      "size_factor": 100,
+      "offset_x": 0,
+      "offset_y": 0,
+      "texture_size": [
+        2048,
+        2048
+      ]
+    },
+    "The Azim Steppe": {
+      "map_row": 372,
+      "texture_id": "e3f3/00",
+      "size_factor": 100,
+      "offset_x": 0,
+      "offset_y": 0,
+      "texture_size": [
+        2048,
+        2048
+      ]
+    },
+    "Lakeland": {
+      "map_row": 491,
+      "texture_id": "n4f1/00",
+      "size_factor": 100,
+      "offset_x": 0,
+      "offset_y": 0,
+      "texture_size": [
+        2048,
+        2048
+      ]
+    },
+    "Kholusia": {
+      "map_row": 492,
+      "texture_id": "n4f2/00",
+      "size_factor": 100,
+      "offset_x": 0,
+      "offset_y": 0,
+      "texture_size": [
+        2048,
+        2048
+      ]
+    },
+    "Amh Araeng": {
+      "map_row": 493,
+      "texture_id": "n4f3/00",
+      "size_factor": 100,
+      "offset_x": 0,
+      "offset_y": 0,
+      "texture_size": [
+        2048,
+        2048
+      ]
+    },
+    "Il Mheg": {
+      "map_row": 494,
+      "texture_id": "n4f4/00",
+      "size_factor": 100,
+      "offset_x": 0,
+      "offset_y": 0,
+      "texture_size": [
+        2048,
+        2048
+      ]
+    },
+    "The Rak'tika Greatwood": {
+      "map_row": 495,
+      "texture_id": "n4f5/00",
+      "size_factor": 100,
+      "offset_x": 0,
+      "offset_y": 0,
+      "texture_size": [
+        2048,
+        2048
+      ]
+    },
+    "The Tempest": {
+      "map_row": 496,
+      "texture_id": "n4f6/00",
+      "size_factor": 100,
+      "offset_x": 0,
+      "offset_y": 0,
+      "texture_size": [
+        2048,
+        2048
+      ]
+    },
+    "Labyrinthos": {
+      "map_row": 695,
+      "texture_id": "k5f1/00",
+      "size_factor": 100,
+      "offset_x": 0,
+      "offset_y": 0,
+      "texture_size": [
+        2048,
+        2048
+      ]
+    },
+    "Thavnair": {
+      "map_row": 696,
+      "texture_id": "m5f1/00",
+      "size_factor": 100,
+      "offset_x": 0,
+      "offset_y": 0,
+      "texture_size": [
+        2048,
+        2048
+      ]
+    },
+    "Garlemald": {
+      "map_row": 697,
+      "texture_id": "m5f2/00",
+      "size_factor": 100,
+      "offset_x": 0,
+      "offset_y": 0,
+      "texture_size": [
+        2048,
+        2048
+      ]
+    },
+    "Mare Lamentorum": {
+      "map_row": 698,
+      "texture_id": "u5f1/00",
+      "size_factor": 100,
+      "offset_x": 0,
+      "offset_y": 0,
+      "texture_size": [
+        2048,
+        2048
+      ]
+    },
+    "Elpis": {
+      "map_row": 700,
+      "texture_id": "n5f1/00",
+      "size_factor": 100,
+      "offset_x": 0,
+      "offset_y": 0,
+      "texture_size": [
+        2048,
+        2048
+      ]
+    },
+    "Ultima Thule": {
+      "map_row": 699,
+      "texture_id": "u5f2/00",
+      "size_factor": 100,
+      "offset_x": 0,
+      "offset_y": 0,
+      "texture_size": [
+        2048,
+        2048
+      ]
+    },
+    "Urqopacha": {
+      "map_row": 857,
+      "texture_id": "y6f1/00",
+      "size_factor": 100,
+      "offset_x": 0,
+      "offset_y": 0,
+      "texture_size": [
+        2048,
+        2048
+      ]
+    },
+    "Kozama'uka": {
+      "map_row": 858,
+      "texture_id": "y6f2/00",
+      "size_factor": 100,
+      "offset_x": 0,
+      "offset_y": 0,
+      "texture_size": [
+        2048,
+        2048
+      ]
+    },
+    "Yak T'el": {
+      "map_row": 859,
+      "texture_id": "y6f3/00",
+      "size_factor": 100,
+      "offset_x": 0,
+      "offset_y": 0,
+      "texture_size": [
+        2048,
+        2048
+      ]
+    },
+    "Shaaloani": {
+      "map_row": 860,
+      "texture_id": "x6f1/00",
+      "size_factor": 100,
+      "offset_x": 0,
+      "offset_y": 0,
+      "texture_size": [
+        2048,
+        2048
+      ]
+    },
+    "Heritage Found": {
+      "map_row": 861,
+      "texture_id": "x6f2/00",
+      "size_factor": 100,
+      "offset_x": 0,
+      "offset_y": 0,
+      "texture_size": [
+        2048,
+        2048
+      ]
+    },
+    "Living Memory": {
+      "map_row": 862,
+      "texture_id": "x6f3/00",
+      "size_factor": 100,
+      "offset_x": 0,
+      "offset_y": 0,
+      "texture_size": [
+        2048,
+        2048
+      ]
+    }
+  }
+}

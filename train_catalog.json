@@ -1,0 +1,165 @@
+{
+  "source": "https://ffxivhuntcn.com/ShiJianShunXu",
+  "servers": [
+    {
+      "id": "temporary-group",
+      "regionId": "chocobo",
+      "name": "临时车组"
+    },
+    {
+      "id": "lanuoxiya",
+      "regionId": "chocobo",
+      "name": "拉诺西亚"
+    },
+    {
+      "id": "huanxiangqunidao",
+      "regionId": "chocobo",
+      "name": "幻影群岛"
+    },
+    {
+      "id": "shenyizhidi",
+      "regionId": "chocobo",
+      "name": "神意之地"
+    },
+    {
+      "id": "mengyachi",
+      "regionId": "chocobo",
+      "name": "萌芽池"
+    },
+    {
+      "id": "hongyuhai",
+      "regionId": "chocobo",
+      "name": "红玉海"
+    },
+    {
+      "id": "yuzhouheyin",
+      "regionId": "chocobo",
+      "name": "宇宙和音"
+    },
+    {
+      "id": "woxianxiran",
+      "regionId": "chocobo",
+      "name": "沃仙曦染"
+    },
+    {
+      "id": "chenxiwangzuo",
+      "regionId": "chocobo",
+      "name": "晨曦王座"
+    },
+    {
+      "id": "chaofengting",
+      "regionId": "moogle",
+      "name": "潮风亭"
+    },
+    {
+      "id": "shenchuanmo",
+      "regionId": "moogle",
+      "name": "神拳痕"
+    },
+    {
+      "id": "baiyinxiang",
+      "regionId": "moogle",
+      "name": "白银乡"
+    },
+    {
+      "id": "baijinqiyuan",
+      "regionId": "moogle",
+      "name": "白金幻象"
+    },
+    {
+      "id": "lvrentaolin",
+      "regionId": "moogle",
+      "name": "旅人栈桥"
+    },
+    {
+      "id": "paiyizhiqian",
+      "regionId": "moogle",
+      "name": "拂晓之间"
+    },
+    {
+      "id": "longchaoshendian",
+      "regionId": "moogle",
+      "name": "龙巢神殿"
+    },
+    {
+      "id": "mengyubaojing",
+      "regionId": "moogle",
+      "name": "梦羽宝境"
+    },
+    {
+      "id": "zishuizhanqiao",
+      "regionId": "cat",
+      "name": "紫水栈桥"
+    },
+    {
+      "id": "yanyu",
+      "regionId": "cat",
+      "name": "延夏"
+    },
+    {
+      "id": "jingyazhuangyuan",
+      "regionId": "cat",
+      "name": "静语庄园"
+    },
+    {
+      "id": "monane",
+      "regionId": "cat",
+      "name": "摩杜纳"
+    },
+    {
+      "id": "haimaonaowu",
+      "regionId": "cat",
+      "name": "海猫茶屋"
+    },
+    {
+      "id": "roufenghaiwan",
+      "regionId": "cat",
+      "name": "柔风海湾"
+    },
+    {
+      "id": "hupo",
+      "regionId": "cat",
+      "name": "琥珀原"
+    },
+    {
+      "id": "shuijingta",
+      "regionId": "bean",
+      "name": "水晶塔"
+    },
+    {
+      "id": "yinleihu",
+      "regionId": "bean",
+      "name": "银泪湖"
+    },
+    {
+      "id": "taiyanghaian",
+      "regionId": "bean",
+      "name": "太阳海岸"
+    },
+    {
+      "id": "yixiujiade",
+      "regionId": "bean",
+      "name": "伊修加德"
+    },
+    {
+      "id": "hongchuan",
+      "regionId": "bean",
+      "name": "红茶川"
+    },
+    {
+      "id": "huangjingu",
+      "regionId": "bean",
+      "name": "黄金谷"
+    },
+    {
+      "id": "yueyawan",
+      "regionId": "bean",
+      "name": "月牙湾"
+    },
+    {
+      "id": "xuesongyuan",
+      "regionId": "bean",
+      "name": "雪松原"
+    }
+  ]
+}

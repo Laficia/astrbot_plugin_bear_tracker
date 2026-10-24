@@ -1,0 +1,4 @@
+components/magic_bucket/assets/map_images/** export-ignore
+tests/** export-ignore
+components/magic_bucket/tests/** export-ignore
+components/hunhuan_forward/tests/** export-ignore

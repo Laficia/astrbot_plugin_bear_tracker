@@ -1,0 +1,450 @@
+{
+  "enabled": {
+    "description": "启用S怪实时播报",
+    "type": "bool",
+    "default": true,
+    "hint": "仍需管理员在目标群执行 /S播报 开启。没有订阅群时不会连接播报源。"
+  },
+  "target_sessions": {
+    "description": "内部接收群路由（由控制台自动生成）",
+    "type": "list",
+    "default": [],
+    "hint": "在控制台直接填写群号即可，不必手动填写此项。"
+  },
+  "poll_interval_seconds": {
+    "description": "断线补查间隔（秒）",
+    "type": "int",
+    "default": 30,
+    "hint": "正常使用网站实时WebSocket；此值用于校对快照及断线恢复，范围10～120。"
+  },
+  "max_report_age_seconds": {
+    "description": "报告有效期（秒）",
+    "type": "int",
+    "default": 300,
+    "hint": "范围30～600。超过有效期的发现报告与发送重试会丢弃，以免播报过时位置。"
+  },
+  "message_template": {
+    "description": "群播报文字模板",
+    "type": "text",
+    "default": "库啵，发现一只{等级}S: {怪名}出现在[{大区简称}-{服务器}] {地图} ({坐标})",
+    "hint": "在控制台编辑和预览。支持 {等级}、{怪名}、{大区}、{大区简称}、{服务器}、{地图}、{坐标}、{X}、{Y}、{分线}，可换行，最多2000字。"
+  },
+  "trigger_alerts_enabled": {
+    "description": "启用S怪可触发提醒",
+    "type": "bool",
+    "default": true,
+    "hint": "按参考站悬浮窗的天气、艾欧泽亚时间和各服CD判断；启动不补发旧窗口。与实际出现播报独立，沿用监听范围和接收群。"
+  },
+  "trigger_message_template": {
+    "description": "S怪可触发提醒模板",
+    "type": "text",
+    "default": "库啵，{等级}S: {怪名}可以触发啦，目前有概率出现在{服务器列表}等，冒险者大人们快去尝试呀！",
+    "hint": "同一只 S 怪的同一条件窗口合并一次提醒。{服务器列表} 输出 [狗-伊修加德]、[狗-水晶塔] 等；模板与实际出现独立。"
+  },
+  "listen_scopes": {
+    "description": "监听大区与服务器",
+    "type": "list",
+    "default": [
+      {
+        "data_center": "豆豆柴",
+        "servers": []
+      }
+    ],
+    "hint": "推荐在控制台添加或删除；servers为空表示该大区全部服务器，整个列表为空表示不监听。"
+  },
+  "trigger_hunts": {
+    "description": "可触发提醒的S怪选择",
+    "type": "list",
+    "default": [
+      "Laideronnette",
+      "The Garlok",
+      "Zona Seeker",
+      "Croque-Mitaine",
+      "Bonnacon",
+      "Thousand-cast Theda",
+      "Gamma",
+      "Mindflayer",
+      "Croakadile",
+      "Okina",
+      "Burfurlur the Canny",
+      "Kirlirger the Abhorrent",
+      "Gandarewa"
+    ],
+    "hint": "在控制台逐只勾选；空列表表示全部不提醒，仅影响可触发提醒，不改变实际出现播报。"
+  },
+  "magic_bucket": {
+    "description": "魔法水桶独立配置（推荐在插件控制台编辑）",
+    "type": "object",
+    "items": {
+      "enabled": {
+        "description": "启用魔法水桶（内置现有群规则，确认接管后开启）",
+        "type": "bool",
+        "default": false
+      },
+      "bot_uin": {
+        "description": "发送账号限制（可选）；留空跟随 AstrBot 接入的 OneBot 账号，支持新增和换号",
+        "type": "string",
+        "default": ""
+      },
+      "send_interval_ms": {
+        "description": "发送间隔（毫秒）",
+        "type": "int",
+        "default": 500
+      },
+      "rules_json": {
+        "description": "转发规则 JSON 数组；留空使用原机器人现有 4 条规则",
+        "type": "text",
+        "default": ""
+      },
+      "overrides_json": {
+        "description": "高级配置 JSON 对象，递归覆盖 profile.json；所有功能参数均可在此修改",
+        "type": "text",
+        "default": "{}"
+      }
+    }
+  },
+  "hunhuan_forward": {
+    "description": "HunHuan 手动群发独立配置（推荐在插件控制台编辑）",
+    "type": "object",
+    "items": {
+      "send_interval_ms": {
+        "description": "转发、回执和撤回的共享间隔（毫秒）",
+        "type": "int",
+        "default": 500,
+        "hint": "与原库默认一致。负数按 0 处理。保存配置后重载插件。"
+      },
+      "rules": {
+        "description": "原 HunHuan 自动规则存档（合并版不执行）",
+        "type": "template_list",
+        "default": [],
+        "hint": "自动转发已统一由魔法水桶管理；此处仅保留原配置。",
+        "templates": {
+          "forward": {
+            "name": "群转发规则",
+            "display_item": "name",
+            "items": {
+              "name": {
+                "description": "规则名称",
+                "type": "string",
+                "default": "重要通知"
+              },
+              "type": {
+                "description": "匹配方式",
+                "type": "string",
+                "default": "prefix",
+                "options": [
+                  "prefix",
+                  "keyword"
+                ],
+                "labels": [
+                  "前缀",
+                  "包含关键词"
+                ]
+              },
+              "source_groups": {
+                "description": "源群号列表",
+                "type": "list",
+                "default": [],
+                "hint": "每项填写一个群号。"
+              },
+              "target_groups": {
+                "description": "目标群号列表",
+                "type": "list",
+                "default": [],
+                "hint": "机器人须已加入目标群。"
+              },
+              "keywords": {
+                "description": "关键词列表",
+                "type": "list",
+                "default": [
+                  "重要",
+                  "紧急"
+                ]
+              },
+              "forward_prefix": {
+                "description": "原库兼容字段（不添加前缀）",
+                "type": "string",
+                "default": "[转发]",
+                "hint": "原库当前版本不会把此前缀追加到消息中，本插件保持一致。"
+              },
+              "enabled": {
+                "description": "启用此规则",
+                "type": "bool",
+                "default": true
+              },
+              "platform_id": {
+                "description": "限定机器人平台实例 ID（空为全部）",
+                "type": "string",
+                "default": ""
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "train_commands": {
+    "description": "车表与自定义指令（在控制台编辑）",
+    "type": "object",
+    "items": {
+      "enabled": {
+        "description": "启用车表指令",
+        "type": "bool",
+        "default": true
+      },
+      "rules": {
+        "description": "指令与回复规则",
+        "type": "list",
+        "default": [
+          {
+            "id": "train-default",
+            "name": "狩猎车表",
+            "enabled": true,
+            "commands": [
+              "发车",
+              "车表"
+            ],
+            "mode": "schedule",
+            "default_center": "bean",
+            "hours": 24,
+            "limit": 30,
+            "reply_template": "库啵，{大区}未来{小时}小时的发车安排：\n{车表}\n\n{提示}\n{来源}",
+            "item_template": "{序号}. {日期} {时间} [{大区简称}-{服务器}] {版本}A · {班次}\n集合：{始发站} {水晶}\n{班次备注}"
+          }
+        ],
+        "hint": "请在车表与指令标签编辑指令、大区和模板。"
+      }
+    }
+  },
+  "automation_platform_id": {
+    "description": "统一自动播报与群转发的发送机器人",
+    "type": "string",
+    "default": "",
+    "hint": "由接收与监听页面设置；未填写时沿用现有唯一接收机器人的平台标识。"
+  },
+  "broadcast_window": {
+    "description": "统一播报区间（北京时间）",
+    "type": "object",
+    "items": {
+      "start": {
+        "type": "string",
+        "description": "开始时间 HH:MM",
+        "default": "00:00"
+      },
+      "end": {
+        "type": "string",
+        "description": "结束时间 HH:MM；与开始相同表示全天",
+        "default": "00:00"
+      }
+    }
+  },
+  "feature_controls": {
+    "type": "object",
+    "description": "各功能开关与群范围（控制台设置）",
+    "items": {
+      "sightings": {
+        "type": "object",
+        "description": "网站 S 怪播报",
+        "items": {
+          "enabled": {
+            "type": "bool",
+            "description": "启用本功能范围",
+            "default": true
+          },
+          "groups": {
+            "type": "list",
+            "description": "限定群号；空列表沿用现有范围",
+            "default": []
+          }
+        }
+      },
+      "forwarding": {
+        "type": "object",
+        "description": "群消息转发",
+        "items": {
+          "enabled": {
+            "type": "bool",
+            "description": "启用本功能范围",
+            "default": true
+          },
+          "groups": {
+            "type": "list",
+            "description": "限定群号；空列表沿用现有范围",
+            "default": []
+          }
+        }
+      },
+      "text": {
+        "type": "object",
+        "description": "文本与地图",
+        "items": {
+          "enabled": {
+            "type": "bool",
+            "description": "启用本功能范围",
+            "default": true
+          },
+          "groups": {
+            "type": "list",
+            "description": "限定群号；空列表沿用现有范围",
+            "default": []
+          }
+        }
+      },
+      "collection": {
+        "type": "object",
+        "description": "查漏与采集",
+        "items": {
+          "enabled": {
+            "type": "bool",
+            "description": "启用本功能范围",
+            "default": true
+          },
+          "groups": {
+            "type": "list",
+            "description": "限定群号；空列表沿用现有范围",
+            "default": []
+          }
+        }
+      },
+      "mango": {
+        "type": "object",
+        "description": "芒果广播",
+        "items": {
+          "enabled": {
+            "type": "bool",
+            "description": "启用本功能范围",
+            "default": true
+          },
+          "groups": {
+            "type": "list",
+            "description": "限定群号；空列表沿用现有范围",
+            "default": []
+          }
+        }
+      },
+      "hunt": {
+        "type": "object",
+        "description": "狩猎提醒",
+        "items": {
+          "enabled": {
+            "type": "bool",
+            "description": "启用本功能范围",
+            "default": true
+          },
+          "groups": {
+            "type": "list",
+            "description": "限定群号；空列表沿用现有范围",
+            "default": []
+          }
+        }
+      },
+      "trains": {
+        "type": "object",
+        "description": "车表与指令",
+        "items": {
+          "enabled": {
+            "type": "bool",
+            "description": "启用本功能范围",
+            "default": true
+          },
+          "groups": {
+            "type": "list",
+            "description": "限定群号；空列表沿用现有范围",
+            "default": []
+          }
+        }
+      },
+      "manual": {
+        "type": "object",
+        "description": "手动群发",
+        "items": {
+          "enabled": {
+            "type": "bool",
+            "description": "启用本功能范围",
+            "default": true
+          },
+          "groups": {
+            "type": "list",
+            "description": "限定群号；空列表沿用现有范围",
+            "default": []
+          }
+        }
+      },
+      "preview": {
+        "type": "object",
+        "description": "效果预览",
+        "items": {
+          "enabled": {
+            "type": "bool",
+            "description": "启用本功能范围",
+            "default": true
+          },
+          "groups": {
+            "type": "list",
+            "description": "限定群号；空列表沿用现有范围",
+            "default": []
+          }
+        }
+      }
+    }
+  },
+  "train_hunt": {
+    "type": "object",
+    "description": "狩猎车文字提醒与图片指令（控制台设置）",
+    "items": {
+      "enabled": {
+        "type": "bool",
+        "description": "启用发车前文字提醒",
+        "default": true
+      },
+      "groups": {
+        "type": "list",
+        "description": "提醒群号",
+        "default": []
+      },
+      "centers": {
+        "type": "list",
+        "description": "提醒大区代码",
+        "default": [
+          "bean"
+        ]
+      },
+      "servers": {
+        "type": "list",
+        "description": "提醒服务器名称",
+        "default": []
+      },
+      "minutes": {
+        "type": "int",
+        "description": "提前提醒分钟数",
+        "default": 10
+      },
+      "template": {
+        "type": "text",
+        "description": "文字提醒模板",
+        "default": "【狩猎车提醒】\n服务器：{服务器}\n版本：{版本}\n时间：{时间}\n始发地：{始发地}\n车头：{车头}\n距离发车还有 {分钟} 分钟！"
+      },
+      "image_commands": {
+        "type": "list",
+        "description": "近期发车图指令",
+        "default": [
+          "车图",
+          "近期发车"
+        ]
+      },
+      "route_commands": {
+        "type": "list",
+        "description": "预计线路图指令",
+        "default": [
+          "车线",
+          "狩猎路线"
+        ]
+      },
+      "default_center": {
+        "type": "string",
+        "description": "图片指令默认大区",
+        "default": "bean"
+      }
+    }
+  }
+}
