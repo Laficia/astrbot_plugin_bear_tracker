@@ -18,7 +18,7 @@
  function message(card,text,error=false){card.status.textContent=text;card.status.classList.toggle('fs-error',error)}
  function routes(card){
   const r=state.routes[card.key]||{};card.routes.replaceChildren(el('b','当前群路由'));
-  for(const [field,label] of [['sources','已配置来源'],['targets','已配置目标']])if(r[field])card.routes.append(el('div',label+'：'+(r[field].filter(Boolean).join('、')||'未设置')));
+  for(const [field,label] of [['sources','已配置来源'],['targets','已配置目标']])if(r[field])card.routes.append(el('div',label+'：'+(window.BearGroupNames.list(r[field])||'未设置')));
   if(card.key==='trains')card.routes.append(el('div','查询和图片回复到发出指令的会话；自动文字提醒按下方提醒群发送。'));
   else if(!r.sources&&!r.targets)card.routes.append(el('div',card.key==='manual'?'从下方机器人群列表选择实际发送群。':'回复到发出指令的群，不额外广播。'));
   card.routes.append(el('div',(card.key==='manual'?'发送账号：按下方所选机器人':card.key==='trains'?'回复账号：收到指令的机器人':'自动发送账号：'+(state.platform_id||'未设置'))+' · '+(state.within_broadcast_window?'当前允许发送':'当前为统一静默时段')));
@@ -26,7 +26,7 @@
  function render(card,force=false){
   if(!state)return;
   if(force||!card.dirty){const v=state.controls[card.key];card.check.checked=v.enabled;card.groups.value=v.groups.join('\n');card.dirty=false;message(card,'开关与群范围已加载')}
-  routes(card);card.button.disabled=false;
+  routes(card);card.button.disabled=false;window.BearGroupNames.update();
   if(!card.dirty){const sub=state.sub_enabled[card.key];message(card,!card.check.checked?'本功能已停用；下方配置保留':sub===false?'范围开关已开启；下方原功能开关仍为关闭':(['forwarding','text','collection','mango','hunt','sightings'].includes(card.key)&&!state.master_enabled)?'全局自动播报与转发已关闭；本页配置保留':'本功能范围已启用；具体路由与子功能按下方配置执行')}
  }
  async function refresh(){
@@ -42,6 +42,7 @@
   const grid=el('div',undefined,'fs-grid'),field=el('label',undefined,'fs-field'),groups=el('textarea');groups.rows=3;groups.spellcheck=false;groups.placeholder='留空沿用现有范围；每行一个群号';groups.setAttribute('aria-label',defs[key][0]+' · '+defs[key][1]);field.append(el('span',defs[key][1]+' · 每行一个群号'),groups);const routing=el('div',undefined,'fs-routes');grid.append(field,routing);section.append(grid);
   const actions=el('div',undefined,'fs-actions'),button=el('button','保存本功能开关与群','primary'),status=el('span','正在读取…','fs-state');button.type='button';button.disabled=true;status.setAttribute('role','status');actions.append(button,status);section.append(actions);
   container.prepend(section);
+  window.BearGroupNames.bind(groups,{platform:()=>key==='manual'?(container.getRootNode().querySelector('#sendPlatform')?.value||window.BearGroupNames.selected()):window.BearGroupNames.selected()});
   const card={key,section,check,groups,button,status,routes:routing,dirty:false,revision:0};cards.set(key,card);
   const changed=()=>{card.dirty=true;card.revision++;message(card,'有未保存的开关或群范围修改')};check.onchange=changed;groups.oninput=changed;
   button.onclick=async()=>{button.disabled=true;const revision=card.revision;try{
@@ -59,10 +60,12 @@
   const label=el('label',undefined,'fs-advanced'),input=el('input');input.type='checkbox';input.setAttribute('aria-label','启用调试模式（关闭后隐藏本页）');input.checked=window.BearConsolePreferences.isDebugEnabled();input.onchange=()=>window.BearConsolePreferences.setDebug(input.checked);window.addEventListener('bear-console-debug-change',()=>{input.checked=window.BearConsolePreferences.isDebugEnabled()});label.append(input,el('span','启用调试模式（关闭后隐藏本页）'));section.append(label);
   advancedRoutes=el('div',undefined,'fs-routes');section.append(advancedRoutes);container.prepend(section);renderAdvanced();
  }
- function renderAdvanced(){if(!state||!advancedRoutes)return;advancedRoutes.replaceChildren(el('b','各功能的群范围（在对应功能页修改）'));for(const [key,def] of Object.entries(defs)){const v=state.controls[key],r=state.routes[key]||{};advancedRoutes.append(el('div',def[0]+' · '+(v.enabled?'开启':'关闭')+' · '+(v.groups.length?v.groups.join('、'):(r.targets||r.sources||[]).filter(Boolean).join('、')||'沿用原配置')))}}
+ function renderAdvanced(){if(!state||!advancedRoutes)return;advancedRoutes.replaceChildren(el('b','各功能的群范围（在对应功能页修改）'));for(const [key,def] of Object.entries(defs)){const v=state.controls[key],r=state.routes[key]||{};advancedRoutes.append(el('div',def[0]+' · '+(v.enabled?'开启':'关闭')+' · '+(window.BearGroupNames.list(v.groups.length?v.groups:(r.targets||r.sources||[]))||'沿用原配置')))}}
  window.BearFeatureControls={mount,advanced,refresh};
  mount('sightings',document.querySelector('#settings'));
  const trainHolder=el('div');document.querySelector('#trainPanel>header').after(trainHolder);mount('trains',trainHolder);
  window.addEventListener('hashchange',()=>refresh().catch(()=>{}));
  window.addEventListener('bear-magic-status',()=>{for(const card of cards.values())if(state)routes(card)});
+ window.addEventListener('bear-group-names-updated',()=>{if(state){for(const card of cards.values())routes(card);renderAdvanced()}});
+ document.getElementById('platform').addEventListener('change',()=>{if(state){for(const card of cards.values())routes(card);renderAdvanced()}});
 })();

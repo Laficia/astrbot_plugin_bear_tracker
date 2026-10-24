@@ -12,7 +12,7 @@
   const input=el(type==='list'||type==='template'?'textarea':'input');input.setAttribute('aria-label',label);
   if(type==='bool'){input.type='checkbox';input.checked=value}else if(type==='number'){input.type='number';input.min=1;input.max=120;input.value=value}else{input.value=type==='list'?value.join('\n'):value;if(type==='template'){input.rows=8;input.maxLength=2000}}
   input.oninput=()=>{update(type==='bool'?input.checked:type==='list'?lines(input.value):type==='number'?Number(input.value):input.value);changed()};
-  wrap.append(input);if(hint)wrap.append(el('p',hint,'note'));host.append(wrap);return input;
+  wrap.append(input);if(hint)wrap.append(el('p',hint,'note'));host.append(wrap);if(label.includes('群号'))window.BearGroupNames.bind(input);return input;
  }
  function centerSelect(host,label,selected){
   const wrap=el('label',undefined,'train-field');wrap.append(el('span',label));const select=el('select');select.setAttribute('aria-label',label);
