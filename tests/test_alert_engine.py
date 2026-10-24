@@ -335,6 +335,7 @@ class AlertEngineTests(unittest.IsolatedAsyncioTestCase):
         with patch.object(plugin_main, "BearClient", return_value=self.client), \
                 patch.object(plugin_main.StarTools, "get_data_dir", return_value=self.root / "commands"):
             plugin = plugin_main.BearTrackerPlugin(self.context, self.config)
+            self.addAsyncCleanup(plugin.operations.close)
         event = SimpleNamespace(
             get_group_id=Mock(return_value="group-a"),
             get_platform_id=Mock(return_value="bot-instance"),
